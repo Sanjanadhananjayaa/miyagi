@@ -30,10 +30,10 @@ In this lab, you'll setup and configure Miyagi app locally.
   
 1. In the **appsettings.json** file replace the following values for the variables below.
 
-   | **Variables**                | **Values**                                                 |
-   | ---------------------------- | ---------------------------------------------------------- |
-   | deploymentOrModelId          |<inject key="CompletionModel" enableCopy="false"/>          |
-   | embeddingDeploymentOrModelId |<inject key="EmbeddingModel" enableCopy="false"/>         |
+   | **Variables**                | **Values**                                                |
+   | ---------------------------- | --------------------------------------------------------- |
+   | deploymentOrModelId          |<inject key="CompletionModel" enableCopy="false"/>         |
+   | embeddingDeploymentOrModelId |<inject key="EmbeddingModel" enableCopy="false"/>          |
    | endpoint                     |<inject key="OpenAIEndpoint" enableCopy="false"/>          |
    | apiKey                       |<inject key="OpenAIKey" enableCopy="false"/>               |
    | azureCognitiveSearchEndpoint |<inject key="SearchServiceuri" enableCopy="false"/>        |
@@ -43,15 +43,21 @@ In this lab, you'll setup and configure Miyagi app locally.
    | bingApiKey                   |<inject key="Bing_API_KEY" enableCopy="false"/>            |
    | cosmosDbConnectionString     |<inject key="CosmosDBconnectinString" enableCopy="false"/> |
    
-1. Leave default settings for  "cosmosDbContainerName": "recommendations","logLevel": "Trace"
+1. Leave default settings for  "cosmosDbContainerName": "recommendations", "logLevel": "Trace"
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
-1. Navigate to miyagi/sandbox/usecases/rag/dotnet and verify .env file is present
+1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
   
-1. Update the values which you recorded in previous steps into .env file and save the file
+1. In the **.env** file replace the following values for the variables below.
 
-   >**Note**: Please refer the below image to know how to update the values in .env files.
+   | **Variables**                  | **Values**                                         |
+   | -------------------------------| ---------------------------------------------------|
+   | AZURE_OPENAI_ENDPOINT          | <inject key="OpenAIEndpoint" enableCopy="false"/>  |
+   | AZURE_OPENAI_API_KEY           | <inject key="OpenAIKey" enableCopy="false"/>       |
+   | AZURE_COGNITIVE_SEARCH_ENDPOINT| <inject key="SearchServiceuri" enableCopy="false"/>|
+   |AZURE_COGNITIVE_SEARCH_API_KEY  | <inject key="SearchAPIkey" enableCopy="false"/>    |
+   
 
    ![](./Media/image-rg-24.png)
 
@@ -61,16 +67,15 @@ In this lab, you'll setup and configure Miyagi app locally.
 1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
    
      ```
-          dotnet user-secrets set "USE_OPEN_AI" "False"
-          dotnet user-secrets set "serviceType" "AzureOpenAI"
-          dotnet user-secrets set "BING_API_KEY" "<Your Bing API Key>"
-          dotnet user-secrets set "MEMORY_COLLECTION" "miyagi-embeddings"
-          dotnet user-secrets set "deploymentOrModelId" "<Your Open AI Completions model Deployment Id>"
-          dotnet user-secrets set "embeddingDeploymentOrModelId" "<Your Open AI Embeddings model Deployment Id>"
-          dotnet user-secrets set "endpoint" "<Your Open AI Endpoint>" 
-          dotnet user-secrets set "apiKey" "<Your Open AI API Key>"
-          dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<Cosmos DB Connection String>"
-         
+     dotnet user-secrets set "USE_OPEN_AI" "False"
+     dotnet user-secrets set "serviceType" "AzureOpenAI"
+     dotnet user-secrets set "BING_API_KEY" "<inject key="Bing_API_KEY" enableCopy="false"/>"
+     dotnet user-secrets set "MEMORY_COLLECTION" "miyagi-embeddings"
+     dotnet user-secrets set "deploymentOrModelId" "<inject key="CompletionModel" enableCopy="false"/>"
+     dotnet user-secrets set "embeddingDeploymentOrModelId" "<inject key="EmbeddingModel" enableCopy="false"/>"
+     dotnet user-secrets set "endpoint" "<Your Open AI Endpoint>" 
+     dotnet user-secrets set "apiKey" "<Your Open AI API Key>"
+     dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<Cosmos DB Connection String>"  
      ```
    Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
 
