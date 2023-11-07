@@ -68,11 +68,11 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
    ![](./Media/docker14-(1).png)
 
-1. On **Run a new containe**, under **Ports** for **Host Port** enter **8002** and click on **Run**.
+1. On **Run a new containe**, under **Ports** for **Host Port** enter **80** and click on **Run**.
 
     ![](./Media/docker14.png)
 
-1. Click on **8002:80** url link
+1. Click on **80:80** url link
    ![](./Media/docker15.png)
    
 1. You should be able to see the application running locally
@@ -113,11 +113,11 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 
    ![](./Media/docker9.png)
 
-1. On **Run a new containe**, under **Ports** for **Host Port** enter **8001** and click on **Run**.
+1. On **Run a new containe**, under **Ports** for **Host Port** enter **3000** and click on **Run**.
 
     ![](./Media/docker10.png)
 
-1. Click on **8001:3000** url link
+1. Click on **3000:3000** url link
    ![](./Media/docker11.png)
    
 1. You should be able to see the application running locally
