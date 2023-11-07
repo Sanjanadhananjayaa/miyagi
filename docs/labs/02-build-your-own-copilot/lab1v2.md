@@ -197,3 +197,5 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
    ![](./Media/financial-advisor-output.png) 
+
+1. Now, click on **Next** from the lower right corner to move to the next page.
