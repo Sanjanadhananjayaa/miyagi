@@ -303,7 +303,7 @@ In this task, you'll Push miyagi-ui and miyagi-recommendation images to acr.
    ![](./Media/acr-ui-13.png)
 
 
-### Task 5: Update Container App Recommendation service url for miyagi-ui 
+### Task 6: Update Container App Recommendation service URL for miyagi-ui 
 
 1. On Azure Portal page, in Search resources, services and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
    ![](./Media/cntr1.png)
