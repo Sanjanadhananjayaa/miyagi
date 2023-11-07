@@ -40,7 +40,7 @@ In this lab, you'll be building the docker images and publishing it to Azure Con
 1. Run following command to build a **Docker image**
 
    ```
-   docker build . -t miyagi-recommemdation      
+   docker build . -t miyagi-recommendation      
    ```
 
    ![](./Media/task2-1.png)
