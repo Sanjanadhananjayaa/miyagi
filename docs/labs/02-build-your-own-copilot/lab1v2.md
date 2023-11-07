@@ -32,16 +32,16 @@ In this lab, you'll setup and configure Miyagi app locally.
 
    | **Variables**                | **Values**                                                 |
    | ---------------------------- | ---------------------------------------------------------- |
-   | deploymentOrModelId          | <inject key="CompletionModel" enableCopy="false"/>          |
-   | embeddingDeploymentOrModelId | <inject key="EmbeddingModel" enableCopy="false"/>         |
-   | endpoint                     | <inject key="OpenAIEndpoint" enableCopy="false"/>          |
-   | apiKey                       | <inject key="OpenAIKey" enableCopy="false"/>               |
-   | azureCognitiveSearchEndpoint | <inject key="SearchServiceuri" enableCopy="false"/>        |
-   | azureCognitiveSearchApiKey   | <inject key="SearchAPIkey" enableCopy="false"/>            |
-   | cosmosDbUri                  | <inject key="CosmosDBuri" enableCopy="false"/>             |
-   | blobServiceUri               | <inject key="StorageAccounturi" enableCopy="false"/>       |
-   | bingApiKey                   | <inject key="Bing_API_KEY" enableCopy="false"/>            |
-   | cosmosDbConnectionString     | <inject key="CosmosDBconnectinString" enableCopy="false"/> |
+   | deploymentOrModelId          |<inject key="CompletionModel" enableCopy="false"/>          |
+   | embeddingDeploymentOrModelId |<inject key="EmbeddingModel" enableCopy="false"/>         |
+   | endpoint                     |<inject key="OpenAIEndpoint" enableCopy="false"/>          |
+   | apiKey                       |<inject key="OpenAIKey" enableCopy="false"/>               |
+   | azureCognitiveSearchEndpoint |<inject key="SearchServiceuri" enableCopy="false"/>        |
+   | azureCognitiveSearchApiKey   |<inject key="SearchAPIkey" enableCopy="false"/>            |
+   | cosmosDbUri                  |<inject key="CosmosDBuri" enableCopy="false"/>             |
+   | blobServiceUri               |<inject key="StorageAccounturi" enableCopy="false"/>       |
+   | bingApiKey                   |<inject key="Bing_API_KEY" enableCopy="false"/>            |
+   | cosmosDbConnectionString     |<inject key="CosmosDBconnectinString" enableCopy="false"/> |
    
 1. Leave default settings for  "cosmosDbContainerName": "recommendations","logLevel": "Trace"
 
