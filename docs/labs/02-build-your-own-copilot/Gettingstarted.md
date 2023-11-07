@@ -16,13 +16,13 @@
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email or username, and click on **Next**. 
 
-   * **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+   * **Email/Username**: **<inject key="AzureAdUserEmail"></inject>**
 
      ![](./Media/img4.png)
      
 1. Now enter the following password and click on **Sign in**.
    
-   * **Password**: <inject key="AzureAdUserPassword"></inject>
+   * **Password**: **<inject key="AzureAdUserPassword"></inject>**
 
      ![](./Media/img5.png)
    
@@ -40,3 +40,12 @@
 
    ![](./Media/img10.png)
 
+1. In the **Resource groups**, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
+
+   ![](./Media/resource-group.png)
+
+1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
+
+   ![](./Media/resources.png)
+
+1. Now, click on **Next** from the lower right corner to move to the next page.
