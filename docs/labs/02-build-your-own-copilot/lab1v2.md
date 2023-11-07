@@ -30,18 +30,18 @@ In this lab, you'll setup and configure Miyagi app locally.
   
 1. In the **appsettings.json** file replace the following values for the variables below.
 
-   | **Variables**                | **Values**                                                |
-   | ---------------------------- | --------------------------------------------------------- |
-   | deploymentOrModelId          |<inject key="CompletionModel" enableCopy="false"/>         |
-   | embeddingDeploymentOrModelId |<inject key="EmbeddingModel" enableCopy="false"/>          |
-   | endpoint                     |<inject key="OpenAIEndpoint" enableCopy="false"/>          |
-   | apiKey                       |<inject key="OpenAIKey" enableCopy="false"/>               |
-   | azureCognitiveSearchEndpoint |<inject key="SearchServiceuri" enableCopy="false"/>        |
-   | azureCognitiveSearchApiKey   |<inject key="SearchAPIkey" enableCopy="false"/>            |
-   | cosmosDbUri                  |<inject key="CosmosDBuri" enableCopy="false"/>             |
-   | blobServiceUri               |<inject key="StorageAccounturi" enableCopy="false"/>       |
-   | bingApiKey                   |<inject key="Bing_API_KEY" enableCopy="false"/>            |
-   | cosmosDbConnectionString     |<inject key="CosmosDBconnectinString" enableCopy="false"/> |
+   | **Variables**                | **Values**                                               |
+   | ---------------------------- | ---------------------------------------------------------|
+   | deploymentOrModelId          |<inject key="CompletionModel" enableCopy="true"/>         |
+   | embeddingDeploymentOrModelId |<inject key="EmbeddingModel" enableCopy="true"/>          |
+   | endpoint                     |<inject key="OpenAIEndpoint" enableCopy="true"/>          |
+   | apiKey                       |<inject key="OpenAIKey" enableCopy="true"/>               |
+   | azureCognitiveSearchEndpoint |<inject key="SearchServiceuri" enableCopy="true"/>        |
+   | azureCognitiveSearchApiKey   |<inject key="SearchAPIkey" enableCopy="true"/>            |
+   | cosmosDbUri                  |<inject key="CosmosDBuri" enableCopy="true"/>             |
+   | blobServiceUri               |<inject key="StorageAccounturi" enableCopy="true"/>       |
+   | bingApiKey                   |<inject key="Bing_API_KEY" enableCopy="true"/>            |
+   | cosmosDbConnectionString     |<inject key="CosmosDBconnectinString" enableCopy="true"/> |
    
 1. Leave default settings for  "cosmosDbContainerName": "recommendations", "logLevel": "Trace"
 
@@ -51,12 +51,12 @@ In this lab, you'll setup and configure Miyagi app locally.
   
 1. In the **.env** file replace the following values for the variables below.
 
-   | **Variables**                  | **Values**                                         |
-   | -------------------------------| ---------------------------------------------------|
-   | AZURE_OPENAI_ENDPOINT          | <inject key="OpenAIEndpoint" enableCopy="false"/>  |
-   | AZURE_OPENAI_API_KEY           | <inject key="OpenAIKey" enableCopy="false"/>       |
-   | AZURE_COGNITIVE_SEARCH_ENDPOINT| <inject key="SearchServiceuri" enableCopy="false"/>|
-   |AZURE_COGNITIVE_SEARCH_API_KEY  | <inject key="SearchAPIkey" enableCopy="false"/>    |
+   | **Variables**                  | **Values**                                        |
+   | -------------------------------| --------------------------------------------------|
+   | AZURE_OPENAI_ENDPOINT          | <inject key="OpenAIEndpoint" enableCopy="true"/>  |
+   | AZURE_OPENAI_API_KEY           | <inject key="OpenAIKey" enableCopy="true"/>       |
+   | AZURE_COGNITIVE_SEARCH_ENDPOINT| <inject key="SearchServiceuri" enableCopy="true"/>|
+   |AZURE_COGNITIVE_SEARCH_API_KEY  | <inject key="SearchAPIkey" enableCopy="true"/>    |
    
 
    ![](./Media/image-rg-24.png)
@@ -64,6 +64,7 @@ In this lab, you'll setup and configure Miyagi app locally.
  ### Task 2: Setup .NET secrets
 
 1. Navigate to **miyagi/services/recommendation-service/dotnet**, right click on dotnet and in cascading menu, select **Open in intergate Terminal**.
+
 1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
    
      ```
@@ -73,22 +74,14 @@ In this lab, you'll setup and configure Miyagi app locally.
      dotnet user-secrets set "MEMORY_COLLECTION" "miyagi-embeddings"
      dotnet user-secrets set "deploymentOrModelId" "<inject key="CompletionModel" enableCopy="false"/>"
      dotnet user-secrets set "embeddingDeploymentOrModelId" "<inject key="EmbeddingModel" enableCopy="false"/>"
-     dotnet user-secrets set "endpoint" "<Your Open AI Endpoint>" 
-     dotnet user-secrets set "apiKey" "<Your Open AI API Key>"
-     dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<Cosmos DB Connection String>"  
+     dotnet user-secrets set "endpoint" "<inject key="OpenAIEndpoint" enableCopy="false"/>" 
+     dotnet user-secrets set "apiKey" "<inject key="OpenAIKey" enableCopy="false"/>"
+     dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<inject key="CosmosDBconnectinString" enableCopy="false"/>"  
      ```
-   Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
 
-   -  **Bing API Key:** Provide **a6a11817493b4c2cb9a49d11bcd31e98**
-   -  **deploymentOrModelId** Replace <Your Open AI Completions model Deployment Id> with deployment name for gpt-35-turbo model
-   -  **embeddingDeploymentOrModelId** Replace  <Your Open AI Embeddings model Deployment Id> with deployment name for text-embedding-ada-002
-   -  **Open AI Endpoint**: Replace "<Your Open AI Endpoint>" with Open AI Endpoint
-   -  **Open AI API Key:** Replace "<Your Open AI API Key>" with Open AI Key
-   -  **Cosmos DB Connection String:**  Replace "< Your Cosmos DB Connection String >" with the cosmos key
+### Task 3: Understanding the implementation of the recommendation service
 
-### Task 3: Understanding implementation of the recommendation service
-
-Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step by step details of how the Recommendation Service is implemented. Pay special attention to how RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
+Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
 1. In Visual Studio Code navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
 
@@ -98,7 +91,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/run.png)
 
- 1. Once after Excuting all the cell you need see the output as shown in below diagram.
+ 1. Once after Executing all the cells you need to see the output as shown in the below diagram.
 
     ![](./Media/output.png)
    
@@ -110,8 +103,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. Run the following command to run the recommendation service locally
     ```
-     dotnet build
-     dotnet run
+    dotnet build
+    dotnet run
     ```
 
    **Note**: Let the command run, meanwhile you can proceed with the next step.
@@ -119,7 +112,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. Open another tab in Edge, in the browser window paste the following link
 
    ```
-     http://localhost:5224/swagger/index.html 
+   http://localhost:5224/swagger/index.html 
    ```
 
    **Note**: Refresh the page continuously until you get the swagger page for the recommendation service as depicted in the image below.
@@ -136,9 +129,9 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. Run the following command to install the dependencies
    
     ```
-     npm install --global yarn
-     yarn install
-     yarn dev
+    npm install --global yarn
+    yarn install
+    yarn dev
     ```
 
    **Note**: Let the command run, meanwhile you can proceed with the next step.
@@ -146,7 +139,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. Open another tab in Edge, and  browse the following
 
    ```
-     http://localhost:4001
+   http://localhost:4001
    ```
 
    **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
@@ -161,16 +154,16 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. Replace the code with the below code, and click on **Execution**.
 
-      ```
-        {
+     ```
+     {
         "metadata": {
-            "userId": "50",
-            "riskLevel": "aggressive",
-            "favoriteSubReddit": "finance",
-            "favoriteAdvisor": "Jim Cramer"
-        },
-        "dataSetName": "intelligent-investor"
-        }
+              "userId": "50",
+              "riskLevel": "aggressive",
+              "favoriteSubReddit": "finance",
+              "favoriteAdvisor": "Jim Cramer"
+            },
+          "dataSetName": "intelligent-investor"
+      }
       ```
 
       ![](./Media/swaggerUI-Execution.png)
