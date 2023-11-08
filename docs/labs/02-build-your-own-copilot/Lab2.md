@@ -4,24 +4,23 @@ In this lab, you'll be building the docker images and publishing them to Azure C
 
 ### Task 1: Verify the deployed API Management service and create an API
 
-1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
+1. Navigate back to the Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
    ![](./Media/lab3-t1-s1.png)
 
-1. From the left menu, click on **APIs** **(1)** and select **HTTP** **(2)** under Define a new API to create an HTTP API.
+1. In the **API Management service** tab, from the left menu, click on **APIs** **(1)** and select **HTTP** **(2)** under Define a new API to create an HTTP API.
 
    ![](./Media/lab3-t1-s2.png)
 
-1. Enter the following values in the Create an HTTP API pane:
+1. In the **Create an HTTP API** tab enter the following details and click on **Create** **(6)**
    
    | **Parameter**        | **Values**           | 
    | -------------------- | -------------------- | 
    | API Type **(1)**     | **Basic**            | 
    | Display name **(2)** | **miyagi-api**       |
    | Name **(3)**         | **miyagi-api**       |
-   | Web service URL **(4)** | Enter the Endpoint of OpenAI resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**  |
+   | Web service URL **(4)** | **<inject key="OpenAIEndpoint" enableCopy="true"/>**|
    | API URL suffix **(5)** | **miyagi** |
-   | Click on  **(6)** | **Create** |
 
    ![](./Media/lab3-t1-s3.png)
 
@@ -44,32 +43,6 @@ In this task, you will be updating the API Management Gateway URL as an endpoint
 1. From the Explorer, navigate to `Miyagi/services/recommendation-service/dotnet/` **(1)** path. Right-click on the `dotnet` folder and select **Open in Integrated Terminal** **(2)** from the options tab to open the terminal with the required path.
 
    ![](./Media/lab3-t2-s3.png)
-
-1. Now, you need to rebuild the docker image for the recommendation service by running the below docker command. Make to update the docker image name which was created earlier for recommendation service with the same name.
-
-   ```
-   docker build . -t miyagi-recommendation
-   ```
-
-   ![](./Media/lab3-t2-s4.png)
-
-1. Run the following command to ACR login.
-
-   **Note**: Please replace **<ACR_Name>** and **[Uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**. For [password], navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from the resources list. Under Settings, select **Access Keys** and select the check box for **Admin user** and then copy the password.
-
-    ```
-    docker login miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io -u miyagiacr<inject key="DeploymentID" enableCopy="false"/> -p [password]
-    ```
-
-1. Once you are logged into ACR. Run the below command to push the update docker image of the recommendation service to the container registry.
-
-   **Note**: Make sure to replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**.
-
-   ```
-   docker push miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io/miyagi-recommendation:latest
-   ```
-
-   ![](./Media/lab3-t2-s5.png)
 
 ### Task 3: Build Docker Images for the Recommendation service
 
@@ -102,12 +75,6 @@ In this task, you will be updating the API Management Gateway URL as an endpoint
    ```
    
    ![](./Media/task2-2.png)
-
-1. Run the following command for running a Docker container.
-
-   ```
-   docker run -t miyagi-recommendation -p 80
-   ```
 
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
 
