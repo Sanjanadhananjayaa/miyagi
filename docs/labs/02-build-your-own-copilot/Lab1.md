@@ -136,16 +136,15 @@ In this lab, you'll setup and configure Miyagi app locally.
 1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
    
      ```
-          dotnet user-secrets set "USE_OPEN_AI" "False"
-          dotnet user-secrets set "serviceType" "AzureOpenAI"
-          dotnet user-secrets set "BING_API_KEY" "<Your Bing API Key>"
-          dotnet user-secrets set "MEMORY_COLLECTION" "miyagi-embeddings"
-          dotnet user-secrets set "deploymentOrModelId" "<Your Open AI Completions model Deployment Id>"
-          dotnet user-secrets set "embeddingDeploymentOrModelId" "<Your Open AI Embeddings model Deployment Id>"
-          dotnet user-secrets set "endpoint" "<Your Open AI Endpoint>" 
-          dotnet user-secrets set "apiKey" "<Your Open AI API Key>"
-          dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<Cosmos DB Connection String>"
-         
+     dotnet user-secrets set "USE_OPEN_AI" "False"
+     dotnet user-secrets set "serviceType" "AzureOpenAI"
+     dotnet user-secrets set "BING_API_KEY" "<Your Bing API Key>"
+     dotnet user-secrets set "MEMORY_COLLECTION" "miyagi-embeddings"
+     dotnet user-secrets set "deploymentOrModelId" "<Your Open AI Completions model Deployment Id>"
+     dotnet user-secrets set "embeddingDeploymentOrModelId" "<Your Open AI Embeddings model Deployment Id>"
+     dotnet user-secrets set "endpoint" "<Your Open AI Endpoint>" 
+     dotnet user-secrets set "apiKey" "<Your Open AI API Key>"
+     dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<Cosmos DB Connection String>"    
      ```
    Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
 
