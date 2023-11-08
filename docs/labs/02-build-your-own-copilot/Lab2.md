@@ -121,9 +121,9 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
    
-   ````
-    az acr login -n [ACRname] -u [uname] -p [password]
-    ```
+   ```
+   az acr login -n [ACRname] -u [uname] -p [password]
+   ```
 
    ![](./Media/task2-5.png)
     
@@ -177,17 +177,17 @@ In this task, you'll will be creating a container app for the recommendation.
 
 1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
 
-   ![](./Media/cntr1.png)
+   ![](./Media/container-app-select.png)
 
-1. In the **Container Apps** blade, select **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In the **Container Apps** blade, select **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](./Media/cntr2.png)
+   ![](./Media/container-ca-miyagi.png)
 
-1. In the **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** and copy **Endpoints** URL link.
+1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** **(1)** under setting session and copy **Endpoints** **(2)** URL link.
 
-   ![](./Media/cntr3.png)
+   ![](./Media/container-ca-ingress.png)
 
-1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui>.env.** and replace existing code for **RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
+1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui>typescript>.env.** and replace existing code for **RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
 
    ![](./Media/cntr4.png)
 
@@ -211,11 +211,11 @@ In this task, you'll will be creating a container app for the recommendation.
 
 1. Reture to **Azure Portal** in Search resources, services and docs (G+/) box at the top of the portal, enter **Container Apps**, and then select **Container Apps** under services.
 
-1. In the **Container Apps** blade, select **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In the **Container Apps** blade, select **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>**.
 
    ![](./Media/cntr5.png)
 
-1. In the **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**, from left navigation pane select **Ingress** and click on **Endpoints** URL link.
+1. In the **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>**, from left navigation pane select **Ingress** and click on **Endpoints** URL link.
 
    ![](./Media/cntr6.png)
 
@@ -223,7 +223,7 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/cntr7.png)
 
-1. Navigate back to the **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>** page, under **Application** select **Revisions** and click on **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**, on **Revision details** window, select **Refresh**.
+1. Navigate back to the **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>** page, under **Application** select **Revisions** and click on **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**, on **Revision details** window, select **Refresh**.
 
    ![](./Media/cntr8.png)
 
@@ -231,7 +231,7 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/cntr9.png)
 
-1. Once restarting is done for **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>** from left pane select **Ingress** and click on **Endpoints**.
+1. Once restarting is done for **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>** from left pane select **Ingress** and click on **Endpoints**.
 
    ![](./Media/cntr6.png)
 
