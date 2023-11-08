@@ -48,7 +48,7 @@ In this task, you will be updating the API Management Gateway URL as an endpoint
 1. Now, you need to rebuild the docker image for the recommendation service by running the below docker command. Make to update the docker image name which was created earlier for recommendation service with the same name.
 
    ```
-   docker build . -t [Docker_Image_Name_Recommendation_Service]
+   docker build . -t miyagi-recommendation
    ```
 
    ![](./Media/lab3-t2-s4.png)
