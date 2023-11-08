@@ -55,12 +55,14 @@ In this lab, you'll setup and configure Miyagi app locally.
 
    | **Variables**                          | **Values**                                            |
    | ---------------------------------------| ------------------------------------------------------|
-   | AZURE_OPENAI_ENDPOINT **(1)**          | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
-   | AZURE_OPENAI_API_KEY  **(2)**          | **<inject key="OpenAIKey" enableCopy="true"/>**       |
-   | AZURE_COGNITIVE_SEARCH_ENDPOINT **(3)**| **<inject key="SearchServiceuri" enableCopy="true"/>**|
-   |AZURE_COGNITIVE_SEARCH_API_KEY **(4)**  | **<inject key="SearchAPIkey" enableCopy="true"/>**    |
+   | AZURE_OPENAI_ENDPOINT                  | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
+   | AZURE_OPENAI_API_KEY                   | **<inject key="OpenAIKey" enableCopy="true"/>**       |
+   | gpt-35-turbo                           | **<inject key="CompletionModel" enableCopy="true"/>** |
+   | text-embedding-ada-002                 | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
+   | AZURE_COGNITIVE_SEARCH_ENDPOINT        | **<inject key="SearchServiceuri" enableCopy="true"/>**|
+   |AZURE_COGNITIVE_SEARCH_API_KEY          | **<inject key="SearchAPIkey" enableCopy="true"/>**    |
    
-   ![](./Media/env1.png)
+   ![](./Media/env1new.png)
 
  ### Task 2: Setup .NET secrets
 
