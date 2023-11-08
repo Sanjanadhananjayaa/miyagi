@@ -88,13 +88,13 @@ In this task, you will be updating the API Management Gateway URL as an endpoint
 
    ![](./Media/docker14-(1).png)
 
-1. In the **Run a new containe**, under **Ports** for **Host Port** enter **80** and click on **Run**.
+1. In the **Run a new containe**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
 
-    ![](./Media/docker14.png)
+    ![](./Media/recommendation-port.png)
 
-1. Click on **80:80** URL link
+1. Click on **5224:80** URL link
 
-   ![](./Media/docker15.png)
+   ![](./Media/recommendation-port-open.png)
    
 1. You should be able to see the application running locally
    
@@ -107,31 +107,25 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 1. Return to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
-1. Run the following command to login.
-
-   **Note**: Please replace **[ACRname>]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for **[password]** navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of resource and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+1. Run the following command to log in to the Azure portal.
 
     ```
     az login
-    az acr login -n miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io -u miyagiacr<inject key="DeploymentID" enableCopy="false"/> -p [password]
+    az acr login -n <inject key="AcrLoginServer" enableCopy="false"/> -u <inject key="AcrUsername" enableCopy="false"/> -p <inject key="AcrPassword" enableCopy="false"/>
     ```
 
    ![](./Media/task2-5.png)
     
 1. Run the following command to add the tag.
 
-   **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
-
    ```
-   docker tag miyagi-recommendation:latest miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io/miyagi-recommendation:latest
+   docker tag miyagi-recommendation:latest <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest
    ```
 
 1. Run the following command to push the image to the container registry.
 
-   **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
-
    ```
-   docker push miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io/miyagi-recommendation:latest
+   docker push <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest
    ```
 
    ![](./Media/task2-6.png)
