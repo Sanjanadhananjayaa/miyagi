@@ -105,14 +105,23 @@ In this task, you will be updating the API Management Gateway URL as an endpoint
 
 In this task, you'll Push miyagi-recommendation images to acr. 
 
-1. Return to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
+1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in intergate Terminal**
 
-1. Run the following command to log in to the Azure portal.
+1. Run the following command to log in to the **Azure portal**.
+
+    ```
+    az login
+    ```
+
+1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
+
+   ![](./Media/azure-account-select.png)
+
+1. Run the following command to log in to an **Azure Container Registry (ACR)** using the Azure CLI.
 
    > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
    
-    ```
-    az login
+   ````
     az acr login -n [ACRname] -u [uname] -p [password]
     ```
 
@@ -140,12 +149,12 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 In this task, you'll will be creating a container app for the recommendation.
 
-1. Run the following command to **Container App environment**.
+1. Run the following command to create **Container App environment**.
 
    > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>** and **[Region]** with **<inject key="Region" enableCopy="true"/>**.
 
    ```
-   az containerapp env create --name env-miyagi --resource-group miyagi-rg-[DID] --location [Region]
+   az containerapp env create --name env-miyagi-[DID] --resource-group miyagi-rg-[DID] --location [Region]
    ```
 
 1. Run the following command to create **Container App**.
@@ -153,13 +162,15 @@ In this task, you'll will be creating a container app for the recommendation.
    > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**, **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
 
    ```
-   az containerapp create --name ca-miyagi-rec --resource-group miyagi-rg-[DID] --image $imageName --environment $envName --registry-server [ACRname] --registry-username [uname] --registry-password [password].
+   az containerapp create --name ca-miyagi-rec-[DID] --resource-group miyagi-rg-[DID] --image [ACRname]/miyagi-recommendation:latest --environment env-miyagi-[DID] --registry-server [ACRname] --registry-username [uname] --registry-password [password]
    ```
 
 1. Run the following command to enable **Container App ingress**.
+
+   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**
    
    ```
-   az containerapp ingress enable -n ca-miyagi-rec -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
+   az containerapp ingress enable -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
    ```
  
 ### Task 6: Update Container App Recommendation service URL for miyagi-ui 
