@@ -16,13 +16,13 @@ In this lab, you'll setup and configure Miyagi app locally.
 
    ![](./Media/image-rg-02.png)
 
-1. Within **File Explorer**, navigate to C:\LabFiles\miyagi select **miyagi**(1) click on **Select folder(2)**
+1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi**(1) click on **Select folder(2)**
 
    ![](./Media/image-rg(003).png)
 
 1. In **Visual Studio Code**, click on **Yes, I trust the authors** when **Do you trust the authors of the files in this folder?** window prompted.
 
-   ![](./Media/image-rg-18.png)
+   ![](./Media/image-rg-18.png) 
    
 1. Expand **miyagi>ui** directory and verify that **.env.** file is present. 
 
@@ -30,36 +30,37 @@ In this lab, you'll setup and configure Miyagi app locally.
   
 1. In the **appsettings.json** file replace the following values for the variables below.
 
-   | **Variables**                | **Values**                                               |
-   | ---------------------------- | ---------------------------------------------------------|
-   | deploymentOrModelId          |<inject key="CompletionModel" enableCopy="true"/>         |
-   | embeddingDeploymentOrModelId |<inject key="EmbeddingModel" enableCopy="true"/>          |
-   | endpoint                     |<inject key="OpenAIEndpoint" enableCopy="true"/>          |
-   | apiKey                       |<inject key="OpenAIKey" enableCopy="true"/>               |
-   | azureCognitiveSearchEndpoint |<inject key="SearchServiceuri" enableCopy="true"/>        |
-   | azureCognitiveSearchApiKey   |<inject key="SearchAPIkey" enableCopy="true"/>            |
-   | cosmosDbUri                  |<inject key="CosmosDBuri" enableCopy="true"/>             |
-   | blobServiceUri               |<inject key="StorageAccounturi" enableCopy="true"/>       |
-   | bingApiKey                   |<inject key="Bing_API_KEY" enableCopy="true"/>            |
-   | cosmosDbConnectionString     |<inject key="CosmosDBconnectinString" enableCopy="true"/> |
+   | **Variables**                | **Values**                                                    |
+   | ---------------------------- |---------------------------------------------------------------|
+   | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
+   | embeddingDeploymentOrModelId | **<inject key="EmbeddingModel" enableCopy="true"/>**          |
+   | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
+   | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
+   | azureCognitiveSearchEndpoint | **<inject key="SearchServiceuri" enableCopy="true"/>**        |
+   | azureCognitiveSearchApiKey   | **<inject key="SearchAPIkey" enableCopy="true"/>**            |
+   | cosmosDbUri                  | **<inject key="CosmosDBuri" enableCopy="true"/>**             |
+   | blobServiceUri               | **<inject key="StorageAccounturi" enableCopy="true"/>**       |
+   | bingApiKey                   | **<inject key="Bing_API_KEY" enableCopy="true"/>**           |
+   | cosmosDbConnectionString     | **<inject key="CosmosDBconnectinString" enableCopy="true"/>** |
    
-1. Leave default settings for  "cosmosDbContainerName": "recommendations", "logLevel": "Trace"
+   > **Note**: Leave default settings for "cosmosDbContainerName": "recommendations", "logLevel": "Trace"
 
+      ![](./Media/appsetting-update.png)
+   
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
 1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
   
 1. In the **.env** file replace the following values for the variables below.
 
-   | **Variables**                  | **Values**                                        |
-   | -------------------------------| --------------------------------------------------|
-   | AZURE_OPENAI_ENDPOINT          | <inject key="OpenAIEndpoint" enableCopy="true"/>  |
-   | AZURE_OPENAI_API_KEY           | <inject key="OpenAIKey" enableCopy="true"/>       |
-   | AZURE_COGNITIVE_SEARCH_ENDPOINT| <inject key="SearchServiceuri" enableCopy="true"/>|
-   |AZURE_COGNITIVE_SEARCH_API_KEY  | <inject key="SearchAPIkey" enableCopy="true"/>    |
+   | **Variables**                          | **Values**                                            |
+   | ---------------------------------------| ------------------------------------------------------|
+   | AZURE_OPENAI_ENDPOINT **(1)**          | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
+   | AZURE_OPENAI_API_KEY  **(2)**          | **<inject key="OpenAIKey" enableCopy="true"/>**       |
+   | AZURE_COGNITIVE_SEARCH_ENDPOINT **(3)**| **<inject key="SearchServiceuri" enableCopy="true"/>**|
+   |AZURE_COGNITIVE_SEARCH_API_KEY **(4)**  | **<inject key="SearchAPIkey" enableCopy="true"/>**    |
    
-
-   ![](./Media/image-rg-24.png)
+   ![](./Media/env1.png)
 
  ### Task 2: Setup .NET secrets
 
