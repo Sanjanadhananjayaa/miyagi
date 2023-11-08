@@ -109,23 +109,29 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 1. Run the following command to log in to the Azure portal.
 
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+   
     ```
     az login
-    az acr login -n <inject key="AcrLoginServer" enableCopy="false"/> -u <inject key="AcrUsername" enableCopy="false"/> -p <inject key="AcrPassword" enableCopy="false"/>
+    az acr login -n [ACRname] -u [uname] -p [password]
     ```
 
    ![](./Media/task2-5.png)
     
 1. Run the following command to add the tag.
 
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+
    ```
-   docker tag miyagi-recommendation:latest <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest
+   docker tag miyagi-recommendation:latest [ACRname]/miyagi-recommendation:latest
    ```
 
 1. Run the following command to push the image to the container registry.
 
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+
    ```
-   docker push <inject key="AcrLoginServer" enableCopy="false"/>/miyagi-recommendation:latest
+   docker push [ACRname]/miyagi-recommendation:latest
    ```
 
    ![](./Media/task2-6.png)
@@ -136,20 +142,24 @@ In this task, you'll will be creating a container app for the recommendation.
 
 1. Run the following command to **Container App environment**.
 
-   ```
-   az containerapp env create --name env-miyagi --resource-group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> --location <inject key="Region" enableCopy="false"/>
-   ```
-
-1. Run the following command to **Container App**.
+   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>** and **[Region]** with **<inject key="Region" enableCopy="true"/>**.
 
    ```
-   az containerapp create --name ca-miyagi-rec --resource-group miyagi-rg-<inject key="DeploymentID" enableCopy="false"/> --image $imageName --environment $envName --registry-server miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io --registry-username miyagiacr<inject key="DeploymentID" enableCopy="false"/> --registry-password [password].
+   az containerapp env create --name env-miyagi --resource-group miyagi-rg-[DID] --location [Region]
    ```
 
-1. Run the following command to enable **Container App ingress**
+1. Run the following command to create **Container App**.
+
+   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**, **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+
+   ```
+   az containerapp create --name ca-miyagi-rec --resource-group miyagi-rg-[DID] --image $imageName --environment $envName --registry-server [ACRname] --registry-username [uname] --registry-password [password].
+   ```
+
+1. Run the following command to enable **Container App ingress**.
    
    ```
-   az containerapp ingress enable -n ca-miyagi-rec -g $rgName --type external --allow-insecure --target-port 80
+   az containerapp ingress enable -n ca-miyagi-rec -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
    ```
  
 ### Task 6: Update Container App Recommendation service URL for miyagi-ui 
@@ -174,18 +184,18 @@ In this task, you'll will be creating a container app for the recommendation.
 
 1. Run the following command to log in.
 
-    > **Note**: Please replace **[ACRname>]** and **[uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** for **[password]** navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from list of recources and under settings select **Access Keys**, select check box for **Admin user** and copy the password.
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
 
     ```
-    docker login miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io -u miyagiacr<inject key="DeploymentID" enableCopy="false"/> -p [password]
+    docker login [ACRname] -u [uname] -p [password]
     ```
    
 1. Run the following command to push the image to the container registry
 
-   > **Note**: Please replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
 
    ```
-   docker push miyagiacr<inject key="DeploymentID" enableCopy="false"/>.azurecr.io/miyagi-recommendation:latest
+   docker push [ACRname]/miyagi-recommendation:latest
    ```
 
 1. Reture to **Azure Portal** in Search resources, services and docs (G+/) box at the top of the portal, enter **Container Apps**, and then select **Container Apps** under services.
@@ -202,7 +212,7 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/cntr7.png)
 
-1. Return to **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>** page, under **Application** select **Revisions** and click on **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**, on **Revision details** window, select **Refresh**.
+1. Navigate back to the **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>** page, under **Application** select **Revisions** and click on **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**, on **Revision details** window, select **Refresh**.
 
    ![](./Media/cntr8.png)
 
