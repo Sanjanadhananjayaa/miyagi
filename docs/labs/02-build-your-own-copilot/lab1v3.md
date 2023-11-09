@@ -75,10 +75,6 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
 
    ![](./Media/run.png)
-
- 1. Once after Executing all the cells you need to see the output as shown in the below diagram.
-
-    ![](./Media/output.png)
    
 ### Task 3: Run recommendation service locally
 
