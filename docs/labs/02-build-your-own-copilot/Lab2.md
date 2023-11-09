@@ -2,49 +2,10 @@
 
 In this lab, you'll be building the docker images and publishing them to Azure Container Apps.
 
-### Task 1: Verify the deployed API Management service and create an API
+### Task 1: Build Docker Image for the Miyagi UI
 
-1. Navigate back to the Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
-   ![](./Media/lab3-t1-s1.png)
-
-1. In the **API Management service** tab, from the left menu, click on **APIs** **(1)** and select **HTTP** **(2)** under Define a new API to create an HTTP API.
-
-   ![](./Media/lab3-t1-s2.png)
-
-1. In the **Create an HTTP API** tab enter the following details and click on **Create** **(6)**
-   
-   | **Parameter**        | **Values**           | 
-   | -------------------- | -------------------- | 
-   | API Type **(1)**     | **Basic**            | 
-   | Display name **(2)** | **miyagi-api**       |
-   | Name **(3)**         | **miyagi-api**       |
-   | Web service URL **(4)** | **<inject key="OpenAIEndpoint" enableCopy="true"/>**|
-   | API URL suffix **(5)** | **miyagi** |
-
-   ![](./Media/lab3-t1-s3.png)
-
-1. Once API is created, click on **Overview** **(1)** from the left-menu and copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
-
-   ![](./Media/lab3-t1-s4.png)
-
-### Task 2: Update the Docker Image for the Recommendation service
-
-In this task, you will be updating the API Management Gateway URL as an endpoint in appsettings.json file of Recommendation Service.
-
-1. Navigate to Visual Studio Code, open the `appsettings.json` file from the path `C:\LabFiles\miyagi\services\recommendation-service\dotnet\appsettings.json`.
-
-   ![](./Media/lab3-t2-s1.png)
-
-1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** with **API Gateway URL** which you have copied in Task-1 Step-4.
-
-   ![](./Media/lab3-t2-s2.png)
-
-1. From the Explorer, navigate to `Miyagi/services/recommendation-service/dotnet/` **(1)** path. Right-click on the `dotnet` folder and select **Open in Integrated Terminal** **(2)** from the options tab to open the terminal with the required path.
-
-   ![](./Media/lab3-t2-s3.png)
-
-### Task 3: Build Docker Images for the Recommendation service
+### Task 2: Build Docker Images for the Recommendation service
 
 1. Open the **Docker** Application from the Lab VM desktop by double-clicking on it.
 
@@ -101,7 +62,7 @@ In this task, you will be updating the API Management Gateway URL as an endpoint
    ![](./Media/docker16.png)
 
 
-### Task 4: Push the Docker Image of Recommendation service to ACR
+### Task 2: Push the Docker Image of Recommendation service to ACR
 
 In this task, you'll Push miyagi-recommendation images to acr. 
 
@@ -145,7 +106,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    ![](./Media/task2-6.png)
 
-### Task 5: Create a container app for miyagi-recommendation.
+### Task 3: Create a container app for miyagi-recommendation
 
 In this task, you'll will be creating a container app for the recommendation.
 
@@ -173,7 +134,7 @@ In this task, you'll will be creating a container app for the recommendation.
    az containerapp ingress enable -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
    ```
  
-### Task 6: Update Container App Recommendation service URL for miyagi-ui 
+### Task 4: Update Container App Recommendation service URL for miyagi-ui 
 
 1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
 
@@ -198,18 +159,29 @@ In this task, you'll will be creating a container app for the recommendation.
    > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
 
     ```
-    docker login [ACRname] -u [uname] -p [password]
+    az acr login -n [ACRname] -u [uname] -p [password]
     ```
    
+1. Run the following command to re-build the docker image.
+
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+
+   ```
+   docker build . -t miyagi-ui:latest
+   ```
+
 1. Run the following command to push the image to the container registry
 
    > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
 
    ```
-   docker push [ACRname]/miyagi-recommendation:latest
+   docker push [ACRname]/miyagi-ui:latest
    ```
 
-1. Reture to **Azure Portal** in Search resources, services and docs (G+/) box at the top of the portal, enter **Container Apps**, and then select **Container Apps** under services.
+
+### Task 5: Create a container app for miyagi-ui
+
+1. Reture to **Azure Portal** in Search resources, services box at the top of the portal, enter **Container Apps**, and then select **Container Apps** under services.
 
 1. In the **Container Apps** blade, select **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -221,20 +193,4 @@ In this task, you'll will be creating a container app for the recommendation.
 
 1. You should get miyagi app running locally as depicted in the image below.
 
-   ![](./Media/cntr7.png)
 
-1. Navigate back to the **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>** page, under **Application** select **Revisions** and click on **miyagi-ui-ca-<inject key="DeploymentID" enableCopy="false"/>**, on **Revision details** window, select **Refresh**.
-
-   ![](./Media/cntr8.png)
-
-1. When **Are you sure you want to restart the revision?** prompt on **Restart revision** window clcik on **Continue**.
-
-   ![](./Media/cntr9.png)
-
-1. Once restarting is done for **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>** from left pane select **Ingress** and click on **Endpoints**.
-
-   ![](./Media/cntr6.png)
-
-1. You should get miyagi app running locally as depicted in the image below.
-
-   ![](./Media/cntr10.png)
