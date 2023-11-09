@@ -1,4 +1,4 @@
-# Build your own Copilot (Intelligent App) workshop  
+# Custom - Build Your Own Copilot Workshop  
 
 ## Workshop Overview  
 
