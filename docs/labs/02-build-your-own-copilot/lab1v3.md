@@ -57,41 +57,15 @@ In this lab, you'll setup and configure Miyagi app locally.
    | ---------------------------------------| ------------------------------------------------------|
    | AZURE_OPENAI_ENDPOINT                  | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
    | AZURE_OPENAI_API_KEY                   | **<inject key="OpenAIKey" enableCopy="true"/>**       |
-   | gpt-35-turbo                           | **<inject key="CompletionModel" enableCopy="true"/>** |
-   | text-embedding-ada-002                 | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
+   | AZURE_OPENAI_CHAT_MODEL                | **<inject key="CompletionModel" enableCopy="true"/>** |
+   | AZURE_OPENAI_EMBEDDING_MODEL           | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
    | AZURE_COGNITIVE_SEARCH_ENDPOINT        | **<inject key="SearchServiceuri" enableCopy="true"/>**|
    |AZURE_COGNITIVE_SEARCH_API_KEY          | **<inject key="SearchAPIkey" enableCopy="true"/>**    |
    
    ![](./Media/env1new.png)
 
- ### Task 2: Setup .NET secrets
 
-1. Navigate to **miyagi/services/recommendation-service/dotnet**, right click on dotnet and in cascading menu, select **Open in intergate Terminal**.
-
-1. Run the following command to set the secrets for the recommendation service. You will need to provide the values for the variables below.
-   
-     ```
-     dotnet user-secrets set "USE_OPEN_AI" "False"
-     dotnet user-secrets set "serviceType" "AzureOpenAI"
-     dotnet user-secrets set "BING_API_KEY" "<Your Bing API Key>"
-     dotnet user-secrets set "MEMORY_COLLECTION" "miyagi-embeddings"
-     dotnet user-secrets set "deploymentOrModelId" "<Your Open AI Completions model Deployment Id>"
-     dotnet user-secrets set "embeddingDeploymentOrModelId" "<Your Open AI Embeddings model Deployment Id>"
-     dotnet user-secrets set "endpoint" "<Your Open AI Endpoint>" 
-     dotnet user-secrets set "apiKey" "<Your Open AI API Key>"
-     dotnet user-secrets set "COSMOS_DB_CONNECTION_STRING" "<Cosmos DB Connection String>"
-     ```
-
-   Use the following instructions to get the values for the arguments to the dotnet user-secrets set command
-
-     -  **Bing API Key**: Replace < Your Bing API Key > with **<inject key="Bing_API_KEY" enableCopy="false"/>**.
-     -  **deploymentOrModelId**: Replace < Your Open AI Completions model Deployment Id > with **<inject key="CompletionModel" enableCopy="false"/>**.
-     -  **embeddingDeploymentOrModelId**: Replace  <Your Open AI Embeddings model Deployment Id> with **<inject key="EmbeddingModel" enableCopy="false"/>**.
-     -  **Open AI Endpoint**: Replace < Your Open AI Endpoint > with **<inject key="OpenAIEndpoint" enableCopy="false"/>**
-     -  **Open AI API Key**: Replace < Your Open AI API Key > with **<inject key="OpenAIKey" enableCopy="false"/>**
-     -  **Cosmos DB Connection String**:  Replace "< Your Cosmos DB Connection String >" with **<inject key="CosmosDBconnectinString" enableCopy="false"/>**
-
-### Task 3: Understanding the implementation of the recommendation service
+### Task 2: Understanding the implementation of the recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
@@ -107,7 +81,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     ![](./Media/output.png)
    
-### Task 4: Run recommendation service locally
+### Task 3: Run recommendation service locally
 
 1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
 
@@ -132,7 +106,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/miyagi2.png)
 
 
-### Task 5: Run miyagi frontend locally
+### Task 4: Run miyagi frontend locally
 
 1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
@@ -158,7 +132,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
                        
    ![](./Media/miyagi1.png)
    
-### Task 6: Persist embeddings in Azure Cognitive Search
+### Task 5: Persist embeddings in Azure Cognitive Search
 
 1. Navigate back to the **swagger UI** page, scoll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
@@ -196,7 +170,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
 
-### Task 7: Explore the recommendation service
+### Task 6: Explore the recommendation service
 
 1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
 
