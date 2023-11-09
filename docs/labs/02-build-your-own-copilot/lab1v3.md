@@ -1,6 +1,6 @@
-# Lab 1 - Run Miyagi Locally
+# Lab 1 - Run Miyagi App Locally
 
-In this lab, you'll setup and configure Miyagi app locally.
+In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development. A crucial step includes optimizing data retrieval efficiency by persisting embeddings in Azure Cognitive Search. The project culminates with a broader exploration of the Miyagi App and Recommendation service, emphasizing a personalized user experience. This task-based approach ensures a systematic progression through the project intricacies, facilitating a comprehensive understanding and effective implementation.
 
 ### Task 1: Setup configuration for miyagi app
 
@@ -64,8 +64,7 @@ In this lab, you'll setup and configure Miyagi app locally.
    
    ![](./Media/env1new.png)
 
-
-### Task 2: Understanding the implementation of the recommendation service
+### Task 2: Understanding the implementation of the Recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
@@ -170,7 +169,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
 
-### Task 6: Explore the recommendation service
+### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
 
 1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
 
@@ -183,5 +182,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
    ![](./Media/financial-advisor-output.png) 
+
+   > In this task, the process unfolds methodically. It begins with configuring the Miyagi App for operational readiness, followed by a detailed exploration of the Recommendation service's implementation. Practical execution involves running the Recommendation service and deploying the Miyagi frontend locally for testing. Enhancing data retrieval efficiency is a pivotal step, achieved by persisting embeddings in Azure Cognitive Search. The project concludes with a broad exploration of the Miyagi App and Recommendation service, prioritizing a personalized user experience. This systematic approach ensures a thorough understanding and effective implementation throughout the project.
 
 1. Now, click on **Next** from the lower right corner to move to the next page.
