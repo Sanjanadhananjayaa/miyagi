@@ -43,7 +43,7 @@ In this lab, you'll setup and configure Miyagi app locally.
    | bingApiKey                   | **<inject key="Bing_API_KEY" enableCopy="true"/>**           |
    | cosmosDbConnectionString     | **<inject key="CosmosDBconnectinString" enableCopy="true"/>** |
    
-   > **Note**: Leave default settings for "cosmosDbContainerName": "recommendations", "logLevel": "Trace"
+   > **Note**: FYI, the above values/Keys/Endpoints/ConnectionString of Azure Resources are directly injected to labguide. Leave default settings for "cosmosDbContainerName": "recommendations" and "logLevel": "Trace".
 
       ![](./Media/appsetting-update.png)
    
