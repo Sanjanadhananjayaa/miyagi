@@ -14,6 +14,10 @@ In this lab, you'll be building the docker images and publishing them to Azure C
 
 1. In the **Welcome to Docker Desktop** window, click on **Continue without signing in**.
 
+   ![](./Media/without-signin.png)
+
+1. In the **Tell us about the work you do** window, click on **Skip**.
+   
 1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
    ```
@@ -49,7 +53,7 @@ In this lab, you'll be building the docker images and publishing them to Azure C
    
 1. You should be able to see the application running locally
    
-   ![](./Media/docker12.png)
+   ![](./Media/docker-ui.png)
 
 ### Task 2: Build Docker Images for the Recommendation service
 
@@ -95,8 +99,7 @@ In this lab, you'll be building the docker images and publishing them to Azure C
    
 1. You should be able to see the application running locally
    
-   ![](./Media/docker16.png)
-
+   ![](./Media/docker-recommend.png.png)
 
 ### Task 3: Push the Docker Image of Recommendation service to Container registry
 
@@ -184,12 +187,9 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/container-ca-ingress.png)
 
-1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui>typescript>.env.** and replace existing code for **RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
+1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui>typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
 
    ![](./Media/cntr4.png)
-
-
-### Task 6: Create a container app for miyagi-ui
 
 1. Right-click on **ui/typescript** in cascading menu, select **Open in intergate Terminal**.
 
@@ -203,10 +203,16 @@ In this task, you'll will be creating a container app for the recommendation.
    
 1. Run the following command to re-build the docker image.
 
+   ```
+   docker build . -t miyagi-ui:latest
+   ```
+
+1. Run the following command to add the tag.
+
    > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
 
    ```
-   docker build . -t miyagi-ui:latest
+   docker tag miyagi-ui:latest [ACRname]/miyagi-ui:latest
    ```
 
 1. Run the following command to push the image to the container registry
@@ -215,6 +221,26 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ```
    docker push [ACRname]/miyagi-ui:latest
+   ```
+
+### Task 6: Create a container app for miyagi-ui
+
+In this task, you'll will be creating a container app for the ui.
+
+1. Run the following command to create **Container App**.
+
+   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**, **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+
+   ```
+   az containerapp create --name ca-miyagi-ui-[DID] --resource-group miyagi-rg-[DID] --image [ACRname]/miyagi-recommendation:latest --environment env-miyagi-[DID] --registry-server [ACRname] --registry-username [uname] --registry-password [password]
+   ```
+
+1. Run the following command to enable **Container App ingress**.
+
+   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**
+   
+   ```
+   az containerapp ingress enable -n ca-miyagi-ui-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
    ```
 
 # Lab 2.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in Azure Container Apps
