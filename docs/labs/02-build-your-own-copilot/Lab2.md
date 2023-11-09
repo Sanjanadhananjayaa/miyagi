@@ -99,7 +99,7 @@ In this lab, you'll be building the docker images and publishing them to Azure C
    
 1. You should be able to see the application running locally
    
-   ![](./Media/docker-recommend.png.png)
+   ![](./Media/docker-recommend.png)
 
 ### Task 3: Push the Docker Image of Recommendation service to Container registry
 
@@ -225,14 +225,14 @@ In this task, you'll will be creating a container app for the recommendation.
 
 ### Task 6: Create a container app for miyagi-ui
 
-In this task, you'll will be creating a container app for the ui.
+In this task, you'll will be creating a container app for the UI.
 
 1. Run the following command to create **Container App**.
 
    > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**, **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
 
    ```
-   az containerapp create --name ca-miyagi-ui-[DID] --resource-group miyagi-rg-[DID] --image [ACRname]/miyagi-recommendation:latest --environment env-miyagi-[DID] --registry-server [ACRname] --registry-username [uname] --registry-password [password]
+   az containerapp create --name ca-miyagi-ui-[DID] --resource-group miyagi-rg-[DID] --image [ACRname]/miyagi-ui:latest --environment env-miyagi-[DID] --registry-server [ACRname] --registry-username [uname] --registry-password [password]
    ```
 
 1. Run the following command to enable **Container App ingress**.
@@ -259,6 +259,9 @@ In this task, you'll will be creating a container app for the ui.
 
    ![](./Media/container-ca-ingress.png)
 
+1. You can view the **miyagi Recommendation service** website running through the Container Apps.
+
+   ![](./Media/online-output-recommendation.png)    
 
 ### Task 2: Explore Miyagi App in Azure Container Apps using Ingress Endpoint
 
@@ -266,11 +269,13 @@ In this task, you'll will be creating a container app for the ui.
 
 1. In the **Container Apps** blade, select **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   ![](./Media/cntr5.png)
+   ![](./Media/container-select-ui.png)
 
 1. In the **ca-miyagi-ui-<inject key="DeploymentID" enableCopy="false"/>**, from left navigation pane select **Ingress** under setting and click on **Endpoints** URL link.
 
-   ![](./Media/cntr6.png)
+   ![](./Media/container-ui-ingress.png)
 
-1. You should get miyagi app running locally as depicted in the image below.
+1. You can view the **miyagi app** running through the Container Apps.
+
+   ![](./Media/online-output-u.png)   
 
