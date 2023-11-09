@@ -1,6 +1,6 @@
 # Lab 3 - Expose Open AI through APIM
 
-In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Application.
+In this lab, you'll be verifying and creating APIs in the deployed API Management service to updating the Docker image for the Recommendation service. The revision of the Recommendation service from the Container App encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
 
 ### Task 1: Verify the deployed API Management service and create an API
 
@@ -53,18 +53,18 @@ In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Appl
 
 1. Run following command to ACR login.
 
-   **Note**: Please replace **<ACR_Name>** and **[Uname]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**. For [password], navigate to resource group > and select **miyagiacr<inject key="DeploymentID" enableCopy="false"/>** from the resources list. Under Settings, select **Access Keys** and select the check box for **Admin user** and then copy the password.
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
 
     ```
-    docker login <ACRname>.azurecr.io -u [uname] -p [password]
+    docker login [ACRname] -u [uname] -p [password]
     ```
 
-1. Once you are logged into ACR. Run the below command to push the update docker image of recommendation service to container registery
+1. Once you are logged into ACR. Run the below command to push the updated docker image of the recommendation service to the container registry.
 
-   **Note**: Make sure to replace **miyagiacr[DID]** with **miyagiacr<inject key="DeploymentID" enableCopy="false"/>**.
+   **Note**: Make sure to replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
 
    ```
-   docker push miyagiacr[DID].azurecr.io/miyagi-recommendation:latest
+   docker push [ACRname]/miyagi-recommendation:latest
    ```
 
    ![](./Media/lab3-t2-s5.png)
@@ -75,7 +75,7 @@ In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Appl
 
    ![](./Media/lab3-t3-s1.png)
 
-1. In the **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>** Container App pane, select **Revisions** **(1)** under Applications from left-menu and then open the **Active Revision** named **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>-SUFFIX** **(2)**.
+1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App pane, select **Revisions** **(1)** under Applications from left-menu and then open the **Active Revision** named **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
 
    ![](./Media/lab3-t3-s2.png)
 
@@ -89,7 +89,7 @@ In this lab, you'll be exposing Open AI through APIM Gateway URL for Miyagi Appl
 
    ![](./Media/lab3-t3-s4.1.png)
 
-1. Select **Ingress** **(1)** under Settings from left-menu and then scroll-down to Endponits of Conatiner App i.e, **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>-SUFFIX** **(2)**. Click on secured link to open it.
+1. Select **Ingress** **(1)** under Settings from the left menu and then scroll down to Endpoints of Container App i.e, **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>-SUFFIX** **(2)**. Click on the secured link to open it.
 
    ![](./Media/lab3-t3-s4.png)
 
