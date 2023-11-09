@@ -116,17 +116,17 @@ In this task, verification, and retrieval of specific values, including End Poin
 
       ![](./Media/image-rg-12.png)
  
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade copy the URL and paste the URL to notepad.
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade copy the **URL** and paste the URL to notepad.
    
       ![](./Media/image-rg-13.png)
 
-      >**Note**: Please record **URL** and paste in Notepad you need these values in further tasks.
+     > **Note**: Please record **URL** and paste in Notepad you need these values in further tasks.
 
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, copy **Primary admin Key** values and paste to **azureCognitiveSearchApiKey**. Paste the values in Notepad
    
       ![](./Media/image-rg-14.png)
 
-       >**Note**: Please record **Key** values in Notepad you need these values in further tasks.
+       > **Note**: Please record **Key** values in Notepad you need these values in further tasks.
 
 1. To obtain the values for "**cosmosDbUri**" and "**cosmosDbName**," please follow the steps below:
 
@@ -134,14 +134,14 @@ In this task, verification, and retrieval of specific values, including End Poin
 
      ![](./Media/image-rg-15.png)
 
-   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** copy the **URL** it in a notepad.
+   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** copy the **URL** and paste it in a notepad.
       ![](./Media/image-rg-16.png)
 
-      >**Note**: Please record **URL** in Notepad you need these values in further tasks.
+      > **Note**: Please record **URL** in Notepad you need these values in further tasks.
 
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings** select **Keys** and Copy the value of the **Cosmos DB Primary Connection String** paste it in a notepad.
       ![](./Media/cs.png)
 
-       >**Note**: Please record **Cosmos DB Primary Connection String** in Notepad you need these values in further tasks.
+       > **Note**: Please record **Cosmos DB Primary Connection String** in Notepad you need these values in further tasks.
 
 1. For "blobServiceUri", replace Your **blobServiceUri** with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
