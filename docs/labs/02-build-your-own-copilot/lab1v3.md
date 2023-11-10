@@ -68,7 +68,7 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
 
-1. In Visual Studio Code navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
+1. In the Visual Studio Code navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
 
    ![](./Media/image-rg-23.png)
 
@@ -178,6 +178,10 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
    ![](./Media/financial-advisor-output.png) 
+
+1. Navigate to the **Visual Studio Code**, and click on **dotnet** from the terminal, you can go through the logs.
+
+   ![](./Media/recommend-log.png)    
 
    > In this task, the process unfolds methodically. It begins with configuring the Miyagi App for operational readiness, followed by a detailed exploration of the Recommendation service's implementation. Practical execution involves running the Recommendation service and deploying the Miyagi frontend locally for testing. Enhancing data retrieval efficiency is a pivotal step, achieved by persisting embeddings in Azure Cognitive Search. The project concludes with a broad exploration of the Miyagi App and Recommendation service, prioritizing a personalized user experience. This systematic approach ensures a thorough understanding and effective implementation throughout the project.
 
