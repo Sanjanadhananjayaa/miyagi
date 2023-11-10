@@ -50,7 +50,7 @@
 
    ![](./Media/resources.png)
 
-### Verify and Retrieve the values of Azure Resources 
+## Verify and Retrieve the values of Azure Resources 
 
 In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key, for the designated resources.
 
@@ -75,8 +75,6 @@ In this task, verification, and retrieval of specific values, including End Poin
          ![](./Media/image-rg-03.png) 
    
       - In the **Azure AI Studio**, select **Deployments**, under the Management section.
-
-        ![](./Media/image-rg-6.png)
 
       - In the **Deployments** blade of Azure AI Studio, click on **gpt-35-turbo** model name **(1)** and Copy the **deployment name** of gpt-35-turbo model **(2)** and enter copied deployment for 
         **"deploymentOrModelId"**. Paste the values in Notepad.
