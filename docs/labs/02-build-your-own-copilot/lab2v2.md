@@ -19,7 +19,7 @@ In this lab, you'll be building the docker images and publishing them to Azure C
    | API Type **(1)**     | **Basic**            | 
    | Display name **(2)** | **miyagi-api**       |
    | Name **(3)**         | **miyagi-api**       |
-   | Web service URL **(4)** | Enter the Endpoint of OpenAI resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**  |
+   | Web service URL **(4)** | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
    | API URL suffix **(5)** | **miyagi** |
    | Click on  **(6)** | **Create** |
 
