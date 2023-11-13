@@ -142,4 +142,8 @@ In this task, verification, and retrieval of specific values, including End Poin
 
        > **Note**: Please record **Cosmos DB Primary Connection String** in Notepad you need these values in further tasks.
 
-1. For "blobServiceUri", replace Your **blobServiceUri** with https://miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>.blob.core.windows.net/
+1. To obtain the values for  "**blobServiceUri**", please follow the steps below:
+
+   - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** from resources list.
+
+1. Now, click on **Next** from the lower right corner to move to the next page.
