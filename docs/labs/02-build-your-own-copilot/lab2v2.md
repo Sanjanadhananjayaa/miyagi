@@ -235,7 +235,7 @@ In this task, you'll will be creating a container app for the recommendation.
 
 1. Run the following command to log in.
 
-   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+   > **Note**: Please replace **[ACRname]** and **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
 
     ```
     az acr login -n [ACRname] -u [uname] -p [password]
