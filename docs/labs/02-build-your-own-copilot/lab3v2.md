@@ -36,30 +36,3 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/online-output-u.png)   
 
-### Task 3: Revision of Recommendation service from Container App
-
-1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>** Container App from the resources list.
-
-   ![](./Media/lab3-t3-s1.png)
-
-1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App pane, select **Revisions** **(1)** under Applications from left-menu and then open the **Active Revision** named **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
-
-   ![](./Media/lab3-t3-s2.png)
-
-1. You will see the **Revision details** pop-up in the right-side, click on **Restart**. You will see a pop-up to restart the revision, click on **Continue** to confirm.
-
-   ![](./Media/lab3-t3-s3.png)
-
-   ![](./Media/lab3-t3-s3.1.png)
-
-1. You will see the notification once the Revision is restarted successfully.
-
-   ![](./Media/lab3-t3-s4.1.png)
-
-1. Select **Ingress** **(1)** under Settings from the left menu and then scroll down to Endpoints of Container App i.e, **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>-SUFFIX** **(2)**. Click on the secured link to open it.
-
-   ![](./Media/lab3-t3-s4.png)
-
-1. You can see the swagger page for the recommendation service as shown in the below image:
-
-   ![](./Media/lab3-t3-s5.png)
