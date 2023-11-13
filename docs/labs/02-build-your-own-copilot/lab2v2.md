@@ -194,7 +194,7 @@ In this task, you'll will be creating a container app for the recommendation.
 1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
    ```
-   docker build . -t miyagi-ui      
+   docker build --no-cache -t miyagi-ui .  
    ```
 
    > **Note**: Please wait as this command may require some time to complete.
@@ -230,6 +230,34 @@ In this task, you'll will be creating a container app for the recommendation.
    ![](./Media/docker-ui.png)
 
 ### Task 8: Push the Docker Image of Miyagi UI service to Container registry 
+
+1. Right-click on **ui/typescript** in cascading menu, select **Open in intergate Terminal**.
+
+1. Run the following command to log in.
+
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+
+    ```
+    az acr login -n [ACRname] -u [uname] -p [password]
+    ```
+   
+1. Run the following command to add the tag.
+
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+
+   ```
+   docker tag miyagi-ui:latest [ACRname]/miyagi-ui:latest
+   ```
+
+1. Run the following command to push the image to the container registry
+
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+
+   ```
+   docker push [ACRname]/miyagi-ui:latest
+   ```
+
+### Task 9: Create a Container app for Miyagi UI
 
 In this task, you'll will be creating a container app for the UI.
 
