@@ -153,3 +153,4 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/online-output-recommendation.png)    
 
+1. Now, click on **Next** from the lower right corner to move to the next page.
