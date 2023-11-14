@@ -1,4 +1,4 @@
-# Custom - Build Your Own Copilot Workshop  
+# Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI
 
 ## Workshop Overview  
 
