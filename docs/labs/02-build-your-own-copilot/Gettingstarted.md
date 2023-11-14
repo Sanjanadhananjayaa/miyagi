@@ -2,11 +2,11 @@
 
 1. After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
 
-   ![](./Media/gettingstartpage1.png)
+   ![](./Media/gettingstartedpagenew1.png)
  
 1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
 
-    ![](./Media/gettingstartpage2.png)
+    ![](./Media/gettingstartedpagenew2.png)
    
    > You will see the SUFFIX value on the **Environment Details** tab; use it wherever you see SUFFIX or DeploymentID in lab steps.
  
@@ -133,17 +133,25 @@ In this task, verification, and retrieval of specific values, including End Poin
      ![](./Media/image-rg-15.png)
 
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** copy the **URL** and paste it in a notepad.
-      ![](./Media/image-rg-16.png)
+
+     ![](./Media/image-rg-16.png)
 
       > **Note**: Please record **URL** in Notepad you need these values in further tasks.
 
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings** select **Keys** and Copy the value of the **Cosmos DB Primary Connection String** paste it in a notepad.
-      ![](./Media/cs.png)
+
+     ![](./Media/cs.png)
 
        > **Note**: Please record **Cosmos DB Primary Connection String** in Notepad you need these values in further tasks.
 
 1. To obtain the values for  "**blobServiceUri**", please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** from resources list.
+
+     ![](./Media/select-storage-account.png)
+
+   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings copy the **Blob service** **(1)** under Blob service.
+
+     ![](./Media/blob-storage-endpoint.png)
 
 1. Now, click on **Next** from the lower right corner to move to the next page.
