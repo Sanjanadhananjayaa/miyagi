@@ -53,3 +53,5 @@
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
    ![](./Media/financial-advisor-output.png)    
+
+1. Navigate back to the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App, from the left-side menu select **Log stream** under Monitoring, and you can go through the logs.
