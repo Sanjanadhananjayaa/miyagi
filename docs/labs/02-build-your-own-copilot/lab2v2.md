@@ -1,4 +1,4 @@
-# Lab 2.1: Containerizing Recommendation service to Azure Container Apps. [Read-Only]
+# Lab 2.1: Containerizing Recommendation service to Azure Container Apps.
 
 In this lab, you'll be building the docker images and publishing them to Azure Container Apps.
 
