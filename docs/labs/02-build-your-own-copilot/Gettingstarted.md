@@ -6,7 +6,7 @@
  
 1. To get the lab environment details, you can select the **Environment Details** tab. Additionally, the credentials will also be emailed to your registered email address. You can also open the Lab Guide in a separate and full window by selecting the **Split Window** from the lower right corner. Also, you can start, stop, and restart virtual machines from the **Resources** tab.
 
-    ![](./Media/gettingstartedpagenew2.png)
+    ![](./Media/gettingstartedpagenew22.png.png)
    
    > You will see the SUFFIX value on the **Environment Details** tab; use it wherever you see SUFFIX or DeploymentID in lab steps.
  
