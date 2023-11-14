@@ -1,45 +1,8 @@
-# Lab 2: Containerizing Miyagi UI and Recommendation Service to Azure Container Apps through API management service.
+# Lab 2.1: Containerizing Recommendation service to Azure Container Apps. [Read-Only]
 
 In this lab, you'll be building the docker images and publishing them to Azure Container Apps.
 
-### Task 1: Verify the deployed API Management service and create an API
-
-1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
-
-   ![](./Media/lab3-t1-s1.png)
-
-1. From the left-menu, click on **APIs** **(1)** and select **HTTP** **(2)** under Define a new API to create an HTTP API.
-
-   ![](./Media/lab3-t1-s2.png)
-
-1. Enter the following values in the Create an HTTP API pane:
-   
-   | **Parameter**        | **Values**           | 
-   | -------------------- | -------------------- | 
-   | API Type **(1)**     | **Basic**            | 
-   | Display name **(2)** | **miyagi-api**       |
-   | Name **(3)**         | **miyagi-api**       |
-   | Web service URL **(4)** | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
-   | API URL suffix **(5)** | **miyagi** |
-   | Click on  **(6)** | **Create** |
-
-   ![](./Media/lab3-t1-s3.png)
-
-1. Once API is created, click on **Overview** **(1)** from the left-menu and copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
-
-   ![](./Media/lab3-t1-s4.png)
-
-### Task 2: Update the API Gateway URL in Recommendation service 
-
-1. Navigate to Visual Studio Code, and open the `appsettings.json` file from the path `C:\LabFiles\miyagi\services\recommendation-service\dotnet\appsettings.json`.
-
-   ![](./Media/lab3-t2-s1.png)
-
-1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** with **API Gateway URL** which you have copied in Task-1 Step-4.
-
-   ![](./Media/lab3-t2-s2.png)
-
-### Task 3: Build Docker Images for the Recommendation service
+### Task 1: Build Docker Images for the Recommendation service
 
 1. Open the **Docker** Application from the Lab VM desktop by double-clicking on it.
 
@@ -99,7 +62,7 @@ In this lab, you'll be building the docker images and publishing them to Azure C
    
    ![](./Media/docker-recommend.png)
 
-### Task 4: Push the Docker Image of the Recommendation service to the Container registry
+### Task 2: Push the Docker Image of the Recommendation service to the Container registry
 
 In this task, you'll Push miyagi-recommendation images to acr. 
 
@@ -143,7 +106,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    ![](./Media/task2-6.png)
 
-### Task 5: Create a container app for miyagi-recommendation
+### Task 3: Create a Container app for recommendation-service 
 
 In this task, you'll will be creating a container app for the recommendation.
 
@@ -170,8 +133,29 @@ In this task, you'll will be creating a container app for the recommendation.
    ```
    az containerapp ingress enable -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
    ```
+
+### Task 4: Verify Recommendation Service using Swagger
+
+
+1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
+
+   ![](./Media/container-app-select.png)
+
+1. In the **Container Apps** blade, select **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**.
+
+   ![](./Media/container-ca-miyagi.png)
+
+1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** **(1)** under setting session and click on **Endpoints** **(2)** URL link.
+
+   ![](./Media/container-ca-ingress.png)
+
+1. You can view the **miyagi Recommendation service** website running through the Container Apps.
+
+   ![](./Media/online-output-recommendation.png)    
+
+## Lab 2.2: Explore and Verify the Containerized Recommendation service in Azure Container Apps using Local Miyagi UI.
  
-### Task 6: Update Container App Recommendation service URL for Miyagi UI
+### Task 1: Update Container App Recommendation service URL for Miyagi UI
 
 1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
 
@@ -189,102 +173,38 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/cntr4.png)
 
-### Task 7: Build Docker Image for the Miyagi UI. 
-  
-1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+### Task 2: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI 
 
-   ```
-   docker build --no-cache -t miyagi-ui .  
-   ```
+1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
-   > **Note**: Please wait as this command may require some time to complete.
+   ![](./Media/image-rg-25.png)
 
-1. Run the following command to get the newly created image.
-
-   ```
-   docker images
-   ```
+1. Run the following command to install the dependencies
    
-1. Navigate back to **Docker desktop**, from the left pane select **Images**.
-
-   ![](./Media/docker7.png)
-
-1. In the **Images** blade, notice **miyagi-ui(1)** image is created, select **run(2)** icon .
-
-   ![](./Media/ui.png)
-
-1. In the **Run a new container** window select the dropdown arrow.
-
-   ![](./Media/docker14-(1).png)
-
-1. In the **Run a new containe**, under **Ports** for **Host Port** enter **3000** and click on **Run**.
-
-    ![](./Media/ui-port.png)
-
-1. Click on **3000:3000** URL link
-
-   ![](./Media/ui-port-open.png)
-   
-1. You should be able to see the application running locally
-   
-   ![](./Media/docker-ui.png)
-
-### Task 8: Push the Docker Image of Miyagi UI service to Container registry 
-
-1. Right-click on **ui/typescript** in cascading menu, select **Open in intergate Terminal**.
-
-1. Run the following command to log in.
-
-   > **Note**: Please replace **[ACRname]** and **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
-
     ```
-    az acr login -n [ACRname] -u [uname] -p [password]
-    ```
-   
-1. Run the following command to add the tag.
-
-   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
-
-   ```
-   docker tag miyagi-ui:latest [ACRname]/miyagi-ui:latest
-   ```
-
-1. Run the following command to push the image to the container registry
-
-   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
-
-   ```
-   docker push [ACRname]/miyagi-ui:latest
-   ```
-
-### Task 9: Create a Container app for Miyagi UI
-
-In this task, you'll will be creating a container app for the UI.
-
-1. Right-click on **ui/typescript** in cascading menu, select **Open in intergate Terminal**.
-
-1. Run the following command to log in.
-
-   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
-
-    ```
-    az acr login -n [ACRname] -u [uname] -p [password]
+    yarn dev
     ```
 
-1. Run the following command to create **Container App**.
+   **Note**: Let the command run, meanwhile you can proceed with the next step.
 
-   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**, **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+1. Open another tab in Edge, and  browse the following
 
    ```
-   az containerapp create --name ca-miyagi-ui-[DID] --resource-group miyagi-rg-[DID] --image [ACRname]/miyagi-ui:latest --environment env-miyagi-[DID] --registry-server [ACRname] --registry-username [uname] --registry-password [password]
+   http://localhost:4001
    ```
 
-1. Run the following command to enable **Container App ingress**.
+   **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
+                       
+   ![](./Media/miyagi1.png)
 
-   > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**
-   
-   ```
-   az containerapp ingress enable -n ca-miyagi-ui-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
-   ```
+1. In the to the **recommendation service** ui page, and click on **personalize** button.
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+    ![](./Media/service-personalize.png)
+
+1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
+
+   ![](./Media/financial-advisor.png)  
+
+1. You should see the recommendations from the recommendation service in the Top Stocks widget.
+
+   ![](./Media/financial-advisor-output.png)    
