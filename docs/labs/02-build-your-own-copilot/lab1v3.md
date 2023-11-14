@@ -183,6 +183,10 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/recommend-log.png)    
 
+1. Once you view the logs, press **Ctrl + C** to stop the **swagger UI** page.
+
+1.  From the **Terminal** select **Node** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
+
    > In this task, the process unfolds methodically. It begins with configuring the Miyagi App for operational readiness, followed by a detailed exploration of the Recommendation service's implementation. Practical execution involves running the Recommendation service and deploying the Miyagi frontend locally for testing. Enhancing data retrieval efficiency is a pivotal step, achieved by persisting embeddings in Azure Cognitive Search. The project concludes with a broad exploration of the Miyagi App and Recommendation service, prioritizing a personalized user experience. This systematic approach ensures a thorough understanding and effective implementation throughout the project.
 
 1. Now, click on **Next** from the lower right corner to move to the next page.
