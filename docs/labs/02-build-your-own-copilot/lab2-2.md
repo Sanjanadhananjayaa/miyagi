@@ -16,7 +16,7 @@
 
 1. In the **Miyagi Recommendations** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
 
-   ![](./Media/docker-recommendations.png)
+   ![](./Media/continer-recommendations.png)
 
 1. Replace the provided **JSON code** below and click on **Execute**.
 
