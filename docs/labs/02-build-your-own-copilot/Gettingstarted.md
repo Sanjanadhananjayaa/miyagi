@@ -52,13 +52,13 @@
 
 ## Verify and Retrieve the values of Azure Resources 
 
-In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key, for the designated resources.
+In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key for the designated resources.
 
    - Azure OpenAI : **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** 
    - Azure Cosmos DB account : **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
    - Search Service : **acs-<inject key="DeploymentID" enableCopy="false"/>**
 
-1. To obtain the deployment model names for "**deploymentOrModelId**" and "**embeddingDeploymentOrModelId**" follow the below steps:
+1. To verify the deployment model names for "**deploymentOrModelId**" and "**embeddingDeploymentOrModelId**" follow the below steps:
    
       - In Azure Portal, click on **Resource groups** from the Navigate panel.
 
@@ -76,37 +76,29 @@ In this task, verification, and retrieval of specific values, including End Poin
    
       - In the **Azure AI Studio**, select **Deployments**, under the Management section.
 
-      - In the **Deployments** blade of Azure AI Studio, click on **gpt-35-turbo** model name **(1)** and Copy the **deployment name** of gpt-35-turbo model **(2)** and enter copied deployment for 
-        **"deploymentOrModelId"**. Paste the values in Notepad.
+      - In the **Deployments** blade of Azure AI Studio, click on **gpt-35-turbo** model name **(1)** and verify the **deployment name** of gpt-35-turbo model **(2)**.
 
           ![](./Media/image-rg-7.png)
         
           ![](./Media/image-rg-8.png)
-
-          > **Note**: Kindly record the **gpt-35-turbo model name** in Notepad you need these values in the next tasks.
       
       -  Navigate back to the **Deployment** page
 
-      - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and Copy the **deployment name** of **text-embedding-ada-002 model(2)** and enter copied deployment for 
-        **"embeddingDeploymentOrModelId"**. Paste the values in Notepad.   
-
+      - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and verify the **deployment name** of **text-embedding-ada-002 model(2)**.
+        
          ![](./Media/image-rg-10.png)
 
          ![](./Media/image-rg-11.png)
 
-        > **Note**: Kindly record the **text-embedding-ada-002 model name** in Notepad you need these values in the next tasks.
-
-1. To obtain the values for **endpoint** and **apiKey** follow the below steps:
+1. To verify the values for **endpoint** and **apiKey** follow the below steps:
 
    -  Navigate back to the tab displaying **Azure portal**. 
 
-   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Resource Management** section select **Keys and Endpoint**, copy the **KEY1** and **Endpoint** paste the values in notepad.
-
+   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint**, verify the **KEY1** and **Endpoint**.
+     
       ![](./Media/image-rg-3.png)
 
-       > **Note**: Kindly record the **KEY1** and **Endpoint** values in Notepad you need these values in the next tasks.
-
-1. To obtain the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
+1. To verify the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
    
    - Navigate back to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
@@ -114,35 +106,27 @@ In this task, verification, and retrieval of specific values, including End Poin
 
       ![](./Media/image-rg-12.png)
  
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade copy the **URL** and paste the URL to notepad.
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, verify the **URL**.
    
       ![](./Media/image-rg-13.png)
 
-     > **Note**: Please record **URL** and paste in Notepad you need these values in further tasks.
-
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, copy **Primary admin Key** values and paste to **azureCognitiveSearchApiKey**. Paste the values in Notepad
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, verify the **Primary admin Key** value.
    
       ![](./Media/image-rg-14.png)
 
-       > **Note**: Please record **Key** values in Notepad you need these values in further tasks.
-
-1. To obtain the values for "**cosmosDbUri**" and "**cosmosDbName**," please follow the steps below:
+1. To verify the values for "**cosmosDbUri**" and "**cosmosDbName**," please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **cosmos-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
      ![](./Media/image-rg-15.png)
 
-   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** copy the **URL** and paste it in a notepad.
-
+   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** verify the **URL**.
+     
      ![](./Media/image-rg-16.png)
 
-      > **Note**: Please record **URL** in Notepad you need these values in further tasks.
-
-   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings** select **Keys** and Copy the value of the **Cosmos DB Primary Connection String** paste it in a notepad.
+   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings**, select **Keys** and verify the value of the **Cosmos DB Primary Connection String**.
 
      ![](./Media/cs.png)
-
-       > **Note**: Please record **Cosmos DB Primary Connection String** in Notepad you need these values in further tasks.
 
 1. To obtain the values for  "**blobServiceUri**", please follow the steps below:
 
@@ -150,7 +134,7 @@ In this task, verification, and retrieval of specific values, including End Poin
 
      ![](./Media/select-storage-account.png)
 
-   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings copy the **Blob service** **(1)** under Blob service.
+   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings verify the **Blob service** **(1)** under Blob service.
 
      ![](./Media/blob-storage-endpoint.png)
 
