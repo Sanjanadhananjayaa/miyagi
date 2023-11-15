@@ -165,69 +165,6 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
 
-1. Navigate back to the **swagger UI** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
-
-   ![](./Media/docker-recommendations.png)
-
-1. Replace the provided **JSON code** below and click on **Execute**.
-
-   ```
-   {
-       "userInfo": {
-       "userId": "50",
-       "riskLevel": "aggressive",
-       "favoriteSubReddit": "finance",
-       "favoriteAdvisor": "Jim Cramer"
-       },
-       "portfolio": [
-           {
-               "name": "Stocks",
-               "allocation": 0.5
-           },
-           {
-               "name": "Bonds",
-               "allocation": 0.3
-            },
-            {
-                    "name": "Cash",
-                    "allocation": 0.1
-            },
-            {
-                    "name": "HomeEquity",
-                    "allocation": 0.1
-            }
-          ],
-          "stocks": [
-            {
-                    "symbol": "MSFT",
-                    "allocation": 0.3
-            },
-            {
-                    "symbol": "ACN",
-                    "allocation": 0.1
-            },
-            {
-                    "symbol": "JPM",
-                    "allocation": 0.3
-            },
-            {
-                    "symbol": "PEP",
-                    "allocation": 0.3
-            }
-       ]
-   }
-   ```
-
-      ![](./Media/recomme-parameter-body.png)   
-
-1. In the **swagger UI** page, Scroll down to the Responses session review that it has been executed successfully by checking the code status is **200**, and review the **Response body** section.
-
-   ![](./Media/docker-response.png)
-
-1. Navigate to the **Visual Studio Code**, and click on **dotnet** from the terminal, you can go through the logs.
-
-   ![](./Media/recommend-log.png) 
-
 ### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
 
 1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
