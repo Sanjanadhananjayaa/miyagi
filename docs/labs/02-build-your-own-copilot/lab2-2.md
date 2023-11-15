@@ -1,4 +1,6 @@
-## Lab 2.2: Explore and Verify the Containerized Recommendation service in Azure Container Apps using Local Miyagi UI.
+## Lab 2.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI.
+
+In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App. 
  
 ### Task 1: Verify the Recommendation service running in the Container App by Personalizing.
 
@@ -123,8 +125,12 @@
 
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
-   ![](./Media/financial-advisor-output.png)    
+   ![](./Media/financial-advisor-output.png)
 
 1. Navigate back to the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App, from the left-side menu select **Log stream** under Monitoring, and you can go through the logs.
 
       ![](./Media/continer-app-logstream.png)
+
+## Summary
+
+In this lab, you have updated the Containerized Recommendation service endpoint in Miyagi UI and verified it locally.
