@@ -12,9 +12,9 @@
 
 1. Under **AIENDPONTS(AZURE OPENAI)**, click on **sign in to Azure** **(1)**, in the pop-up  **The extension 'Semantic Kernel Tools' wants to sign in using Microsoft** click on **Allow** **(2)**.
 
- ![](./Media/Semantic-sign-in.png)
+   ![](./Media/Semantic-sign-in.png)
 
- 1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
+1. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
 
    ![](./Media/azure-account-select.png)
 
