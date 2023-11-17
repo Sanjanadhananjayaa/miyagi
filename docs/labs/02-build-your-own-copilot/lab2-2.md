@@ -1,4 +1,4 @@
-## Lab 2.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI.
+# Lab 2.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI.
 
 In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App. 
  
