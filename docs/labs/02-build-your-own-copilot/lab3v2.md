@@ -21,7 +21,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    | API Type **(1)**     | **Full**            | 
    | Display name **(2)** | **miyagi-api**       |
    | Web service URL **(3)** | **<inject key="OpenAIEndpoint" enableCopy="true"/>**   |
-   | Products **(4)** | **miyagi** |
+   | Products **(4)** | **Unlimited** |
    | Click on  **(5)** | **Create** |
 
    ![](./Media/http-api-create.png)
