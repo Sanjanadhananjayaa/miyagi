@@ -34,15 +34,17 @@
 
     ![](./Media/trustauthor.png)
 
-1. Expand **Config**, rename **appsettings.json.azure-openai-example** to **appsettings.json** replace and save the file
+1. Expand **Config**, rename **appsettings.json.azure-openai-example** to **appsettings.json** replace the values .
 
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
-   | serviceId                    |  **gpt-3.5-turbo **                                           |
+   | serviceId                    |  **gpt-35-turbo**                                           |
    | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
-    
+
+1. Comment the line 2 by adding **//** and save the file .
+
 1. Configure an Azure OpenAI endpoint by Opening a **Terminal**, Replace the value and run it
   
    | **Variables**                | **Values**                                                    |
@@ -80,4 +82,19 @@
    ```powershell
    dotnet build
    dotnet run
-   ```  
+   ```
+   
+   > **Note** : Getting a 400 (BadRequest) and error "Azure.RequestFailedException: logprobs, best_of and echo parameters are not available on gpt-35-turbo model. Please remove the parameter and try again."
+
+   > A chat completion model (gpt-35-turbo) was set in serviceId/deploymentOrModelId while the kernel was configured to use a text completion model. The type of model used by the kernel can be configured with the endpointType secret. To fix, you can either:
+
+   > change endpointType to chat-completion and Re-run step 13 
+
+   ```powershell
+   dotnet user-secrets set "endpointType" "chat-completion"
+   ```
+
+1. Configure Azure Cognitive Search
+1. From the Azure Portal, create and provision Azure Cognitive Search.
+1. Click on the Import data button at the top of the Overview blade.
+1. Follow the wizard to import the Cosmos DB hotels-sample.
