@@ -161,7 +161,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
 
-    ![](./Media/cognitive-search.png)    
+    ![](./Media/ai-search1.png)    
 
 1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
