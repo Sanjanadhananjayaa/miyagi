@@ -123,4 +123,6 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 1. Navigate to the **Visual Studio Code**, and click on **dotnet** from the terminal, you can go through the logs.
 
-   ![](./Media/recommend-log.png)    
+   ![](./Media/recommend-log.png)
+
+1. Now, click on Next from the lower right corner to move to the next page.
