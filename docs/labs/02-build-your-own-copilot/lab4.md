@@ -18,23 +18,23 @@
 
    ![](./Media/azure-account-select.png)
 
- 1. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** and follow the wizard to **create your app** with the semantic function and save it
+1. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** and follow the wizard to **create your app** with the semantic function and save it
 
-  ![](./Media/sskernal.png)
+    ![](./Media/sskernal.png)
 
- 1. Choose **C# Hello World**
+1. Choose **C# Hello World**
 
-   ![](./Media/kkernal.png)
+    ![](./Media/kkernal.png)
 
- 1. Browse the location **C:\LabFiles** and **select location for new app**
+1. Browse the location **C:\LabFiles** and **select location for new app**
 
     ![](./Media/location.png)
 
- 1. Click on **Yes,I trust authors**
+1. Click on **Yes,I trust authors**
 
     ![](./Media/trustauthor.png)
 
- 1. Expand **Config**, rename **appsettings.json.azure-openai-example** to **appsettings.json** replace and save the file
+1. Expand **Config**, rename **appsettings.json.azure-openai-example** to **appsettings.json** replace and save the file
 
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
@@ -43,7 +43,7 @@
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
     
- 1. Configure an Azure OpenAI endpoint by Opening a **Terminal**, Replace the value and run it
+1. Configure an Azure OpenAI endpoint by Opening a **Terminal**, Replace the value and run it
   
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
@@ -59,7 +59,6 @@
    dotnet user-secrets set "endpoint" "https:// ... your endpoint ... .openai.azure.com/"
    dotnet user-secrets set "apiKey" "... your Azure OpenAI key ..."
    ```
-
 1. Configure the **Semantic Kernel logging level**
 
    ```powershell
