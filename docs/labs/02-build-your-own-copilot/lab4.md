@@ -94,7 +94,29 @@
    dotnet user-secrets set "endpointType" "chat-completion"
    ```
 
-1. Configure Azure Cognitive Search
-1. From the Azure Portal, create and provision Azure Cognitive Search.
-1. Click on the Import data button at the top of the Overview blade.
-1. Follow the wizard to import the Cosmos DB hotels-sample.
+### 2. Configure Azure Cognitive Search
+
+1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
+
+    ![](./Media/cognitive-search.png)    
+
+1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+
+1. In the overiew tab of search service, click on the **Import data**.
+   
+1. From the drop-down select **Data Source** as **Sample**, select the **CosmosDB hotels-sample**, and click on **Next : Add cognitive skills(optional)**.
+   
+1. In the Add cognitive skills(optional) leave as default and click on **Skip:Customize target index**.
+
+1. In the **Customize target index**, Enter the index name as **realestate-us-sample-index** and click on **Next:Create an indexer**.
+
+1. In the **create an indexer**, change the indexer name as **realestate-us-sample-indexer** and click on **submit**.
+
+   
+1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **realestate-us-sample-index** has been created.   
+
+    ![](./Media/search-service.png)
+
+    > **Note**: Please click on the refresh button still you view the **Document Count**.
+    
+1. Click on **realestate-us-sample-index** in the search bar enter **Seattle** and click on **Search**.
