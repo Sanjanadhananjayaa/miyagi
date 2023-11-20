@@ -147,7 +147,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
                        
    ![](./Media/miyagi1.png)
    
-### Task 6: Persist embeddings in Azure Cognitive Search
+### Task 6: Persist embeddings in Azure AI Search
 
 1. Navigate back to the **swagger UI** page, scoll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
@@ -173,11 +173,11 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     ![](./Media/swaggerUI-Responses.png)
 
-1. Navigate back to the **Azure portal** tab, search and select **Cognitive Search**.
+1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
 
     ![](./Media/cognitive-search.png)    
 
-1. In **Azure AI services | Cognitive search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
