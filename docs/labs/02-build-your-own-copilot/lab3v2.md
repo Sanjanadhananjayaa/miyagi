@@ -24,7 +24,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    | Products **(4)** | **Unlimited** |
    | Click on  **(5)** | **Create** |
 
-   ![](./Media/http-api-create.png)
+![](./Media/http-api-create.png)
 
 1. Once the **HTTP API pane** is created, select **miyagi-api** **(1)** API from the list, select **Settings** **(2)**, scroll down to Subscription part **Uncheck** **(3)** the Subscription required and click on **Save** **(4)**.
 
