@@ -125,4 +125,4 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/recommend-log.png)
 
-1. Now, click on Next from the lower right corner to move to the next page.
+1. From the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page. Now, click on Next from the lower right corner to move to the next page.
