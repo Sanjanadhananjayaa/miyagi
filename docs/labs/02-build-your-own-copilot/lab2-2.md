@@ -12,11 +12,19 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
    ![](./Media/container-ca-miyagi.png)
 
-1. In the ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/> page, from the left navigation pane select **Ingress** **(1)** under setting session and click on **Endpoints** **(2)** URL link.
+1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from the left navigation pane select **Ingress** **(1)** under setting session and click on **Endpoints** **(2)** URL link.
 
    ![](./Media/container-ca-ingress.png)
 
-1. In the **Miyagi Recommendations** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
+1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
+
+    ![](./Media/logstream.png)
+   
+      ![](./Media/containerapps-logsstream.png)
+   
+  > **Note** : Please click on **Refresh** for the logs to show up .
+
+1. Navigate back to **Miyagi Recommendations** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
 
    ![](./Media/continer-recommendations.png)
 
@@ -75,11 +83,8 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
       ![](./Media/recommendations-parameter-output.png)
 
-1. Navigate to **Azure Portal**, open container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
 
-      ![](./Media/continer-app-logstream.png)
-
-1. Review the **logs**.
+1.  Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>|Log stream**, review the **logs**.
 
 ### Task 2: Update Container App Recommendation service URL for Miyagi UI
 
@@ -129,7 +134,10 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 1. Navigate back to the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App, from the left-side menu select **Log stream** under Monitoring, and you can go through the logs.
 
-      ![](./Media/continer-app-logstream.png)
+    ![](./Media/continer-app-logstream.png)
+
+   >**Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page. 
+   
 
 ## Summary
 
