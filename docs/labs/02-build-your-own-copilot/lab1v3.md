@@ -1,6 +1,6 @@
 # Lab 1 - Run Miyagi App Locally
 
-In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development. A crucial step includes optimizing data retrieval efficiency by persisting embeddings in Azure Cognitive Search. The project culminates with a broader exploration of the Miyagi App and Recommendation service, emphasizing a personalized user experience. This task-based approach ensures a systematic progression through the project intricacies, facilitating a comprehensive understanding and effective implementation.
+In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development. A crucial step includes optimizing data retrieval efficiency by persisting embeddings in Azure AI Search. The project culminates with a broader exploration of the Miyagi App and Recommendation service, emphasizing a personalized user experience. This task-based approach ensures a systematic progression through the project intricacies, facilitating a comprehensive understanding and effective implementation.
 
 ### Task 1: Setup configuration for miyagi app
 
@@ -64,6 +64,8 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
    
    ![](./Media/env1new.png)
 
+1. Once after updating the values kindly save the file by pressing **CTRL + S**.
+
 ### Task 2: Understanding the implementation of the Recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
@@ -73,8 +75,12 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/image-rg-23.png)
 
 1. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+  
+  > **Note**: Make sure **.Net Interactive** is in ready State , If not please wait for 15 to 20 seconds.
 
    ![](./Media/run.png)
+
+   > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
    
 ### Task 3: Run recommendation service locally
 
@@ -127,7 +133,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
                        
    ![](./Media/miyagi1.png)
    
-### Task 5: Persist embeddings in Azure Cognitive Search
+### Task 5: Persist embeddings in Azure AI Search
 
 1. Navigate back to the **swagger UI** page, scoll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
@@ -153,11 +159,11 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     ![](./Media/swaggerUI-Responses.png)
 
-1. Navigate back to the **Azure portal** tab, search and select **Cognitive Search**.
+1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
 
     ![](./Media/cognitive-search.png)    
 
-1. In **Azure AI services | Cognitive search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
@@ -191,4 +197,4 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 ## Summary
 
-In this Lab, you began with configuring the Miyagi App for operational readiness, followed by a detailed exploration of the Recommendation service's implementation. Practical execution involves running the Recommendation service and deploying the Miyagi frontend locally for testing. Enhancing data retrieval efficiency is a pivotal step, achieved by persisting embeddings in Azure Cognitive Search. The project concludes with a broad exploration of the Miyagi App and Recommendation service, prioritizing a personalized user experience. This systematic approach ensures a thorough understanding and effective implementation throughout the project.
+In this Lab, you began with configuring the Miyagi App for operational readiness, followed by a detailed exploration of the Recommendation service's implementation. Practical execution involves running the Recommendation service and deploying the Miyagi frontend locally for testing. Enhancing data retrieval efficiency is a pivotal step, achieved by persisting embeddings in Azure AI Search. The project concludes with a broad exploration of the Miyagi App and Recommendation service, prioritizing a personalized user experience. This systematic approach ensures a thorough understanding and effective implementation throughout the project.
