@@ -84,7 +84,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
       ![](./Media/recommendations-parameter-output.png)
 
 
-1.  Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>|Log stream**, review the **logs**.
+1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>|Log stream**, review the **logs**.
 
 ### Task 2: Update Container App Recommendation service URL for Miyagi UI
 
@@ -116,7 +116,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
    http://localhost:4001
    ```
 
-   **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
+    > **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
                        
    ![](./Media/miyagi1.png)
 
@@ -136,7 +136,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
     ![](./Media/continer-app-logstream.png)
 
-   >**Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page. 
+    > **Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page. 
    
 
 ## Summary
