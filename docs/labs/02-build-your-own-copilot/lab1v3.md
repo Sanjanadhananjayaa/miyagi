@@ -76,11 +76,11 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
   
-  > **Note**: Make sure **.Net Interactive** is in ready State , If not please wait for 15 to 20 seconds.
+   > **Note**: Make sure **.Net Interactive** is in ready State, If not please wait for 15 to 20 seconds.
 
-   ![](./Media/run.png)
+      ![](./Media/run.png)
 
-   > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
+      > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
    
 ### Task 3: Run recommendation service locally
 
