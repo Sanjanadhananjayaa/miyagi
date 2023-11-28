@@ -60,7 +60,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/lab3-t2-s1.png)
 
-1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** to **API Gateway URL** which you have copied in Task-1 Step-7.
+1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** to **API Gateway URL** which you have copied in Task-1 Step-7 and press Ctrl + S to save the file.
 
    ![](./Media/lab3-t2-s2.png)
 
@@ -86,7 +86,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    **Note**: Refresh the page continuously until you get the swagger page for the recommendation service as depicted in the image below.
 
    ![](./Media/miyagi2.png)
-   
+
 ### Task 3: Verify that the Recommendation service accesses Azure Open AI through APIM
 
 1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.

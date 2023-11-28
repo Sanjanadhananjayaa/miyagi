@@ -80,8 +80,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
       ![](./Media/run.png)
 
-      > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
-   
+   > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
+
 ### Task 3: Run recommendation service locally
 
 1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.

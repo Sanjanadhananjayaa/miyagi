@@ -28,13 +28,13 @@
 
 1. Browse the location **C:\LabFiles** and **select location for new app**
 
-    ![](./Media/location.png)
+    ![](./Media/image1-lab(4).png)
 
 1. Click on **Yes,I trust authors**
 
     ![](./Media/trustauthor.png)
 
-1. Expand **Config**, rename **appsettings.json.azure-openai-example** to **appsettings.json** replace the values .
+1. Expand **Config**, rename **appsettings.json.azure-example** to **appsettings.json** replace the values .
 
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
@@ -45,7 +45,13 @@
 
 1. Comment the line 2 by adding **//** and save the file .
 
-1. Configure an Azure OpenAI endpoint by Opening a **Terminal**, Replace the value and run it
+    ![](./Media/image3-lab4.png)
+
+1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**
+
+    ![](./Media/image2-lab4.png)
+
+1. Replace the value and run it
   
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
@@ -61,7 +67,7 @@
    dotnet user-secrets set "endpoint" "https:// ... your endpoint ... .openai.azure.com/"
    dotnet user-secrets set "apiKey" "... your Azure OpenAI key ..."
    ```
-1. Configure the **Semantic Kernel logging level**
+1. Run the following command to Configure the **Semantic Kernel logging level**
 
    ```powershell
    dotnet user-secrets set "LogLevel" 0
