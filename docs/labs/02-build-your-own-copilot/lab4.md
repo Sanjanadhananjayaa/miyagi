@@ -51,7 +51,7 @@
 
     ![](./Media/image2-lab4.png)
 
-3. Replace the value and run it
+1. Replace the value and run it
   
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
