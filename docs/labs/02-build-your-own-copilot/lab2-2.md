@@ -22,7 +22,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
    
       ![](./Media/containerapps-logsstream.png)
    
-  > **Note** : Please click on **Refresh** for the logs to show up .
+     > **Note** : Please click on **Refresh** for the logs to show up .
 
 1. Navigate back to **Miyagi Recommendations** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
 
