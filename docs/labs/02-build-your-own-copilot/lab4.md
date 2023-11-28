@@ -28,7 +28,7 @@
 
 1. Browse the location **C:\LabFiles** and **select location for new app**
 
-    ![](./Media/image(1)-lab4.png)
+    ![](./Media/image1-lab(4).png)
 
 1. Click on **Yes,I trust authors**
 
