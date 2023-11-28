@@ -28,7 +28,7 @@
 
 1. Browse the location **C:\LabFiles** and **select location for new app**
 
-    ![](./Media/image1-lab4.png)
+    ![](./Media/image(1)-lab4.png)
 
 1. Click on **Yes,I trust authors**
 
@@ -45,10 +45,11 @@
 
 1. Comment the line 2 by adding **//** and save the file .
 
-   ![](./Media/image3-lab4.png)
+    ![](./Media/image3-lab4.png)
 
 1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**
-     ![](./Media/image2-lab4.png)
+
+    ![](./Media/image2-lab4.png)
 
 3. Replace the value and run it
   
