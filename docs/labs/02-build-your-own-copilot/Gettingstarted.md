@@ -134,7 +134,7 @@ In this task, verification, and retrieval of specific values, including End Poin
 
      ![](./Media/select-storage-account.png)
 
-   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings verify the **Blob service** **(1)** under Blob service.
+   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings verify the **Blob service** **(2)** under Blob service.
 
      ![](./Media/blob-storage-endpoint.png)
 
