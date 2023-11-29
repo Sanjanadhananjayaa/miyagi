@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "Lab Scenario Preview: Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabsAI-Azure/miyagi/tree/main/docs/labs/02-build-your-own-copilot",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/Lab-Scenario-Preview/Lab.md",
+        "Order": 1
+      }
+    ]
+  }
+]
