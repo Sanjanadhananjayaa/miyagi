@@ -1,8 +1,8 @@
-# Lab 2.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI.
+# Lab 2.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
 
 In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App. 
  
-### Task 1: Verify the Recommendation service running in the Container App by Personalizing.
+### Task 1: Verify the Recommendation service running in the Container App by Personalizing
 
 1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
 
