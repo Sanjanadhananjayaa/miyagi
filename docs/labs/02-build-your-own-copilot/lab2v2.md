@@ -1,4 +1,4 @@
-# Lab 2.1: Containerizing Recommendation service to Azure Container Apps - [Read Only]
+# Lab - Containerizing Recommendation service to Azure Container Apps - [Additional]
 
 In this Lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps. Containerization has become a key strategy in modern application development and deployment, providing a consistent and reproducible environment across various stages of the software development lifecycle. Azure Container Apps, part of Microsoft's Azure cloud platform, offers a managed container service that enables developers to deploy and scale containerized applications seamlessly. 
 
