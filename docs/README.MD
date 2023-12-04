@@ -47,27 +47,27 @@ Due to the rapid pace of advancements in foundation models, we are incrementally
 ### Frontend
 Interaction with foundation models is more than chat. This sample shows a few use cases 
 
-![frontend](./assets/images/wip-ui.png)
+![frontend](./wip-ui.png)
 
 ### Architecture
 
 #### High-level logical architecture
 
-![azure](./assets/images/wip-azure.png)
+![azure](./wip-azure.png)
 
 #### Semantic Kernel Orchestration for Miyagi usecase
 
-![sk-orchestration](./assets/images/sk-memory-orchestration.png)
+![sk-orchestration](./sk-memory-orchestration.png)
 
 #### 30k foot view
 
-<p align="left"><img src="assets/images/basic-arch.png" width=30% height=30% /></p>
+<p align="left"><img src="basic-arch.png" width=30% height=30% /></p>
 
 ## Tech Stack
 
 ### Copilot Stack
 
-![copilot stack](./assets/images/copilot-stack.png)
+![copilot stack](./copilot-stack.png)
 
 ### Services and capabilities
 
