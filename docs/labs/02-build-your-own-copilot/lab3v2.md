@@ -1,4 +1,4 @@
-# Lab 3: Expose OpenAI through API Management Service
+# Lab 3: Expose OpenAI through API Management Service - [Optional]
 
 In this lab, you'll be verifying and creating APIs in the deployed API Management service to update the Docker image for the Recommendation service. The revision of the Recommendation service from the Container App encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
  
