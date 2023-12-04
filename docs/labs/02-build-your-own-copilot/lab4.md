@@ -1,5 +1,10 @@
 # Lab 1 - Getting Started with Your Own Copilot
 
+Semantic Kernel is an SDK that integrates Large Language Models (LLMs) like OpenAI, Azure OpenAI, and Hugging Face with conventional programming languages like C#, Python, and Java. Semantic Kernel achieves this by allowing you to define plugins that can be chained together in just a few lines of code.
+
+What makes Semantic Kernel _special_, however, is its ability to _automatically_ orchestrate plugins with AI. With Semantic Kernel
+[planners](https://learn.microsoft.com/en-us/semantic-kernel/ai-orchestration/planner), you can ask an LLM to generate a plan that achieves a user's unique goal. Afterwards, Semantic Kernel will execute the plan for the user.
+
 ### Task 1: Configure and Run the Semantic Kernel Sample
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
@@ -100,7 +105,7 @@
    dotnet user-secrets set "endpointType" "chat-completion"
    ```
 
-###Task 2: Configure Azure Cognitive Search
+### Task 2: Configure Azure AI Search
 
 1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
 
