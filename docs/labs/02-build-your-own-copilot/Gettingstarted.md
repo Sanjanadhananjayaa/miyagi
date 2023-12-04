@@ -50,7 +50,7 @@
 
    ![](./Media/resources.png)
 
-## Verify and Retrieve the values of Azure Resources 
+## Verify and Review the values of Azure Resources 
 
 In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key for the designated resources.
 
