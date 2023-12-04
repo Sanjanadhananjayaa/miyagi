@@ -141,4 +141,4 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 ## Summary
 
-In this lab, you have updated the Containerized Recommendation service endpoint in Miyagi UI and verified it locally.
+In this lab, you have updated the Containerized Recommendation service endpoint in Miyagi UI and verified it locally. You can follow this additional [Lab - Containerizing Recommendation service to Azure Container Apps](https://github.com/CloudLabsAI-Azure/miyagi/blob/insights/docs/labs/02-build-your-own-copilot/lab2v2.md)  to understand and try how to build Docker Images, pushing them to Container Registry and containerize it to Azure Container Apps.
