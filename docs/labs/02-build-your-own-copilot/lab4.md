@@ -1,4 +1,4 @@
-# Getting Started with Your Own Copilot
+# Lab 1 - Getting Started with Your Own Copilot
 
 ### Task 1: Configure and Run the Semantic Kernel Sample
 
@@ -100,7 +100,7 @@
    dotnet user-secrets set "endpointType" "chat-completion"
    ```
 
-### 2. Configure Azure Cognitive Search
+###Task 2: Configure Azure Cognitive Search
 
 1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
 
@@ -131,34 +131,3 @@
 1. Click on **realestate-us-sample-index** in the search bar enter **Seattle** and click on **Search**.
 
    ![](./Media/final-indexer.png)
-
-### 3. Add a Memory Store to the Starter Sample 
-
-1. Similar to [Getting Started with the RaG Notebook](https://github.com/Azure-Samples/miyagi/blob/main/sandbox/usecases/rag/dotnet/Getting-started.ipynb), create a `MemoryBuilder` instance similar to:
-
-   ```cs
-   var memoryBuilder = new MemoryBuilder();
-   memoryBuilder
-      .WithAzureTextEmbeddingGenerationService(
-         env["AZURE_OPENAI_EMBEDDING_MODEL"],
-         env["AZURE_OPENAI_ENDPOINT"],
-         env["AZURE_OPENAI_API_KEY"]
-      )
-      .WithMemoryStore(
-         new AzureCognitiveSearchMemoryStore(
-               env["AZURE_COGNITIVE_SEARCH_ENDPOINT"],
-               env["AZURE_COGNITIVE_SEARCH_API_KEY"]
-         )
-      );
-
-   var memory = memoryBuilder.Build();
-   ```
-
-2. Retrieve the `AZURE_OPENAI_EMBEDDING_MODEL` from Azure OpenAI's model deployment and update the environment variables.
-
-3. Similarly, obtain the `AZURE_COGNITIVE_SEARCH_ENDPOINT` and `AZURE_COGNITIVE_SEARCH_API_KEY` from the recently provisioned Azure Cognitive Search instance.
-
-### 4. Perform Retrieval-Augmented Generation (RaG) Using the Semantic Kernel
-
-1. Import the `TextMemoryPlugin` and update the Semantic Function (Prompt template) with `{recall $fact1}` in a manner akin to the Semantic Kernel's [C#](https://github.com/microsoft/semantic-kernel/blob/main/dotnet/notebooks/06-memory-and-embeddings.ipynb) or [Python](https://github.com/microsoft/semantic-kernel/blob/main/python/notebooks/06-memory-and-embeddings.ipynb) notebooks.
-
