@@ -28,22 +28,6 @@ This polyglot codebase relies on a multitude of microservices, implementing seve
 
 Embark on a journey to transform your applications into cutting-edge, intelligent systems with the self-guided workshop and discover the art of the possible.
 
-### Partial Implementations
-
-Due to the rapid pace of advancements in foundation models, we are incrementally implementing use cases for Miyagi in the experiments folder. So far, we have the following implemented:
-
-1. [MVP with Personalize (Synthesis via Semantic Kernel) and Chat on Azure Container Apps](https://agentmiyagi.com).
-    1. [Detailed breakdown and implementations](./services/README.md)
-    1. [Quickstart with RaG](./sandbox/usecases/rag/dotnet/Getting-started.ipynb)
-1. [Miyagi ChatGPT Plugin](./services/chatgpt-plugin/python)
-1. [Knowledge Graph memory using Langchain's entity cache](./sandbox/experiments/langchain/Memory_Usecases.ipynb)
-1. [Qdrant vector store for embeddings via Langchain](./sandbox/experiments/langchain/qdrant_miyagi_example)
-1. [MS Graph API intent invoked via Semantic Kernel's skills](./sandbox/experiments/semantic-kernel/ms-graph-chain)
-1. [Miyagi prompt engineered chat interaction](./sandbox/experiments/langchain/chat) using LangChain's PromptTemplate 
-1. [Azure OpenAI GPT-3.5 basic flow](./sandbox/experiments/az-openai)
-1. [GPT-3.5-turbo and Whisper-1 usage to transcribe audio and demonstrate few-shot example](./sandbox/experiments/gpt-3.5-turbo)
-1. [DeepSpeed Chat](https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat) MiyagiGPT (BYO Weights w/ RLHF - Reinforcement Learning from Human Feedback) - coming soon
-
 ### Frontend
 Interaction with foundation models is more than chat. This sample shows a few use cases 
 
@@ -62,8 +46,6 @@ Interaction with foundation models is more than chat. This sample shows a few us
 #### 30k foot view
 
 <p align="left"><img src="basic-arch.png" width=30% height=30% /></p>
-
-## Tech Stack
 
 ### Copilot Stack
 
@@ -84,18 +66,32 @@ Interaction with foundation models is more than chat. This sample shows a few us
 - [Service Bus](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Event Grid](https://learn.microsoft.com/en-us/azure/event-grid/overview)
 - [Logic Apps](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview)
-- [AKS](https://azure.microsoft.com/en-us/products/kubernetes-service) / [ACA](https://azure.microsoft.com/en-us/products/container-apps)
 - [Cosmos DB](https://azure.microsoft.com/en-us/products/cosmos-db/)
-- [Github Actions](https://docs.github.com/en/actions)
 - [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/)
-- [Azure DB for PostgreSQL](https://azure.microsoft.com/en-us/products/postgresql)
-- [Azure Redis Cache](https://azure.microsoft.com/en-us/products/cache)
 - [Azure Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-introduction)
-- [Apache Kafka on Azure Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/azure-event-hubs-kafka-overview)
-- [Azure HuggingFace Inference Endpoints](https://azure.microsoft.com/en-us/solutions/hugging-face-on-azure)
 - [LangChain](https://github.com/hwchase17/langchain#readme)
 - [Foundation Models from CogServices](https://azure.microsoft.com/en-us/blog/announcing-a-renaissance-in-computer-vision-ai-with-microsofts-florence-foundation-model/)
 - [Qdrant](https://qdrant.tech/solutions/)
 - [Microsoft DeepSpeed Chat](https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-Chat)
 - [Azure Web PubSub](https://azure.microsoft.com/en-us/products/web-pubsub)
 - [Azure Communication Services (ACS)](https://learn.microsoft.com/en-us/azure/communication-services/overview#common-scenarios)
+
+## Summary
+
+### Introduction to Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI
+### Getting Started with CloudLabs Environment
+### Lab 1 - Getting Started with Your Own Copilot:
+
+In this lab, you will be building your own Copilot App using Semantic Kernal Tools. Also, you will be configuring Azure AI Search.
+
+### Lab 2 - Run Miyagi App Locally
+
+In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development.
+
+### Lab 3 - Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
+
+In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App. You can follow this additional [Lab - Containerizing Recommendation service to Azure Container Apps](https://github.com/CloudLabsAI-Azure/miyagi/blob/insights/docs/labs/02-build-your-own-copilot/lab2v2.md)  to understand and try how to build Docker Images, pushing them to Container Registry and containerize it to Azure Container Apps.
+
+### Lab 4 - Expose OpenAI through API Management Service - [Optional]
+
+In this lab, you'll be verifying and creating APIs in the deployed API Management service to update the Docker image for the Recommendation service. The revision of the Recommendation service from the Container App encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
