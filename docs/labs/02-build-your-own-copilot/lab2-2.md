@@ -137,6 +137,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
     > **Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page. 
    
+1. Now, click on Next from the lower right corner to move on to the next page.
 
 ## Summary
 
