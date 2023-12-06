@@ -39,7 +39,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
     ![](./Media/trustauthor.png)
 
-1. Expand **Config**, rename **appsettings.json.azure-example** to **appsettings.json** replace the values .
+1. In ASP.NET Core, `appsettings.json` is a configuration file used to store various application settings, such as service endpoints, and other application-specific settings. Expand **Config** folder, rename **appsettings.json.azure-example** to **appsettings.json** and then replace the values given below.
 
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
@@ -49,7 +49,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
 
-1. Comment the line 2 by adding **//** and save the file.
+1. Comment the line 2 by adding **//** and save the file. Make sure the `appsettings.json` file looks as shown in the below screenshot.
 
     ![](./Media/hello-appsettings.png)
 
@@ -57,7 +57,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
     ![](./Media/image2-lab4.png)
 
-1. Run the below dotnet commands to set user-secrets. Make sure to replace the below values before running it.
+1. You can use the secret manager tool without knowing these implementation details. Here, you'll be defining multiple app secret consisting of a key and its value. The secret is associated with the project's UserSecretsId value. Run the below dotnet commands to set user-secrets. Make sure to replace the below values before running it.
   
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
