@@ -100,4 +100,4 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 ### Getting Started with Your Own Copilot
 
-In this lab, you will be building your own Copilot App using Semantic Kernal Tools. Also, you will be configuring Azure AI Search.
+In this lab, you'll be building your own Copilot App using Semantic Kernal Tools. Also, you will be configuring Azure AI Search.
