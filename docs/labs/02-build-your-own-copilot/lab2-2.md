@@ -18,11 +18,11 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
 
-    ![](./Media/logstream.png)
+   ![](./Media/logstream.png)
    
-      ![](./Media/containerapps-logsstream.png)
+   ![](./Media/containerapps-logsstream.png)
    
-     > **Note** : Please click on **Refresh** for the logs to show up .
+   >**Note** : Please click on **Refresh** for the logs to show up .
 
 1. Navigate back to **Miyagi Recommendations** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
 
@@ -77,12 +77,11 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
    }
    ```
 
-      ![](./Media/recomme-parameter-body.png)
+   ![](./Media/recomme-parameter-body.png)
 
 1. In the **Miyagi Recommendations** page, Scroll down to the Responses session review that it has been executed successfully by checking the code status is **200**, and review the **Response body** section.
 
-      ![](./Media/recommendations-parameter-output.png)
-
+   ![](./Media/recommendations-parameter-output.png)
 
 1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>|Log stream**, review the **logs**.
 
