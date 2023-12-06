@@ -35,7 +35,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
     ![](./Media/image1-lab(4).png)
 
-1. Click on **Yes,I trust authors**
+1. Click on **Yes, I trust authors**
 
     ![](./Media/trustauthor.png)
 
@@ -95,7 +95,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    dotnet run
    ```
    
-   > **Note** : Getting a 400 (BadRequest) and error "Azure.RequestFailedException: logprobs, best_of and echo parameters are not available on gpt-35-turbo model. Please remove the parameter and try again."
+   >**Note**: Getting a 400 (BadRequest) and error "Azure.RequestFailedException: logprobs, best_of and echo parameters are not available on gpt-35-turbo model. Please remove the parameter and try again."
 
    > A chat completion model (gpt-35-turbo) was set in serviceId/deploymentOrModelId while the kernel was configured to use a text completion model. The type of model used by the kernel can be configured with the endpointType secret. To fix, you can either:
 
@@ -113,19 +113,19 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   > **Note**: Please click on the refresh button still you view the **Document Count**.
+   >**Note**: Please click on the refresh button still you view the **Document Count**.
 
 1. In the overiew tab of search service, click on the **Import data**.
 
     ![](./Media/import-data1.png)    
    
-1. From the drop-down select **Data Source** as **Sample**, select the **CosmosDB hotels-sample**, and click on **Next : Add cognitive skills(optional)**.
+1. From the drop-down select **Data Source** as **Sample**, select the **CosmosDB hotels-sample**, and click on **Next: Add cognitive skills(optional)**.
 
    ![](./Media/import-data2.png)
    
 1. In **cognitive skills** leave as default and click on **Customize target index**.
 
-1. In the **Customize target index**, Enter the index name as **realestate-us-sample-index** and click on **Next:Create an indexer**.
+1. In the **Customize target index**, Enter the index name as **realestate-us-sample-index** and click on **Next: Create an indexer**.
 
    ![](./Media/import-data3.png)
 
