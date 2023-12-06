@@ -100,5 +100,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 1. This app don't support real-time information questions. For example: `What's the latest update on Azure OpenAI`
 
    ![](./Media/question3.png)
+
+1. Now, click on Next from the lower right corner to move on to the next page.
    
    
