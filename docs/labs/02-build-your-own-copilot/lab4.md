@@ -51,7 +51,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 1. Comment the line 2 by adding **//** and save the file.
 
-    ![](./Media/image3-lab4.png)
+    ![](./Media/api.png)
 
 1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**.
 
