@@ -57,7 +57,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
     ![](./Media/image2-lab4.png)
 
-1. You can use the secret manager tool without knowing these implementation details. Here, you'll be defining multiple app secret consisting of a key and its value. The secret is associated with the project's UserSecretsId value. Run the below dotnet commands to set user-secrets. Make sure to replace the below values before running it.
+1. You can use the secret manager tool without knowing these implementation details. Here, you'll be defining multiple app secrets consisting of a key and its value. The secret is associated with the project's UserSecretsId value. Run the below dotnet commands to set user-secrets. Make sure to replace the below values before running it.
   
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
