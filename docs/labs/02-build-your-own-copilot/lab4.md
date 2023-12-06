@@ -82,12 +82,18 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    dotnet build
    dotnet run
    ```
-   After running **dotnet run**, please ask few questions and check if the response is received.
-   For eg:
-   
-   Q1) Which Azure OpenAI model is used here?<br>
-   Q2) What is the endpoint doing in this app?<br>
-   Q3) What role does Semantic Kernel play?
+
+1. After running `dotnet run`, you can ask few questions and review the response. For example: `what is Copilot?`
+
+   ![](./Media/question1.png)
+
+1. Example 2: `How Semantic Kernal used in C# Hello World Sample App`
+
+   ![](./Media/question2.png)
+
+1. This app don't support real-time information questions. For example: `What's the latest update on Azure OpenAI`
+
+   ![](./Media/question3.png)
    
    >**Note**: Getting a 400 (BadRequest) and error "Azure.RequestFailedException: logprobs, best_of and echo parameters are not available on gpt-35-turbo model. Please remove the parameter and try again."
 
