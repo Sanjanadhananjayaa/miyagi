@@ -73,22 +73,6 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    dotnet user-secrets set "endpoint" "https:// ... your endpoint ... .openai.azure.com/"
    dotnet user-secrets set "apiKey" "... your Azure OpenAI key ..."
    ```
-
-1. Run the following command to Configure the **Semantic Kernel logging level**
-
-   ```powershell
-   dotnet user-secrets set "LogLevel" 0
-   ```
-
-   Log levels:
-
-   - 0 = Trace
-   - 1 = Debug
-   - 2 = Information
-   - 3 = Warning
-   - 4 = Error
-   - 5 = Critical
-   - 6 = None
      
 1. To build and run the console application from the terminal use the following commands:
 
@@ -96,6 +80,12 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    dotnet build
    dotnet run
    ```
+   After running **dotnet run**, please ask few questions and check if the response is received.
+   For eg:
+   
+   Q1) Which Azure OpenAI model is used here?<br>
+   Q2) What is the endpoint doing in this app?<br>
+   Q3) What role does Semantic Kernel play?
    
    >**Note**: Getting a 400 (BadRequest) and error "Azure.RequestFailedException: logprobs, best_of and echo parameters are not available on gpt-35-turbo model. Please remove the parameter and try again."
 
