@@ -44,7 +44,8 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
    | serviceId                    |  **gpt-35-turbo**                                           |
-   | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
+   | deploymentId                 | **<inject key="CompletionModel" enableCopy="true"/>**         |
+   | modelID                      | **<inject key="CompletionModel" enableCopy="true"/>**
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
 
@@ -60,7 +61,8 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
   
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
-   | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
+   | deploymentId                 | **<inject key="CompletionModel" enableCopy="true"/>**         |
+   | modelID                      | **<inject key="CompletionModel" enableCopy="true"/>**
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
     
