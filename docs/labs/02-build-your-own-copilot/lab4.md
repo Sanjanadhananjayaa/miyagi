@@ -35,7 +35,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
     ![](./Media/image1-lab(4).png)
 
-1. Click on **Yes, I trust authors**
+1. Click on **Yes, I trust authors**.
 
     ![](./Media/trustauthor.png)
 
@@ -48,15 +48,15 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
 
-1. Comment the line 2 by adding **//** and save the file .
+1. Comment the line 2 by adding **//** and save the file.
 
     ![](./Media/image3-lab4.png)
 
-1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**
+1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**.
 
     ![](./Media/image2-lab4.png)
 
-1. Replace the value and run it
+1. Run the below dotnet commands to set user-secrets. Make sure to replace the below values before running it.
   
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
@@ -72,6 +72,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    dotnet user-secrets set "endpoint" "https:// ... your endpoint ... .openai.azure.com/"
    dotnet user-secrets set "apiKey" "... your Azure OpenAI key ..."
    ```
+
 1. Run the following command to Configure the **Semantic Kernel logging level**
 
    ```powershell
