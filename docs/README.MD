@@ -84,7 +84,7 @@ Interaction with foundation models is more than chat. This sample shows a few us
 
 ### Lab 1 - Getting Started with Your Own Copilot
 
-In this lab, you will be building your own Copilot App using Semantic Kernal Tools. Also, you will be configuring Azure AI Search.
+In this lab, you'll be building your own Copilot App using Semantic Kernal Tools. Also, you will be configuring Azure AI Search.
 
 ### Lab 2 - Run Miyagi App Locally
 
