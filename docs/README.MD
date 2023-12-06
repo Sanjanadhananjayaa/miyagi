@@ -79,8 +79,10 @@ Interaction with foundation models is more than chat. This sample shows a few us
 ## Summary
 
 ### Introduction to Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI
+
 ### Getting Started with CloudLabs Environment
-### Lab 1 - Getting Started with Your Own Copilot:
+
+### Lab 1 - Getting Started with Your Own Copilot
 
 In this lab, you will be building your own Copilot App using Semantic Kernal Tools. Also, you will be configuring Azure AI Search.
 
