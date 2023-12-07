@@ -230,9 +230,8 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/swaggerUI-memory.png)
 
 1. Replace the code with the below code, and click on **Execution**.
-
    
-      **Note:** Please make sure that you are not clicking multiple times on the execution button as it can lead to exceeding the Azure OpenAI TPM limit and you may face an issue with 503 Service unreachable. You will need to wait for a few minutes before executing it again to fix the 503 issue.
+     >**Note:** Please make sure that you are not clicking multiple times on the execution button as it can lead to exceeding the Azure OpenAI TPM limit and you may face an issue with 503 Service unreachable. You will need to wait for a few minutes before executing it again to fix the 503 issue.
    
       ```
         {
