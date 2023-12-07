@@ -164,6 +164,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/image-rg-23.png)
 
 1. Execute the notebook cell by cell (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+      **Note:** Please make sure that you are not running all the cells together as it can lead to exceeding the Azure OpenAI TPM limit and you may face an issue with 503 Service unreachable. You will need to wait for few minutes before running the cells again to fix the 503 issue.
 
    ![](./Media/run.png)
 
@@ -230,6 +231,9 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. Replace the code with the below code, and click on **Execution**.
 
+   
+      **Note:** Please make sure that you are not clicking multiple times on the execution button as it can lead to exceeding the Azure OpenAI TPM limit and you may face an issue with 503 Service unreachable. You will need to wait for a few minutes before executing it again to fix the 503 issue.
+   
       ```
         {
         "metadata": {
