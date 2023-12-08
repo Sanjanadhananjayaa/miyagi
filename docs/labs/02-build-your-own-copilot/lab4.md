@@ -15,7 +15,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
    ![](./Media/Semantic-select.png)
 
-1. Under **AIENDPONTS(AZURE OPENAI)**, click on **sign in to Azure** **(1)**, in the pop-up  **The extension 'Semantic Kernel Tools' wants to sign in using Microsoft** click on **Allow** **(2)**.
+1. Under **AI ENDPONTS(AZURE OPENAI)**, click on **sign in to Azure** **(1)**, in the pop-up  **The extension 'Semantic Kernel Tools' wants to sign in using Microsoft** click on **Allow** **(2)**.
 
    ![](./Media/Semantic-sign-in.png)
 
@@ -41,15 +41,17 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 1. In ASP.NET Core, `appsettings.json` is a configuration file used to store various application settings, such as service endpoints, and other application-specific settings. Expand **Config** folder, rename **appsettings.json.azure-example** to **appsettings.json** and then replace the values given below.
 
+   >**Note**: In the `appsettings.json` file, you will find a environment variable named `deploymentormodelId`. Please update this `deploymentormodelId` environment variable into two separate enviroment variables as `deploymentId` and `modelId`.
+
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
    | serviceId                    |  **gpt-35-turbo**                                           |
    | deploymentId                 | **<inject key="CompletionModel" enableCopy="true"/>**         |
-   | modelID                      | **<inject key="CompletionModel" enableCopy="true"/>**
+   | modelId                      | **<inject key="CompletionModel" enableCopy="true"/>**
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
 
-1. Comment the line 2 by adding **//** and save the file. Make sure the `appsettings.json` file looks as shown in the below screenshot.
+1. Comment the line 2 by adding **//** and save the file. Make sure that your `appsettings.json` file looks as shown in the below screenshot.
 
     ![](./Media/hello-appsettings.png)
 
@@ -93,9 +95,9 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
    ![](./Media/question1.png)
 
-1. Example 2: `How Semantic Kernal used in C# Hello World Sample App`
+1. Example 2: `How Semantic Kernel used in C# Hello World Sample App`
 
-   ![](./Media/question2.png)
+   ![](./Media/question2.1.png)
 
 1. This app don't support real-time information questions. For example: `What's the latest update on Azure OpenAI`
 
