@@ -139,7 +139,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    ![](./Media/swaggerUI-memory.png)
 
-1. Replace the code with the below code, and click on **Execution**.
+1. Replace the code with the below code, and click on **Execute**.
 
      ```
      {
