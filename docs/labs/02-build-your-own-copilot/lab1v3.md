@@ -135,7 +135,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    
 ### Task 5: Persist embeddings in Azure AI Search
 
-1. Navigate back to the **swagger UI** page, scoll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
+1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
    ![](./Media/swaggerUI-memory.png)
 
