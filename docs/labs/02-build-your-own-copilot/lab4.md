@@ -72,8 +72,8 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
    ```powershell
    dotnet user-secrets set "serviceType" "AzureOpenAI"
    dotnet user-secrets set "serviceId" "gpt-35-turbo"
-   dotnet user-secrets set "deploymentId" "gpt-35-turbo"
-   dotnet user-secrets set "ModelId" "gpt-35-turbo"
+   dotnet user-secrets set "deploymentId" "your deploymentId"
+   dotnet user-secrets set "ModelId" "your ModelId"
    dotnet user-secrets set "endpoint" "https:// ... your endpoint ... .openai.azure.com/"
    dotnet user-secrets set "apiKey" "... your Azure OpenAI key ..."
    ```
