@@ -1,5 +1,7 @@
 # Lab 3: Expose OpenAI through API Management Service
 
+### Duration: 30 minutes
+
 In this lab, you'll be verifying and creating APIs in the deployed API Management service to update the Docker image for the Recommendation service. The revision of the Recommendation service from the Container App encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
  
    > **Note**: Please note that authentication is not configured for APIM. In production, you will be configuring authentication in addition to other best practices.
