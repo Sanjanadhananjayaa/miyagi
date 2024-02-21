@@ -12,15 +12,15 @@
 				"Order": 2
 			},
 			{
-				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/lab2v2.md",
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/gl-lab2v2.md",
 				"Order": 3
 			},
 			{
-				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/lab2-2.md",
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/gl-lab2-2.md",
 				"Order": 4
 			},
 			{
-				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/lab3v2.md",
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/gl-lab3v2.md",
 				"Order": 5
 			}
 		]
