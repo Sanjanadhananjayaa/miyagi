@@ -1,4 +1,4 @@
-Exercise 1: Bringing your own data with Azure AI Search
+## Exercise 1: Bringing your own data with Azure AI Search
 
 ### Task 1: Configure Azure Cognitive Search
 
