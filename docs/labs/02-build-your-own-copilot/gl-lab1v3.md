@@ -111,7 +111,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 ### Task 4: Run miyagi frontend locally
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
