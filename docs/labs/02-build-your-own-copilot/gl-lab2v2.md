@@ -40,7 +40,7 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
    ![](./Media/image-rg-18.png)
 
-1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in Integrated Terminal**.
 
 1. Run the following command to build a **Docker image**.
 
@@ -72,7 +72,7 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
    ![](./Media/docker14-(1).png)
 
-1. In the **Run a new containe**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
+1. In the **Run a new container**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
 
     ![](./Media/recommendation-port.png)
 
@@ -88,7 +88,7 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
 In this task, you'll Push miyagi-recommendation images to acr. 
 
-1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**
+1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in Integrated Terminal**
 
 1. Run the following command to log in to the **Azure portal**.
 
