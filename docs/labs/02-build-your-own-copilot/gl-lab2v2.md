@@ -20,7 +20,19 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
 1. In the **Tell us about the work you do** window, click on **Skip**.
 
-1. Navigate back to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
+
+   ![](./Media/vs.png)
+
+   >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
+
+   ![](./Media/image-rg-01.png)
+   
+1. In **Visual Studio Code** from menu bar select **File(1)>open folder(2)**.
+
+   ![](./Media/image-rg-02.png)
+
+1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
 1. Run the following command to build a **Docker image**.
 
