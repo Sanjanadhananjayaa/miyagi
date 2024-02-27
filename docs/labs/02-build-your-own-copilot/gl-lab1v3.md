@@ -196,7 +196,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 ### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
 
-1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
+1. Navigate back to the **recommendation service** ui page, and click on **Personalize** button.
 
     ![](./Media/service-personalize.png)
 
