@@ -32,6 +32,14 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
    ![](./Media/image-rg-02.png)
 
+1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi**(1) click on **Select folder(2)**
+
+   ![](./Media/image-rg(003).png)
+
+1. In **Visual Studio Code**, click on **Yes, I trust the authors** when **Do you trust the authors of the files in this folder?** window prompted.
+
+   ![](./Media/image-rg-18.png)
+
 1. Navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
 1. Run the following command to build a **Docker image**.
