@@ -99,7 +99,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/byoc-mcs-env1.png)
 
-1. Open a new terminal: by navigating  **Miyagi** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating  **Miyagi** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
