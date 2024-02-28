@@ -93,13 +93,13 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
    ![](./Media/container-ca-ingress.png)
 
-1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui>typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
+1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui\typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
 
    ![](./Media/cntr4.png)
 
 ### Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI 
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in integrated Terminal**.
+1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -121,7 +121,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
                        
    ![](./Media/miyagi1.png)
 
-1. In the to the **recommendation service** ui page, and click on **personalize** button.
+1. In the to the **recommendation service** ui page, and click on **Personalize** button.
 
     ![](./Media/service-personalize.png)
 
@@ -137,7 +137,9 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
     ![](./Media/continer-app-logstream.png)
 
-    > **Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page. 
+    > **Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page.
+
+    > **Note**: Navigate back to VS code, from the Terminal select dotnet terminal, press Ctrl + C to stop the recommendation service ui page. 
    
 
 ## Summary
