@@ -99,7 +99,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 ### Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI 
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
