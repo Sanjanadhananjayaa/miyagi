@@ -91,7 +91,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 ### Task 3: Verify that the Recommendation service accesses Azure Open AI through APIM
 
-1. Navigate to **Miyagi** **(1)** folder, open **ui/typescript** **(2)** folder and then open `.env` file. Replace the existing code for **RECCOMMENDATION_SERVICE_URL** with the below provided URL and then save the file.
+1. Navigate to **Miyagi** **(1)** folder, open **ui/typescript** **(2)** folder and then open `.env` file. Replace the existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with the below provided URL and then save the file.
 
    ```
    http://localhost:5224
