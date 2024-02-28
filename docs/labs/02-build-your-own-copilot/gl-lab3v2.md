@@ -97,7 +97,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    http://localhost:5224
    ```
 
-   ![](./Media/byoc-mcs-env1.png)
+   ![](./Media/lab2-11.png)
 
 1. Open a new terminal: by navigating  **Miyagi** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
