@@ -1,6 +1,6 @@
 # Lab 1.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
 
-### Duration: 40 minutes
+### Duration: 60 minutes
 
 In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App. 
  
