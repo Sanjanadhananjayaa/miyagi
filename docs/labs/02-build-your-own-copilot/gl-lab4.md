@@ -88,8 +88,9 @@ You will clone the Chat-Copilot GitHub Repository to the environment where you'r
    | EmbeddingModel:{DEPLOYMENT_NAME}       | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
    | PlannerModel:{DEPLOYMENT_NAME}         | **<inject key="CompletionModel" enableCopy="true"/>** |
  
+  >**Note:** If Security warning pop up windows appears, choose **Yes**
 
-  >**Note:** The code should look similar to the image:
+  >**Note:** The code should look similar to the image below:
 
   ![](./Media/code-1.png)
 
