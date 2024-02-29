@@ -1,4 +1,4 @@
-# Lab 4: Bringing your own data with Azure AI Search
+# Lab 1: Bringing your own data with Azure AI Search
 
 ### Duration: 120 minutes
 
