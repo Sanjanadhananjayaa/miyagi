@@ -1,4 +1,4 @@
-# Lab 3: Expose OpenAI through API Management Service
+# Lab 2: Expose OpenAI through API Management Service
 
 ### Duration: 30 minutes
 
