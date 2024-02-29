@@ -82,7 +82,7 @@ Interaction with foundation models is more than chat. This sample shows a few us
 
 ### Getting Started with CloudLabs Environment
 
-### Lab 2.1 - Containerizing Recommendation service to Azure Container Apps - [Read Only]
+### Lab 2.1 - Containerizing Recommendation service to Azure Container Apps
 
 In this lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps.
 
