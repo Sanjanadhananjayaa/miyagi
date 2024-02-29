@@ -137,7 +137,7 @@ In this task, verification, and retrieval of specific values, including End Poin
      ![](./Media/blob-storage-endpoint.png)
 
 1. Click "Next" from the bottom right corner to embark on your Lab journey!
-
-      ![Start Your Azure Journey](./Media/next-1.png)
+ 
+     ![Start Your Azure Journey](./Media/next-1.png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
