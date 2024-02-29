@@ -137,6 +137,8 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 1. Open the **Docker** Application from the Lab VM desktop by double-clicking on it.
 
    ![](./Media/docker1.png)
+
+    > **Note**: If docker desktop is already opened then proceed with step 4.
    
 1. In the **Docker Subscription Service Agreement** window, click **Accept**.
 
