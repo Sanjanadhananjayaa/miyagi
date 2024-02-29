@@ -82,10 +82,10 @@ Interaction with foundation models is more than chat. This sample shows a few us
 
 ### Getting Started with CloudLabs Environment
 
-### Lab 1.1 - Containerizing Recommendation service to Azure Container Apps - [Read Only]
+### Lab 2.1 - Containerizing Recommendation service to Azure Container Apps - [Read Only]
 
 In this lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps.
 
-### Lab 1.2 - Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
+### Lab 2.2 - Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
 
 In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App.
