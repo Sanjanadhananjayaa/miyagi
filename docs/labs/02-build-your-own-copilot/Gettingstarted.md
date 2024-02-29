@@ -1,7 +1,5 @@
 # Getting Started with the Lab
 
-### Duration: 30 minutes
-
 1. After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
 
    ![](./Media/gettingstartedpagenew1.png)
