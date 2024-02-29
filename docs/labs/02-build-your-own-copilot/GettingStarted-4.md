@@ -47,3 +47,9 @@
 1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
 
    ![](./Media/resources.png)
+
+1. Click "Next" from the bottom right corner to embark on your Lab journey!
+ 
+     ![Start Your Azure Journey](./Media/next-1.png)
+ 
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
