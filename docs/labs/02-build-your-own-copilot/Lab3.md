@@ -49,11 +49,11 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 4. Navigate to the **settings** tab and update the subscription key **Header Name** to **api-key** and click on **Save**.
 
-   ![](./Media/aks-05.png)
+   ![](./Media/apim5.png)
 
 5. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
 
-   ![](./Media/aks-06.png)
+   ![](./Media/apim6.png)
 
 6. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** add the **Azure OpenAI Service API** **(3)** hit Enter and click on **Create** **(4)**.
 
