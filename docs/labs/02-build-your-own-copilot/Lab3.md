@@ -19,15 +19,84 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    | API Type **(1)**     | **Basic**            | 
    | Display name **(2)** | **miyagi-api**       |
    | Name **(3)**         | **miyagi-api**       |
-   | Web service URL **(4)** | Enter the Endpoint of OpenAI resource named **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**  |
+   | Web service URL **(4)** | Enter the Endpoint of OpenAI End point  **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
    | API URL suffix **(5)** | **miyagi** |
    | Click on  **(6)** | **Create** |
 
-   ![](./Media/lab3-t1-s3.png)
+   ![](./Media/apim1.png)
 
 1. Once API is created, click on **Overview** **(1)** from the left-menu and copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
 
    ![](./Media/lab3-t1-s4.png)
+
+### Task 2: Create API Management Policy and Roles
+
+1. Inside API Management select **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)** and click on **OpenAPI** **(4)**.
+
+   ![](./Media/apim2.png)
+
+2. Once the popup shows paste the below link into the **textbox** **(1)**, select update, and then click **import** **(2)**. 
+
+   ```
+   https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/cognitiveservices/data-plane/AzureOpenAI/inference/stable/2023-05-15/inference.json
+   ```
+
+   ![](./Media/apim3.png)
+
+3. You should now see a series of APIs under the Azure OpenAI Service API.
+   
+    ![](./Media/apim4.png)
+
+4. Navigate to the **settings** tab and update the subscription key **Header Name** to **api-key** and click on **Save**.
+
+   ![](./Media/aks-05.png)
+
+5. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
+
+   ![](./Media/aks-06.png)
+
+6. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** add the **Azure OpenAI Service API** **(3)** hit Enter and click on **Create** **(4)**.
+
+   ![](./Media/apim7.png)
+
+7. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
+
+   ![](./Media/apim8.png)
+
+8. In the **Add subscription**, enter the Name as **aoai-test** **(1)**, enter Display name as **AOAI Test** **(2)**, and click on **Create** **(3)**.
+
+   ![](./Media/apim9.png)
+
+8. Once the subscription is created click the **three dots** **(1)** next to the newly created key and then click **Show\hide keys** **(2)**. Copy the **primary subscription** **(3)** key and save it for later.
+
+   ![](./Media/apim10.png)
+
+9. Navigate to your OpenAI resource in the Azure Portal and select the Identity and Access Management tab. Select Add and role-assignment and at the next screen select Cognitive Services User, click next, then the managed identity radio button, and select memebers. In the managed identity drop down you should see your API Management, select the manage identity and click select. Once finished select Review and Assign and save the role assignment.
+
+    ![](./Media/apim-role.png)
+
+10. In the Azure Portal navigate back to the API Management resource and select APIs. Select the Azure OpenAI Service API create in the earlier step and select All Operations. Copy the below policy to overwrite the **inbound** tags only.
+
+   ```
+   <inbound>
+      <base />
+      <set-header name="api-key" exists-action="delete" />
+      <authentication-managed-identity resource="https://cognitiveservices.azure.com" output-token-variable-name="msi-access-token" ignore-error="false" />
+      <set-header name="Authorization" exists-action="override">
+         <value>@("Bearer " + (string)context.Variables["msi-access-token"])</value>
+      </set-header>
+      <set-backend-service base-url="https://<<API_MANAGMENT_URL>>/openai" />
+   </inbound>
+   ```
+
+11. Next navigate to the test tab in API Management next to settings and select **Creates a completion for the chat message**. In the deployment-id filed enter **gpt-35-turbo**. Inside the api-version field enter **2023-05-15** and click send. 
+
+   ![](./Media/apim-test.png)
+
+12. Scroll down the response and you should see a 200 response and a message back from your OpenAI service.
+
+    ![](./Media/openai-response.png)
+
 
 ### Task 2: Update the Docker Image for Recommendation service
 
