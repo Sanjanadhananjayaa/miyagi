@@ -4,7 +4,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 ### Task 1: Deploy AKS Services
 
-1. Navigate back to the Visual studio code window and navigate to **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi** ,right click on **50-miyagi** in cascading menu, select **Open in integrate Terminal**.
+1. Navigate back to the Visual Studio code window and navigate to **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi**, right-click on **50-miyagi** in cascading menu, and select **Open in integrate Terminal**.
 
     ![](./Media/aks-01.png)
 
@@ -106,6 +106,8 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 1. Navigate back to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
+   ![](./Media/aks-04.png)
+
 1. Run the following command to build a **Docker image**
 
    ```
@@ -148,7 +150,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
    
    ![](./Media/docker-recommend.png)
 
-### Task 4: Push the Docker Image of Recommendation service to Container registry
+### Task 4: Push the Docker Image of Recommendation service to the Container registry
 
 In this task, you'll Push miyagi-recommendation images to acr. 
 
@@ -192,15 +194,20 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 ### Task 5: Deploy AKS Pods
 
-1. Navigate back to the Visual studio code window and navigate to **miyagi/deploy/infrastructure/kubernetes/50-miyagi** right click on 50-miyagi in cascading menu, select Open in integrate Terminal
+1. Navigate back to the Visual Studio code window and navigate to **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi** right click on **50-miyagi** in cascading menu, select **Open in integrate Terminal**.
 
-2. Open the miyagi-recommendation.yaml file and replace the &lt;ACR-NAME&gt; with you Azure container registry name created earlier.
+    ![](./Media/aks-01.png)
+
+2. Open the **miyagi-recommendation.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier.
+
    ![](./Media/service-acr.png)
 
-3. Open the miyagi-ui.yaml file and replace the &lt;ACR-NAME&gt; with you Azure container registry name created earlier.
+4. Open the **miyagi-ui.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier.
+
    ![](./Media/ui-acr.png)
 
-4. Run the following commands to deploy the application pods.
+5. Run the following commands to deploy the application pods.
+
    ```
     kubectl apply -f ./miyagi-recommendation.yaml
    ```
@@ -208,7 +215,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
     kubectl apply -f ./miyagi-ui.yaml
    ```
 
-5. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
+6. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
    ```
     kubectl get pods
    ```
@@ -220,6 +227,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 ### Task 1: Explore Recommendation service in AKS using Ingress Endpoint
 
 1. To test the API run the below command to get the service IP addresses
+
    ```
     kubectl get svc
    ```
@@ -227,7 +235,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
    ![](./Media/serviceips.png)
 
 
-2. Copy the IP address of the miyagi-recommendation-service and enter it into the browser. You should now see the swagger endpoint.
+3. Copy the IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
     ![](./Media/service-swagger.png)
    
 ### Task 2: Explore Miyagi App in Azure Container Apps using Ingress Endpoint
@@ -240,5 +248,6 @@ In this task, you'll Push miyagi-recommendation images to acr.
    ![](./Media/serviceips.png)
 
 
-2. Copy the IP address of the miyagi-ui and enter it into the browser. You should now see the Miyagi frontend.
-    ![](./Media/miyagi-ui.png)
+2. Copy the IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
+
+   ![](./Media/miyagi-ui.png)
