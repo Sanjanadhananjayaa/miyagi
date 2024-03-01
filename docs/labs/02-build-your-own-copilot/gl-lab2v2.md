@@ -1,14 +1,144 @@
 # Lab 1.1: Containerizing Recommendation service to Azure Container Apps
 
-### Duration: 30 minutes
+### Duration: 60 minutes
 
 In this Lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps. Containerization has become a key strategy in modern application development and deployment, providing a consistent and reproducible environment across various stages of the software development lifecycle. Azure Container Apps, part of Microsoft's Azure cloud platform, offers a managed container service that enables developers to deploy and scale containerized applications seamlessly.  
 
-### Task 1: Build Docker Images for the Recommendation service
+### Task 1: Setup configuration for miyagi app
+
+1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
+
+   ![](./Media/vs.png)
+
+   >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
+
+   ![](./Media/image-rg-01.png)
+   
+1. In **Visual Studio Code** from menu bar select **File(1)>open folder(2)**.
+
+   ![](./Media/image-rg-02.png)
+
+1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi**(1) click on **Select folder(2)**
+
+   ![](./Media/image-rg(003).png)
+
+1. In **Visual Studio Code**, click on **Yes, I trust the authors** when **Do you trust the authors of the files in this folder?** window prompted.
+
+   ![](./Media/image-rg-18.png) 
+   
+1. Expand **miyagi>ui** directory and verify that **.env.** file is present. 
+
+1. Expand **miyagi/services/recommendation-service/dotnet** directory and verify that **appsettings.json** file is present.
+  
+1. In the **appsettings.json** file replace the following values for the variables below.
+
+   | **Variables**                | **Values**                                                    |
+   | ---------------------------- |---------------------------------------------------------------|
+   | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
+   | embeddingDeploymentOrModelId | **<inject key="EmbeddingModel" enableCopy="true"/>**          |
+   | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
+   | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
+   | azureCognitiveSearchEndpoint | **<inject key="SearchServiceuri" enableCopy="true"/>**        |
+   | azureCognitiveSearchApiKey   | **<inject key="SearchAPIkey" enableCopy="true"/>**            |
+   | cosmosDbUri                  | **<inject key="CosmosDBuri" enableCopy="true"/>**             |
+   | blobServiceUri               | **<inject key="StorageAccounturi" enableCopy="true"/>**       |
+   | bingApiKey                   | **<inject key="Bing_API_KEY" enableCopy="true"/>**           |
+   | cosmosDbConnectionString     | **<inject key="CosmosDBconnectinString" enableCopy="true"/>** |
+   
+   > **Note**: FYI, the above values/Keys/Endpoints/ConnectionString of Azure Resources are directly injected to labguide. Leave default settings for "cosmosDbContainerName": "recommendations" and "logLevel": "Trace".
+
+      ![](./Media/appsetting-update.png)
+   
+1. Once after updating the values kindly save the file by pressing **CTRL + S**.
+
+1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
+  
+1. In the **.env** file replace the following values for the variables below.
+
+   | **Variables**                          | **Values**                                            |
+   | ---------------------------------------| ------------------------------------------------------|
+   | AZURE_OPENAI_ENDPOINT                  | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
+   | AZURE_OPENAI_CHAT_MODEL                | **<inject key="CompletionModel" enableCopy="true"/>** |
+   | AZURE_OPENAI_EMBEDDING_MODEL           | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
+   | AZURE_OPENAI_API_KEY                   | **<inject key="OpenAIKey" enableCopy="true"/>**       |
+   | AZURE_COGNITIVE_SEARCH_ENDPOINT        | **<inject key="SearchServiceuri" enableCopy="true"/>**|
+   |AZURE_COGNITIVE_SEARCH_API_KEY          | **<inject key="SearchAPIkey" enableCopy="true"/>**    |
+   
+   ![](./Media/env1new.png)
+
+1. Once after updating the values kindly save the file by pressing **CTRL + S**.
+
+### Task 2: Run miyagi frontend locally
+
+1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
+
+   ![](./Media/image-rg-25.png)
+
+1. Run the following command to install the dependencies
+   
+    ```
+    npm install --global yarn
+    yarn install
+    yarn dev
+    ```
+
+   **Note**: Let the command run, meanwhile you can proceed with the next step.
+
+1. Open another tab in Edge, and  browse the following
+
+   ```
+   http://localhost:4001
+   ```
+
+   **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
+                       
+   ![](./Media/miyagi1.png)
+   
+### Task 3: Persist embeddings in Azure AI Search
+
+1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /datasets** for expansion, and click on **Try it out**.
+
+   ![](./Media/swaggerUI-memory.png)
+
+1. Replace the code with the below code, and click on **Execute**.
+
+     ```
+     {
+        "metadata": {
+              "userId": "50",
+              "riskLevel": "aggressive",
+              "favoriteSubReddit": "finance",
+              "favoriteAdvisor": "Jim Cramer"
+            },
+          "dataSetName": "intelligent-investor"
+      }
+      ```
+
+      ![](./Media/swaggerUI-Execution.png)
+      
+1. In the **swagger UI** page, Scroll down to the **Responses** session review that it has been executed successfully by checking the code status is **200**.
+
+    ![](./Media/swaggerUI-Responses.png)
+
+1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
+
+    ![](./Media/ai-search1.png)    
+
+1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+
+1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
+
+    ![](./Media/search-service.png)
+
+    > **Note**: Please click on the refresh button still you view the **Document Count**.
+
+### Task 4: Build Docker Images for the Recommendation service
 
 1. Open the **Docker** Application from the Lab VM desktop by double-clicking on it.
 
    ![](./Media/docker1.png)
+
+    > **Note**: If docker desktop is already opened then proceed with step 4.
    
 1. In the **Docker Subscription Service Agreement** window, click **Accept**.
 
@@ -20,7 +150,7 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
 1. In the **Tell us about the work you do** window, click on **Skip**.
 
-1. Navigate back to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+1. In the VS code, navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in Integrated Terminal**.
 
 1. Run the following command to build a **Docker image**.
 
@@ -52,7 +182,7 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
    ![](./Media/docker14-(1).png)
 
-1. In the **Run a new containe**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
+1. In the **Run a new container**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
 
     ![](./Media/recommendation-port.png)
 
@@ -64,11 +194,11 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
    
    ![](./Media/docker-recommend.png)
 
-### Task 2: Push the Docker Image of the Recommendation service to the Container registry
+### Task 5: Push the Docker Image of the Recommendation service to the Container registry
 
 In this task, you'll Push miyagi-recommendation images to acr. 
 
-1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**
+1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in Integrated Terminal**
 
 1. Run the following command to log in to the **Azure portal**.
 
@@ -108,7 +238,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    ![](./Media/task2-6.png)
 
-### Task 3: Create a Container app for recommendation-service 
+### Task 6: Create a Container app for recommendation-service 
 
 In this task, you'll will be creating a container app for the recommendation.
 
@@ -136,7 +266,7 @@ In this task, you'll will be creating a container app for the recommendation.
    az containerapp ingress enable -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
    ```
 
-### Task 4: Verify Recommendation Service using Swagger
+### Task 7: Verify Recommendation Service using Swagger
 
 
 1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.

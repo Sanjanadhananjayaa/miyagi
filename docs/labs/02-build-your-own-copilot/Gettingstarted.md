@@ -1,7 +1,5 @@
 # Getting Started with the Lab
 
-### Duration: 30 minutes
-
 1. After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
 
    ![](./Media/gettingstartedpagenew1.png)
@@ -32,13 +30,11 @@
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
-   ![](./Media/img7.png)
+      ![](./Media/img7.png)
 
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
-
-    ![](./Media/img6.png)
+1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
    
 1. Now that you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
@@ -140,4 +136,8 @@ In this task, verification, and retrieval of specific values, including End Poin
 
      ![](./Media/blob-storage-endpoint.png)
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+1. Click "Next" from the bottom right corner to embark on your Lab journey!
+ 
+     ![Start Your Azure Journey](./Media/next-1.png)
+ 
+Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!

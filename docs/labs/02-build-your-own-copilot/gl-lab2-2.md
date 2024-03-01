@@ -1,6 +1,6 @@
 # Lab 1.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
 
-### Duration: 40 minutes
+### Duration: 60 minutes
 
 In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App. 
  
@@ -93,13 +93,19 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
    ![](./Media/container-ca-ingress.png)
 
-1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui>typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
+1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui\typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
 
    ![](./Media/cntr4.png)
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI 
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
    ![](./Media/image-rg-25.png)
 
@@ -121,7 +127,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
                        
    ![](./Media/miyagi1.png)
 
-1. In the to the **recommendation service** ui page, and click on **personalize** button.
+1. In the to the **recommendation service** ui page, and click on **Personalize** button.
 
     ![](./Media/service-personalize.png)
 
@@ -137,7 +143,9 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
     ![](./Media/continer-app-logstream.png)
 
-    > **Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page. 
+    > **Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page.
+
+    > **Note**: Navigate back to VS code, from the Terminal select dotnet terminal, press Ctrl + C to stop the recommendation service ui page. 
    
 
 ## Summary
