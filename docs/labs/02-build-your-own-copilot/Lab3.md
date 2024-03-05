@@ -75,11 +75,11 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 10. In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
-   ![](./Media/apinew2.png)
+    ![](./Media/apinew2.png)
    
 11. In **Add role assignment** tab in the search bar search and select **Cognitive Services User** and click on **Next**.
 
-   ![](./Media/apinew3.png)
+    ![](./Media/apinew3.png)
 
 12. then the managed identity radio button, and select members. In the managed identity drop down you should see your API Management, select the managed identity and click select. Once finished select Review and Assign and save the role assignment.
 
@@ -87,23 +87,23 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 13. In the Azure Portal navigate back to the API Management resource and select APIs. Select the Azure OpenAI Service API created in the earlier step and select All Operations. Copy the below policy to overwrite the **inbound** tags only.
 
-   ```
-   <inbound>
-      <base />
-      <set-header name="api-key" exists-action="delete" />
-      <authentication-managed-identity resource="https://cognitiveservices.azure.com" output-token-variable-name="msi-access-token" ignore-error="false" />
-      <set-header name="Authorization" exists-action="override">
-         <value>@("Bearer " + (string)context.Variables["msi-access-token"])</value>
-      </set-header>
-      <set-backend-service base-url="https://<<API_MANAGMENT_URL>>/openai" />
-   </inbound>
-   ```
+      ```
+      <inbound>
+         <base />
+         <set-header name="api-key" exists-action="delete" />
+         <authentication-managed-identity resource="https://cognitiveservices.azure.com" output-token-variable-name="msi-access-token" ignore-error="false" />
+         <set-header name="Authorization" exists-action="override">
+            <value>@("Bearer " + (string)context.Variables["msi-access-token"])</value>
+         </set-header>
+         <set-backend-service base-url="https://<<API_MANAGMENT_URL>>/openai" />
+      </inbound>
+      ```
 
-11. Next navigate to the test tab in API Management next to settings and select **Creates a completion for the chat message**. In the deployment-id filed enter **gpt-35-turbo**. Inside the api-version field enter **2023-05-15** and click send. 
+14. Next navigate to the test tab in API Management next to settings and select **Creates a completion for the chat message**. In the deployment-id filed enter **gpt-35-turbo**. Inside the api-version field enter **2023-05-15** and click send. 
 
    ![](./Media/apim-test.png)
 
-12. Scroll down the response and you should see a 200 response and a message back from your OpenAI service.
+15. Scroll down the response and you should see a 200 response and a message back from your OpenAI service.
 
     ![](./Media/openai-response.png)
 
