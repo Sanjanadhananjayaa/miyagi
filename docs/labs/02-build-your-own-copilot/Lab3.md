@@ -19,8 +19,8 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    | API Type **(1)**     | **Basic**            | 
    | Display name **(2)** | **miyagi-api**       |
    | Name **(3)**         | **miyagi-api**       |
-   | Web service URL **(4)** | Enter the Endpoint of OpenAI End point  **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
-   | API URL suffix **(5)** | **miyagi** |
+   | Web service URL **(4)** | Enter the Endpoint of Azure OpenAI Endpoint  **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
+   | API URL suffix **(5)** | **openai** |
    | Click on  **(6)** | **Create** |
 
    ![](./Media/apim1.png)
@@ -47,9 +47,9 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    
     ![](./Media/apim4.png)
 
-4. Navigate to the **settings** tab and update the subscription key **Header Name** to **api-key** and click on **Save**.
+4. Navigate to the **settings** **(1)** tab and update the subscription key **Header Name** to **api-key** **(2)** and click on **Save** **(3)**.
 
-   ![](./Media/apim5.png)
+   ![](./Media/apinew1.png)
 
 5. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
 
@@ -71,11 +71,21 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/apim10.png)
 
-9. Navigate to your OpenAI resource in the Azure Portal and select the Identity and Access Management tab. Select Add and role-assignment and at the next screen select Cognitive Services User, click next, then the managed identity radio button, and select memebers. In the managed identity drop down you should see your API Management, select the manage identity and click select. Once finished select Review and Assign and save the role assignment.
+9. Navigate to your **Azure OpenAI** in the Azure Portal, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** Azure OpenAI resources.
+
+10. In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
+
+   ![](./Media/apinew2.png)
+   
+11. In **Add role assignment** tab in the search bar search and select **Cognitive Services User** and click on **Next**.
+
+   ![](./Media/apinew3.png)
+
+12. then the managed identity radio button, and select members. In the managed identity drop down you should see your API Management, select the managed identity and click select. Once finished select Review and Assign and save the role assignment.
 
     ![](./Media/apim-role.png)
 
-10. In the Azure Portal navigate back to the API Management resource and select APIs. Select the Azure OpenAI Service API create in the earlier step and select All Operations. Copy the below policy to overwrite the **inbound** tags only.
+13. In the Azure Portal navigate back to the API Management resource and select APIs. Select the Azure OpenAI Service API created in the earlier step and select All Operations. Copy the below policy to overwrite the **inbound** tags only.
 
    ```
    <inbound>
@@ -97,18 +107,17 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/openai-response.png)
 
+### Task 2: Update the Docker Image for the Recommendation service
 
-### Task 2: Update the Docker Image for Recommendation service
-
-1. Navigate to Visual Studio Code, open the `appsettings.json` file from the path `C:\LabFiles\miyagi\services\recommendation-service\dotnet\appsettings.json`.
+1. Navigate to Visual Studio Code, and open the `appsettings.json` file from the path `C:\LabFiles\miyagi\services\recommendation-service\dotnet\appsettings.json`.
 
    ![](./Media/lab3-t2-s1.png)
 
-1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** to **API Gateway URL** which you have copied in Task-1 Step-4.
+1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** with **API Gateway URL** which you have copied in Task-1 Step-4.
 
    ![](./Media/lab3-t2-s2.png)
 
-1. From the Explorer, navigate to `Miyagi/services/recommendation-service/dotnet/` **(1)** path. Right-click on `dotnet` folder and select **Open in Integrated Terminal** **(2)** from the options tab to open terminal with required path.
+1. From the Explorer, navigate to `Miyagi/services/recommendation-service/dotnet/` **(1)** path. Right-click on `dotnet` folder and select **Open in Integrated Terminal** **(2)** from the options tab to open the terminal with the required path.
 
    ![](./Media/lab3-t2-s3.png)
 
@@ -120,7 +129,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/lab3-t2-s4.png)
 
-1. Run following command to ACR login.
+1. Run the following command to ACR login.
 
    > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
 
