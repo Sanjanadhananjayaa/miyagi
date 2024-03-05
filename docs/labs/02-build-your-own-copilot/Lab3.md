@@ -101,7 +101,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 14. Next navigate to the test tab in API Management next to settings and select **Creates a completion for the chat message**. In the deployment-id filed enter **gpt-35-turbo**. Inside the api-version field enter **2023-05-15** and click send. 
 
-   ![](./Media/apim-test.png)
+     ![](./Media/apim-test.png)
 
 15. Scroll down the response and you should see a 200 response and a message back from your OpenAI service.
 
