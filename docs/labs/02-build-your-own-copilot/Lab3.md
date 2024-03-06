@@ -157,33 +157,29 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/lab3-t2-s5.png)
 
-### Task 4: Revision of Recommendation service from Container App
+### Task 4: Revision of Recommendation service from AKS 
 
-1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App from the resources list.
+1. Navigate to the Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **env-miyagi-<inject key="DeploymentID" enableCopy="false"/>** Kubernetes service from the resources list.
 
-   ![](./Media/continer-app-new1.png)
+   ![](./Media/kub1.png)
 
-1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App pane, select **Revisions and replicas** **(1)** under Applications from left-menu and then open the **Active Revision** named **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
+1. In the Overview tab **env-miyagi-<inject key="DeploymentID" enableCopy="false"/>** Kubernetes service pane, click on **Stop** button.
 
-   ![](./Media/continer-app-new2.png)
+   ![](./Media/kub2.png)
 
-1. You will see the **Revision details** pop-up in the right-side, click on **Restart**. You will see a pop-up to restart the revision, click on **Continue** to confirm.
+   > **Note**: Wait till Kubernetes service is completely stopped. 
 
-   ![](./Media/continer-app-new3.png)
+1. In the Overview tab **env-miyagi-<inject key="DeploymentID" enableCopy="false"/>** Kubernetes service pane, click on **Start** button.
 
-   ![](./Media/lab3-t3-s3.1.png)
+   ![](./Media/kub3.png)
 
-1. You will see the notification once the Revision is restarted successfully.
+1. Once the Kubernetes service starts, select **Services and ingresses** under Kubernetes resources and click on **Extension IP** of the miyagi-recommendation-service.
 
-   ![](./Media/lab3-t3-s4.1.png)
+   ![](./Media/kub4.png)
 
-1. Select **Ingress** **(1)** under Settings from the left menu and then scroll down to Endpoints of Container App i.e, **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>-SUFFIX** **(2)**. Click on the secured link to open it.
+1. This will navigate a new tab with **miyagi-recommendation-service** web page.
 
-   ![](./Media/continer-app-new5.png)
-
-1. You can see the swagger page for the recommendation service as shown in the below image:
-
-   ![](./Media/lab3-t3-s5.png)
+   ![](./Media/kub5.png)
 
 ### Task 5: Setup Event Hub Logging and Validate Input
 
@@ -289,9 +285,16 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    </outbound>
    ```
 
-17. Navigate to your Event Hub, select **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event Hubs, from the left menu select to **Event Hub** name. Next click process data and find the Process your Event Hub data using Stream Analytics Query Language and click start
+17. Navigate to your Event Hub, select **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event Hubs.
 
    ![](./Media/eventhub-processdata.png)
 
-18. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query you should see log information for the tokens used.
-    ![](./Media/event-hub-data.png)
+18. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
+
+   ![](./Media/namespace4.png)
+
+19. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hubs Instance, from the left menu select **Process data** **(1)**, scroll down till you find **Process your Event Hub data using Stream Analytics Query Language** and click **Start** **(2)**.
+
+   ![](./Media/bicepfile4.png)
+
+20. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query, you should see log information for the tokens used.
