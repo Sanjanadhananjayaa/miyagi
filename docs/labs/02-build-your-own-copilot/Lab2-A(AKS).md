@@ -168,7 +168,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 1. Run the following command to log in to an **Azure Container Registry (ACR)** using the Azure CLI.
 
-   > **Note**: Please replace **[ACRname]** and **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+   > **Note**: Please replace **[ACRname]** **<inject key="AcrUsername" enableCopy="true"/>**.
    
    ```
    az acr login -n [ACRname] 
@@ -176,7 +176,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
     
 1. Run the following command to add the tag.
 
-   > **Note**: To get the **[ACRname]** navigate to the Container registry created in the previous lab, go to Overview, and copy the **Login server**. The value should be in the format **[ACRname].azurecr.io**.
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
 
    ```
    docker tag miyagi-recommendation:latest [ACRname]/miyagi-recommendation:latest
@@ -192,9 +192,27 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    ![](./Media/task2-6.png)
 
+1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+
+1. Run the following command to add the tag.
+
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+
+   ```
+   docker tag miyagi-ui:latest [ACRname]/miyagi-ui:latest
+   ```
+
+1. Run the following command to push the image to the container registry.
+
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**.
+
+   ```
+   docker push [ACRname]/miyagi-ui:latest
+   ```
+
 ### Task 5: Deploy AKS Pods
 
-1. Navigate back to the Visual Studio code window and navigate to **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi** right click on **50-miyagi** in cascading menu, select **Open in integrate Terminal**.
+1. Navigate back to the Visual Studio code window and navigate to **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi** click on **50-miyagi** in the cascading menu, and select **Open in integrate Terminal**.
 
     ![](./Media/aks-01.png)
 
