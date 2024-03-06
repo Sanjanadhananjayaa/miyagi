@@ -187,15 +187,33 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 ### Task 5: Setup Event Hub Logging and Validate Input
 
-1. Navigate to your event hub in the Azure Portal and select the Identity and Access Management tab. Select Add and role-assignment and at the next screen select Azure Event Hubs Data Sender, click next, then the managed identity radio button, and select memebers. In the managed identity drop down you should see your API Management, select the manage identity and click select. Once finished select Review and Assign and save the role assignment.
-    ![](./Media/apim-role.png)
+1. In the Azure portal Search and select **Event hub**, select the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**.
 
-2. Navigate to your event hub in the Azure Portal and select event hubs, then select your event hub name. In the left menu select share access policies and create a new policy that can send data.
-    ![](./Media/eh-access-policy.png)
+2. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hub Namespace tab, from the left menu select **Access control (IAM)** **(1)** , click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
-3. Next navigate to the shared access policy and copy the Connection string–primary key to your clipboard.
+   ![](./Media/namespace1.png)
 
-4. Navigate to the `miyagi` root folder in your file explorer and create a new file called aoai-logger.bicep. Paste the content into that file and update the <<API_MANAGEMENT_NAME>> name and the <<EVENT_HUB_CONNECTION_STRING>> copied from the step above.
+3. In the **Role** tab of the Add role assignment tab in the search bar search and select **Azure Event Hubs Data Sender** and click on **Next**.
+
+   ![](./Media/namespace2.png)
+
+4. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
+
+   ![](./Media/apim-role.png)
+
+5. In the **Review + assign** tab click on **Review + assign**.
+
+   ![](./Media/namespace3.png)
+
+6. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
+
+   ![](./Media/namespace4.png)
+
+7. In the **Event Hubs Instance** of **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**, from the left menu select **Shared access policies** **(1)** under Settings, click on **apimLoggerAccessPolicy** **(2)** and copy the **Connection string–primary key** **(3)** paste it in a notepad.
+
+   ![](./Media/namespace5.png)
+
+8. Open the **notepad** from the jumpvm and copy and paste the below code, update the **<<API_MANAGEMENT_NAME>>** with **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** name and the <<EVENT_HUB_CONNECTION_STRING>> copied from the step above.
 
    ```
    resource existingApiManagement 'Microsoft.ApiManagement/service@2023-03-01-preview' existing = {
@@ -216,12 +234,44 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
     }
    ```
 
-6.  Navigate to the `miyagi` root folder in your terminal and execute the below command to run the bicep file.
+   ![](./Media/bicepfile1.png)
+
+9. In the menu bar notepad select **Files** and click on **Save As**.
+
+10. In the **Save As** navigate to the `C:\LabFiles\miyagi` **(1)** path, enter the file name **aoai-logger.bicep** **(2)**, save as type to **All Files** **(3)** and click on **Save** **(4)**.
+
+   ![](./Media/bicepfile2.png)
+
+11. From the jumpvm open the PowerShell terminal and run the following command to log in to the **Azure portal**.
+
+    ```
+    az login
+    ```
+
+12. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
+
+   ![](./Media/azure-account-select.png)
+
+13. Run the following command to change the directory to `miyagi` root folder in the terminal and run the bicep file.
+
+   > **Note**: Replace <<RESOURCE_GROUP_NAME>> with **<inject key="rgname" enableCopy="true"/>**.
+   
    ```
-    az deployment group create --resource-group <<RESOURCE_GROUP_NAME>> --template-file .\aoai-logger.bicep
+   cd C:\LabFiles\miyagi
+   az deployment group create --resource-group <<RESOURCE_GROUP_NAME>> --template-file .\aoai-logger.bicep
    ```
     
-6. In the Azure Portal navigate back to the API Management resource and select APIs. Select the Azure OpenAI Service API create in the earlier step and select All Operations. Copy the below policy to overwrite the **outbound** tags only.
+14. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
+
+   ![](./Media/lab3-t1-s1.png)
+
+
+15. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service for the left menu, click on **APIs** **(1)** and  Select the **Azure OpenAI Service API** **(2)** created in the earlier step, select **All Operations** **(3)**.
+
+   ![](./Media/bicepfile3.png)
+
+16. In the code editor copy the below policy to overwrite the **outbound** tags only and click on **Save**.
+
    ```
    <outbound>
       <base />
@@ -239,8 +289,9 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    </outbound>
    ```
 
-7. Inside the Azure portal navigate to your Event Hub, select Event Hubs, and click on your event hub name. Next click process data and find the Process your Event Hub data using Stream Analytics Query Language and click start
-    ![](./Media/eventhub-processdata.png)
+17. Navigate to your Event Hub, select **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event Hubs, from the left menu select to **Event Hub** name. Next click process data and find the Process your Event Hub data using Stream Analytics Query Language and click start
 
-8. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query you should see log information for the tokens used.
+   ![](./Media/eventhub-processdata.png)
+
+18. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query you should see log information for the tokens used.
     ![](./Media/event-hub-data.png)
