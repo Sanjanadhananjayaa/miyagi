@@ -25,9 +25,9 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/apim1.png)
 
-1. Once API is created, click on **Overview** **(1)** from the left-menu and copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
+1. Once API is created, click on **Overview** **(1)** from the left-menu copy the **Developer portal URL** and **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
 
-   ![](./Media/lab3-t1-s4.png)
+   ![](./Media/api-key.png)
 
 ### Task 2: Create API Management Policy and Roles
 
@@ -81,11 +81,19 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/apinew3.png)
 
-12. then the managed identity radio button, and select members. In the managed identity drop down you should see your API Management, select the managed identity and click select. Once finished select Review and Assign and save the role assignment.
+12. In the **Members** tab, select **Managed identity** **(1)**, click on **+ Select Members** **(2)** in the select managed identity pop-up under Managed identity the drop-down select **API Management service** **(3)**, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(4)**, then click-on **Select** **(5)** and click on **Next** **(6)**.
 
     ![](./Media/apim-role.png)
 
-13. In the Azure Portal navigate back to the API Management resource and select APIs. Select the Azure OpenAI Service API created in the earlier step and select All Operations. Copy the below policy to overwrite the **inbound** tags only.
+13. In the **Review + assign** tab click on **Review + assign**.
+
+    ![](./Media/apim-role1.png)
+
+14. In the **API Management resource**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor** **(4)**.
+
+    ![](./Media/api-api1.png)
+
+15. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **<<API_MANAGMENT_URL>>** with **Developer portal URL** **(2)** of API manager which you copen in task 1 step 4 and click on **Save** **(3)**.
 
       ```
       <inbound>
@@ -99,23 +107,25 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
       </inbound>
       ```
 
-14. Next navigate to the test tab in API Management next to settings and select **Creates a completion for the chat message**. In the deployment-id filed enter **gpt-35-turbo**. Inside the api-version field enter **2023-05-15** and click send. 
+    ![](./Media/api-inbound.png)
+
+16. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter **gpt-35-turbo** **(3)** in the deployment-id field, enter **2023-05-15** **(4)** in the API version field, and click **Send** **(5)**. 
 
      ![](./Media/apim-test.png)
 
-15. Scroll down the response and you should see a 200 response and a message back from your OpenAI service.
+17. Scroll down the response and you should see a 200 response and a message back from your OpenAI service.
 
     ![](./Media/openai-response.png)
 
-### Task 2: Update the Docker Image for the Recommendation service
+### Task 3: Update the Docker Image for the Recommendation service
 
-1. Navigate to Visual Studio Code, and open the `appsettings.json` file from the path `C:\LabFiles\miyagi\services\recommendation-service\dotnet\appsettings.json`.
+1. Navigate to Visual Studio Code, and open the `appsettings.json` file from the path `miyagi/services/recommendation-service/dotnet`.
 
    ![](./Media/lab3-t2-s1.png)
 
-1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** with **API Gateway URL** which you have copied in Task-1 Step-4.
+1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** with **API Gateway URL** which you have copied in Task-1 Step-4, **apiKey** value with the **subscription key** that was copied in Task-2 Step-9 and Save the file.
 
-   ![](./Media/lab3-t2-s2.png)
+   ![](./Media/api-update.png)
 
 1. From the Explorer, navigate to `Miyagi/services/recommendation-service/dotnet/` **(1)** path. Right-click on `dotnet` folder and select **Open in Integrated Terminal** **(2)** from the options tab to open the terminal with the required path.
 
@@ -124,7 +134,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 1. Now, you need to re-build the docker image for recommendation service by running the below docker command. Make to update the docker image name which was created earlier for recommendation service with the same name.
 
    ```
-   docker build . -t [Docker_Image_Name_Recommendation_Service]
+   docker build . -t miyagi-recommendation
    ```
 
    ![](./Media/lab3-t2-s4.png)
@@ -147,19 +157,19 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/lab3-t2-s5.png)
 
-### Task 3: Revision of Recommendation service from Container App
+### Task 4: Revision of Recommendation service from Container App
 
-1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-rec-ca-<inject key="DeploymentID" enableCopy="false"/>** Container App from the resources list.
+1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App from the resources list.
 
-   ![](./Media/lab3-t3-s1.png)
+   ![](./Media/continer-app-new1.png)
 
-1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App pane, select **Revisions** **(1)** under Applications from left-menu and then open the **Active Revision** named **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
+1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** Container App pane, select **Revisions and replicas** **(1)** under Applications from left-menu and then open the **Active Revision** named **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** **(2)**.
 
-   ![](./Media/lab3-t3-s2.png)
+   ![](./Media/continer-app-new2.png)
 
 1. You will see the **Revision details** pop-up in the right-side, click on **Restart**. You will see a pop-up to restart the revision, click on **Continue** to confirm.
 
-   ![](./Media/lab3-t3-s3.png)
+   ![](./Media/continer-app-new3.png)
 
    ![](./Media/lab3-t3-s3.1.png)
 
@@ -169,8 +179,68 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 1. Select **Ingress** **(1)** under Settings from the left menu and then scroll down to Endpoints of Container App i.e, **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>-SUFFIX** **(2)**. Click on the secured link to open it.
 
-   ![](./Media/lab3-t3-s4.png)
+   ![](./Media/continer-app-new5.png)
 
 1. You can see the swagger page for the recommendation service as shown in the below image:
 
    ![](./Media/lab3-t3-s5.png)
+
+### Task 5: Setup Event Hub Logging and Validate Input
+
+1. Navigate to your event hub in the Azure Portal and select the Identity and Access Management tab. Select Add and role-assignment and at the next screen select Azure Event Hubs Data Sender, click next, then the managed identity radio button, and select memebers. In the managed identity drop down you should see your API Management, select the manage identity and click select. Once finished select Review and Assign and save the role assignment.
+    ![](./Media/apim-role.png)
+
+2. Navigate to your event hub in the Azure Portal and select event hubs, then select your event hub name. In the left menu select share access policies and create a new policy that can send data.
+    ![](./Media/eh-access-policy.png)
+
+3. Next navigate to the shared access policy and copy the Connection string–primary key to your clipboard.
+
+4. Navigate to the `miyagi` root folder in your file explorer and create a new file called aoai-logger.bicep. Paste the content into that file and update the <<API_MANAGEMENT_NAME>> name and the <<EVENT_HUB_CONNECTION_STRING>> copied from the step above.
+
+   ```
+   resource existingApiManagement 'Microsoft.ApiManagement/service@2023-03-01-preview' existing = {
+      name: '<<API_MANAGEMENT_NAME>>'
+    }
+    
+    resource ehLoggerWithConnectionString 'Microsoft.ApiManagement/service/loggers@2023-05-01-preview' = {
+      name: 'AOAILogger'
+      parent: existingApiManagement
+      properties: {
+        loggerType: 'azureEventHub'
+        description: 'Event hub logger with connection string'
+        credentials: {
+          connectionString: '<<EVENT_HUB_CONNECTION_STRING>>'
+          name: 'ApimEventHub'
+        }
+      }
+    }
+   ```
+
+6.  Navigate to the `miyagi` root folder in your terminal and execute the below command to run the bicep file.
+   ```
+    az deployment group create --resource-group <<RESOURCE_GROUP_NAME>> --template-file .\aoai-logger.bicep
+   ```
+    
+6. In the Azure Portal navigate back to the API Management resource and select APIs. Select the Azure OpenAI Service API create in the earlier step and select All Operations. Copy the below policy to overwrite the **outbound** tags only.
+   ```
+   <outbound>
+      <base />
+      <choose>
+         <when condition="@(!context.Variables.GetValueOrDefault<bool>("isStream"))">
+               <log-to-eventhub logger-id="AOAILogger" partition-id="0">@{
+               var responseBody = context.Response.Body?.As<JObject>(true);
+               return new JObject(
+                  new JProperty("prompt_tokens", responseBody["usage"]["prompt_tokens"].ToString()),
+                  new JProperty("total_tokens", responseBody["usage"]["total_tokens"].ToString())
+               ).ToString();
+         }</log-to-eventhub>
+         </when>
+      </choose>
+   </outbound>
+   ```
+
+7. Inside the Azure portal navigate to your Event Hub, select Event Hubs, and click on your event hub name. Next click process data and find the Process your Event Hub data using Stream Analytics Query Language and click start
+    ![](./Media/eventhub-processdata.png)
+
+8. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query you should see log information for the tokens used.
+    ![](./Media/event-hub-data.png)
