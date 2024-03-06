@@ -10,7 +10,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 2. Run the following command to log in to the Azure portal.
 
-   > **Note**: replace [ClusterName] with **<inject key="aksname" enableCopy="true"/>** and [ResourceGroupName] with **<inject key="aksname" enableCopy="rgname"/>**
+   > **Note**: replace [ClusterName] with **<inject key="aksname" enableCopy="true"/>** and [ResourceGroupName] with **<inject key="rgname" enableCopy="true"/>**
 
    ```
    az aks get-credentials -n [ClusterName] -g [ResourceGroupName]
