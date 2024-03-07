@@ -296,11 +296,11 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 17. Navigate to your Event Hub, select **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event Hubs.
 
-   ![](./Media/eventhub-processdata.png)
+   ![](./Media/api-product9.png)
 
 18. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
 
-   ![](./Media/api-product9.png)
+    ![](./Media/namespace4.png)
 
 19. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hubs Instance, from the left menu select **Process data** **(1)**, scroll down till you find **Process your Event Hub data using Stream Analytics Query Language** and click **Start** **(2)**.
 
