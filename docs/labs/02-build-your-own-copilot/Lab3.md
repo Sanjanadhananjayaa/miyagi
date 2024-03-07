@@ -304,8 +304,8 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 19. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hubs Instance, from the left menu select **Process data** **(1)**, scroll down till you find **Process your Event Hub data using Stream Analytics Query Language** and click **Start** **(2)**.
 
-   ![](./Media/bicepfile4.png)
+    ![](./Media/bicepfile4.png)
 
 20. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query, you should see log information for the tokens used.
 
-   ![](./Media/event-hub-data.png)
+    ![](./Media/event-hub-data.png)
