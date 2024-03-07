@@ -86,9 +86,13 @@ Interaction with foundation models is more than chat. This sample shows a few us
 
 In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development.
 
-### Lab 2.1 - Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS)
+### Lab 2.1 - Containerizing Recommendation service to Azure Container Apps - [Read Only]
 
-In this lab, you'll be building the docker images and publishing them to Azure Kubernetes Service(AKS).
+In this lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps.
+
+### Lab 2.2 - Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
+
+In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App.
 
 ### Lab 3 - Expose OpenAI through API Management Service
 
