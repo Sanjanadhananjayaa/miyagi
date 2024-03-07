@@ -25,9 +25,9 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/apim1.png)
 
-1. Once API is created, click on **Overview** **(1)** from the left-menu copy the **Developer portal URL** and **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
+1. Once API is created, click on **Overview** **(1)** from the left-menu copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
 
-   ![](./Media/api-key.png)
+   ![](./Media/api-product6.png)
 
 ### Task 2: Create API Management Policy and Roles
 
@@ -53,25 +53,25 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 5. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
 
-   ![](./Media/apim6.png)
+   ![](./Media/api-product1.png)
 
-6. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** add the **Azure OpenAI Service API** **(3)** hit Enter and click on **Create** **(4)**.
+6. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** **(3)** select the **Azure OpenAI Service API** **(4)** hit Enter and click on **Create** **(5)**.
 
-   ![](./Media/apim7.png)
+   ![](./Media/api-product2.png)
 
 7. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
 
-   ![](./Media/apim8.png)
+   ![](./Media/api-product3.png)
 
 8. In the **Add subscription**, enter the Name as **aoai-test** **(1)**, enter Display name as **AOAI Test** **(2)**, and click on **Create** **(3)**.
 
-   ![](./Media/apim9.png)
+   ![](./Media/api-product4.png)
 
 8. Once the subscription is created click the **three dots** **(1)** next to the newly created key and then click **Show\hide keys** **(2)**. Copy the **primary subscription** **(3)** key and save it for later.
 
-   ![](./Media/apim10.png)
+   ![](./Media/api-product5.png)
 
-9. Navigate to your **Azure OpenAI** in the Azure Portal, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** Azure OpenAI resources.
+9. Navigate to **Azure OpenAI** in the Azure Portal, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** Azure OpenAI resources.
 
 10. In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
@@ -89,11 +89,13 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/apim-role1.png)
 
-14. In the **API Management resource**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor** **(4)**.
+14. Navigate to **API Management service** in the Azure Portal, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service.
+
+14. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor** **(4)**.
 
     ![](./Media/api-api1.png)
 
-15. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **<<API_MANAGMENT_URL>>** with **Developer portal URL** **(2)** of API manager which you copen in task 1 step 4 and click on **Save** **(3)**.
+15. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **<<Azure_OpenAI_Endpoint>>** with **<inject key="OpenAIEndpoint" enableCopy="true"/>** **(2)** of API manager which you copen in Task 1 Step 4 and click on **Save** **(3)**.
 
       ```
       <inbound>
@@ -103,19 +105,19 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
          <set-header name="Authorization" exists-action="override">
             <value>@("Bearer " + (string)context.Variables["msi-access-token"])</value>
          </set-header>
-         <set-backend-service base-url="https://<<API_MANAGMENT_URL>>/openai" />
+         <set-backend-service base-url="https://<<Azure_OpenAI_Endpoint>>/openai" />
       </inbound>
       ```
 
     ![](./Media/api-inbound.png)
 
-16. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter **gpt-35-turbo** **(3)** in the deployment-id field, enter **2023-05-15** **(4)** in the API version field, and click **Send** **(5)**. 
+16. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter the gpt-35-turbo deployment name **<inject key="CompletionModel" enableCopy="true"/>** **(3)** in the deployment-id field, enter **2023-05-15** **(4)** in the API version field, and click **Send** **(5)**. 
 
-     ![](./Media/apim-test.png)
+     ![](./Media/api-product7.png)
 
 17. Scroll down the response and you should see a 200 response and a message back from your OpenAI service.
 
-    ![](./Media/openai-response.png)
+    ![](./Media/api-product8.png)
 
 ### Task 3: Update the Docker Image for the Recommendation service
 
@@ -138,7 +140,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    ```
 
    ![](./Media/lab3-t2-s4.png)
-
+   
 1. Run the following command to ACR login.
 
    > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
@@ -146,6 +148,14 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
     ```
     docker login [ACRname] -u [uname] -p [password]
     ```
+
+1. Run the following command to add the tag.
+
+   > **Note**: Please replace **[ACRname]** with **<inject key="AcrLoginServer" enableCopy="true"/>**, **[uname]** with **<inject key="AcrUsername" enableCopy="true"/>**, and **[password]** with **<inject key="AcrPassword" enableCopy="true"/>**.
+
+   ```
+   docker tag miyagi-recommendation:latest [ACRname]/miyagi-recommendation:latest
+   ```
 
 1. Once you are logged into ACR. Run the below command to push the updated docker image of the recommendation service to the container registry.
 
@@ -183,9 +193,9 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 ### Task 5: Setup Event Hub Logging and Validate Input
 
-1. In the Azure portal Search and select **Event hub**, select the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**.
+1. In the Azure portal Search and select **Event Hubs**, select the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**.
 
-2. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hub Namespace tab, from the left menu select **Access control (IAM)** **(1)** , click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
+2. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace tab, from the left menu select **Access control (IAM)** **(1)** , click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
    ![](./Media/namespace1.png)
 
@@ -209,7 +219,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/namespace5.png)
 
-8. Open the **notepad** from the jumpvm and copy and paste the below code, update the **<<API_MANAGEMENT_NAME>>** with **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** name and the <<EVENT_HUB_CONNECTION_STRING>> copied from the step above.
+8. Open the **notepad** from the jumpvm and copy and paste the below code, update the **<<API_MANAGEMENT_NAME>>** with **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** name and the &lt;&lt;EVENT_HUB_CONNECTION_STRING&gt;&gt; copied from the step above.
 
    ```
    resource existingApiManagement 'Microsoft.ApiManagement/service@2023-03-01-preview' existing = {
@@ -236,7 +246,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 10. In the **Save As** navigate to the `C:\LabFiles\miyagi` **(1)** path, enter the file name **aoai-logger.bicep** **(2)**, save as type to **All Files** **(3)** and click on **Save** **(4)**.
 
-   ![](./Media/bicepfile2.png)
+    ![](./Media/bicepfile2.png)
 
 11. From the jumpvm open the PowerShell terminal and run the following command to log in to the **Azure portal**.
 
@@ -244,57 +254,58 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
     az login
     ```
 
-12. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
+12. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **PowerShell**.
 
-   ![](./Media/azure-account-select.png)
+    ![](./Media/azure-account-select.png)
 
 13. Run the following command to change the directory to `miyagi` root folder in the terminal and run the bicep file.
 
-   > **Note**: Replace <<RESOURCE_GROUP_NAME>> with **<inject key="rgname" enableCopy="true"/>**.
+    > **Note**: Replace &lt;&lt;RESOURCE_GROUP_NAME&gt;&gt; with **<inject key="rgname" enableCopy="true"/>**.
    
-   ```
-   cd C:\LabFiles\miyagi
-   az deployment group create --resource-group <<RESOURCE_GROUP_NAME>> --template-file .\aoai-logger.bicep
-   ```
+    ```
+    cd C:\LabFiles\miyagi
+    az deployment group create --resource-group <<RESOURCE_GROUP_NAME>> --template-file .\aoai-logger.bicep
+    ```
     
 14. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
-   ![](./Media/lab3-t1-s1.png)
-
+    ![](./Media/lab3-t1-s1.png)
 
 15. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service for the left menu, click on **APIs** **(1)** and  Select the **Azure OpenAI Service API** **(2)** created in the earlier step, select **All Operations** **(3)**.
 
-   ![](./Media/bicepfile3.png)
+    ![](./Media/bicepfile3.png)
 
 16. In the code editor copy the below policy to overwrite the **outbound** tags only and click on **Save**.
 
-   ```
-   <outbound>
-      <base />
-      <choose>
-         <when condition="@(!context.Variables.GetValueOrDefault<bool>("isStream"))">
-               <log-to-eventhub logger-id="AOAILogger" partition-id="0">@{
-               var responseBody = context.Response.Body?.As<JObject>(true);
-               return new JObject(
-                  new JProperty("prompt_tokens", responseBody["usage"]["prompt_tokens"].ToString()),
-                  new JProperty("total_tokens", responseBody["usage"]["total_tokens"].ToString())
-               ).ToString();
-         }</log-to-eventhub>
-         </when>
-      </choose>
-   </outbound>
-   ```
+      ```
+      <outbound>
+         <base />
+         <choose>
+            <when condition="@(!context.Variables.GetValueOrDefault<bool>("isStream"))">
+                  <log-to-eventhub logger-id="AOAILogger" partition-id="0">@{
+                  var responseBody = context.Response.Body?.As<JObject>(true);
+                  return new JObject(
+                     new JProperty("prompt_tokens", responseBody["usage"]["prompt_tokens"].ToString()),
+                     new JProperty("total_tokens", responseBody["usage"]["total_tokens"].ToString())
+                  ).ToString();
+            }</log-to-eventhub>
+            </when>
+         </choose>
+      </outbound>
+      ```
 
 17. Navigate to your Event Hub, select **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event Hubs.
 
    ![](./Media/eventhub-processdata.png)
 
-18. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
+18. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
 
-   ![](./Media/namespace4.png)
+   ![](./Media/api-product9.png)
 
-19. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hubs Instance, from the left menu select **Process data** **(1)**, scroll down till you find **Process your Event Hub data using Stream Analytics Query Language** and click **Start** **(2)**.
+19. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hubs Instance, from the left menu select **Process data** **(1)**, scroll down till you find **Process your Event Hub data using Stream Analytics Query Language** and click **Start** **(2)**.
 
    ![](./Media/bicepfile4.png)
 
 20. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query, you should see log information for the tokens used.
+
+   ![](./Media/event-hub-data.png)
