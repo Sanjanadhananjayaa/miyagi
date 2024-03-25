@@ -6,7 +6,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
-   ![](./Media/lab3-t1-s1.png)
+   ![](./Media/api-select.png)
 
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
 
