@@ -1,4 +1,4 @@
-# Lab 2.1: Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS)
+# Lab 3.1: Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS)
 
 In this lab, you'll be building the docker images and publishing them to Azure Kubernetes Service(AKS).
 
@@ -240,7 +240,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
    
    ![](./Media/AKS-running.png)
 
-# Lab 2.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
+# Lab 3.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
 
 ### Task 1: Explore Recommendation service in AKS using Ingress Endpoint
 
