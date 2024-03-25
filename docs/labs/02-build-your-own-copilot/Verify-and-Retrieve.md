@@ -1,4 +1,4 @@
-# Verify and Retrieve the values of Azure Resources (optional)
+# Lab 1: Verify and Retrieve the values of Azure Resources (optional)
 
 In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key for the designated resources.
 
