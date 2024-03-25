@@ -31,7 +31,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
    kubectl get svc
    ```
 
-   ![](./Media/serviceips.png)
+   ![](./Media/external-ip.png)
 
 5. Next navigate to **miyagi/services/recommendation-service/dotnet** and open app settings.
 
@@ -47,7 +47,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 8. Copy the **miyagi-recommendation-service** IP address from the console and paste it in the **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** value.
 
-   ![](./Media/ui-service-value.png)
+   ![](./Media/miyagi-ui-env.png)
 
 ### Task 2: Build a Docker Image for the Miyagi UI
 
@@ -84,7 +84,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 8. In the **Images** blade, notice **miyagi-ui(1)** image is created, select **run(2)** icon .
 
-   ![](./Media/ui.png)
+   ![](./Media/docker-miyagi-ui.png)
 
 9. In the **Run a new container** window select the dropdown arrow.
 
@@ -140,7 +140,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 1. In the **Run a new containe**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
 
-    ![](./Media/recommendation-port.png)
+    ![](./Media/recommendation-port-new.png)
 
 1. Click on **5224:80** URL link
 
@@ -238,7 +238,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
     kubectl get pods
    ```
    
-   ![](./Media/running-pods.png)
+   ![](./Media/AKS-running.png)
 
 # Lab 2.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
 
@@ -247,23 +247,24 @@ In this task, you'll Push miyagi-recommendation images to acr.
 1. To test the API run the below command to get the service IP addresses
 
    ```
-    kubectl get svc
+   kubectl get svc
    ```
    
-   ![](./Media/serviceips.png)
+   ![](./Media/aks-endpoint.png)
 
 
-3. Copy the IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
-    ![](./Media/service-swagger.png)
+2. Copy the IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
    
-### Task 2: Explore Miyagi App in Azure Container Apps using Ingress Endpoint
+   ![](./Media/service-swagger.png)
+   
+### Task 2: Explore Miyagi App in AKS using Ingress Endpoint
 
 1. To test the UI run the below command to get the service IP addresses
    ```
-    kubectl get svc
+   kubectl get svc
    ```
    
-   ![](./Media/serviceips.png)
+   ![](./Media/aks-endpoint.png)
 
 
 2. Copy the IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
