@@ -52,11 +52,11 @@ In this task, verification, and retrieval of specific values, including End Poin
 
    - On the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** page, select **acs-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-      ![](./Media/image-rg-12.png)
+      ![](./Media/select-acs.png)
  
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, verify the **URL**.
    
-      ![](./Media/select-acs.png)
+      ![](./Media/image-rg-13.png)
 
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, verify the **Primary admin Key** value.
    
