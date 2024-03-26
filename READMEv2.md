@@ -50,7 +50,7 @@ Interaction with foundation models is more than chat. This sample shows a few us
 
 #### High-level logical architecture
 
-![azure](./assets/images/wip-azure.png)
+![azure](./assets/images/wip-azure1.png)
 
 #### Semantic Kernel Orchestration for Miyagi usecase
 
