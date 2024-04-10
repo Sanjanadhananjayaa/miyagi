@@ -143,10 +143,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
     ![](./Media/continer-app-logstream.png)
 
-    > **Note**: Navigate back to VS code, from the Terminal select Node terminal, press Ctrl + C to stop the recommendation service ui page.
-
-    > **Note**: Navigate back to VS code, from the Terminal select dotnet terminal, press Ctrl + C to stop the recommendation service ui page. 
-   
+    > **Note**: Navigate back to VS code, from the Terminal select Node terminal, and press Ctrl + C to stop the recommendation service ui page.
 
 ## Summary
 
