@@ -68,6 +68,29 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
+1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in Integrated Terminal**.
+
+    ![](./Media/task4-1.png)
+
+1. Run the following command to run the recommendation service locally
+    ```
+    dotnet build
+    dotnet run
+    ```
+
+   **Note**: Let the command run, meanwhile you can proceed with the next step.
+
+1. Open another tab in Edge, in the browser window paste the following link
+
+   ```
+   http://localhost:5224/swagger/index.html 
+   ```
+
+   **Note**: Refresh the page continuously until you get the swagger page for the recommendation service as depicted in the image below.
+
+   ![](./Media/miyagi2.png)
+
+
 ### Task 2: Run miyagi frontend locally
 
 1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
@@ -131,6 +154,10 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
     ![](./Media/search-service.png)
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
+
+1. once you viewed the indexes in AI Search, Navigae back to VS Code and  press **Ctrl + C** to stop the **swagger UI** page for node terminal.
+
+1. From the **Terminal** select **dotnet** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
 
 ### Task 4: Build Docker Images for the Recommendation service
 
