@@ -234,6 +234,9 @@ In this task, you'll Push miyagi-recommendation images to acr.
    ```
 
 6. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
+
+   >**Note** : It could take a few minutes for the output to appear so wait a few minutes before running the command.
+   
    ```
     kubectl get pods
    ```
@@ -245,6 +248,8 @@ In this task, you'll Push miyagi-recommendation images to acr.
 ### Task 1: Explore Recommendation service in AKS using Ingress Endpoint
 
 1. To test the API run the below command to get the service IP addresses
+
+   >**Note** : It could take a few minutes for the output to appear so wait a few minutes before running the command.
 
    ```
    kubectl get svc
