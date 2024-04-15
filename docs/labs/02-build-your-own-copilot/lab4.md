@@ -47,15 +47,14 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
-   | serviceId                    |  **gpt-35-turbo**                                           |
+   | serviceId                    |  **gpt-35-turbo**                                             |
    | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
-   | modelId                      | **<inject key="CompletionModel" enableCopy="true"/>**
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
 
 1. Comment the line 2 by adding **//** and save the file. Make sure that your `appsettings.json` file looks as shown in the below screenshot.
 
-    ![](./Media/hello-appsettings.png)
+    ![](./Media/app.png)
 
 1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**.
 
