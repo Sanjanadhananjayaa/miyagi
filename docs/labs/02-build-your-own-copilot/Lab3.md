@@ -91,7 +91,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 15. Navigate back to **API Management service** in the Azure Portal, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service.
 
-16. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor** **(4)**.
+16. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor** **(4)** under **Inbound processing**.
 
       ![](./Media/add-inbound.png)
 
@@ -110,6 +110,8 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
       ```
 
     ![](./Media/api-inbound.png)
+
+    >**Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
 
 18. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter the gpt-35-turbo deployment name **<inject key="CompletionModel" enableCopy="true"/>** **(3)** in the deployment-id field, enter **2023-05-15** **(4)** in the API version field, and click **Send** **(5)**. 
 
