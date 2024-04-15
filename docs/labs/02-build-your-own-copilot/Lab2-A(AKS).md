@@ -65,7 +65,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 4. In the **Tell us about the work you do** window, click on **Skip**.
    
-5. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+5. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrate Terminal**.
 
    ```
    docker build . -t miyagi-ui      
@@ -192,7 +192,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    ![](./Media/task2-6.png)
 
-1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrate Terminal**.
 
 1. Run the following command to add the tag.
 
