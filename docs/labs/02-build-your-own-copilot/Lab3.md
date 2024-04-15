@@ -306,6 +306,6 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/bicepfile4.png)
 
-20. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query, you should see log information for the tokens used.
+20. Next open the Miyagi UI in a separate browser tab click **Personalize** and change your stock preferences. Then, click on **Personalize** and repeat the same steps several times to generate additional logs. In the Event Hub query, you should see log information for the tokens used.
 
     ![](./Media/event-hub-data.png)
