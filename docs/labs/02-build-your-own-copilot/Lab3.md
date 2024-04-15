@@ -215,7 +215,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/namespace4.png)
 
-7. In the **Event Hubs Instance** of **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**, from the left menu select **Shared access policies** **(1)** under Settings, click on **apimLoggerAccessPolicy** **(2)** and copy the **Connection string–primary key** **(3)** paste it in a notepad.
+7. In the **Event Hubs Instance** of **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**, from the left menu select **Shared access policies** **(1)** under Settings, click on **apimLoggerAccessPolicy** **(2)** and copy the **Connection string–primary key** **(3)** paste it in a notepad.
 
    ![](./Media/namespace5.png)
 
@@ -298,7 +298,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/api-product9.png)
 
-18. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
+18. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**
 
     ![](./Media/namespace4.png)
 
