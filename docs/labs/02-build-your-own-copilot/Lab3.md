@@ -271,7 +271,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/lab3-t1-s1.png)
 
-15. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service for the left menu, click on **APIs** **(1)** and  Select the **Azure OpenAI Service API** **(2)** created in the earlier step, select **All Operations** **(3)**.
+15. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service for the left menu, click on **APIs** **(1)** and  Select the **Azure OpenAI Service API** **(2)** created in the earlier step, select **All Operations** **(3)** and under **outbound proccessing** click on **policy code editor(4)**.
 
     ![](./Media/api-outbound.png)
 
