@@ -65,7 +65,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 4. In the **Tell us about the work you do** window, click on **Skip**.
    
-5. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+5. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrate Terminal**.
 
    ```
    docker build . -t miyagi-ui      
@@ -192,7 +192,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    ![](./Media/task2-6.png)
 
-1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
+1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrate Terminal**.
 
 1. Run the following command to add the tag.
 
@@ -234,6 +234,9 @@ In this task, you'll Push miyagi-recommendation images to acr.
    ```
 
 6. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
+
+   >**Note** : It could take a few minutes for the output to appear so wait a few minutes before running the command.
+   
    ```
     kubectl get pods
    ```
@@ -245,6 +248,8 @@ In this task, you'll Push miyagi-recommendation images to acr.
 ### Task 1: Explore Recommendation service in AKS using Ingress Endpoint
 
 1. To test the API run the below command to get the service IP addresses
+
+   >**Note** : It could take a few minutes for the output to appear so wait a few minutes before running the command.
 
    ```
    kubectl get svc

@@ -91,7 +91,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 15. Navigate back to **API Management service** in the Azure Portal, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service.
 
-16. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor** **(4)**.
+16. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor** **(4)** under **Inbound processing**.
 
       ![](./Media/add-inbound.png)
 
@@ -110,6 +110,8 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
       ```
 
     ![](./Media/api-inbound.png)
+
+    >**Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
 
 18. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter the gpt-35-turbo deployment name **<inject key="CompletionModel" enableCopy="true"/>** **(3)** in the deployment-id field, enter **2023-05-15** **(4)** in the API version field, and click **Send** **(5)**. 
 
@@ -211,11 +213,11 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/namespace3.png)
 
-6. In the **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
+6. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**
 
    ![](./Media/namespace4.png)
 
-7. In the **Event Hubs Instance** of **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**, from the left menu select **Shared access policies** **(1)** under Settings, click on **apimLoggerAccessPolicy** **(2)** and copy the **Connection string–primary key** **(3)** paste it in a notepad.
+7. In the **Event Hubs Instance** of **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**, from the left menu select **Shared access policies** **(1)** under Settings, click on **apimLoggerAccessPolicy** **(2)** and copy the **Connection string–primary key** **(3)** paste it in a notepad.
 
    ![](./Media/namespace5.png)
 
@@ -271,7 +273,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/lab3-t1-s1.png)
 
-15. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service for the left menu, click on **APIs** **(1)** and  Select the **Azure OpenAI Service API** **(2)** created in the earlier step, select **All Operations** **(3)**.
+15. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service for the left menu, click on **APIs** **(1)** and  Select the **Azure OpenAI Service API** **(2)** created in the earlier step, select **All Operations** **(3)** and under **outbound proccessing** click on **policy code editor(4)**.
 
     ![](./Media/api-outbound.png)
 
@@ -298,7 +300,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/api-product9.png)
 
-18. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="CompletionModel" enableCopy="false"/>**
+18. In the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event hub Namespace, from the left-menu select **Event Hubs** **(1)** under Entity and click on **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**
 
     ![](./Media/namespace4.png)
 
@@ -306,6 +308,6 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
     ![](./Media/bicepfile4.png)
 
-20. Next open the Miyagi UI in a separate browser tab and change your stock preferences. In the Event Hub query, you should see log information for the tokens used.
+20. Next open the Miyagi UI in a separate browser tab click **Personalize** and change your stock preferences. Then, click on **Personalize** and repeat the same steps several times to generate additional logs. In the Event Hub query, you should see log information for the tokens used.
 
     ![](./Media/event-hub-data.png)
