@@ -271,7 +271,10 @@ In this task, you'll Push miyagi-recommendation images to acr.
    
    ![](./Media/aks-endpoint.png)
 
-
 2. Copy the IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
 
    ![](./Media/miyagi-ui.png)
+
+### Summary
+
+In this Lab, you deployed Azure Kubernetes Service (AKS) for both the Miyagi UI and Miyagi Recommendation service. It began with constructing Docker images for these services, containing all necessary components like code and configuration files. After image creation, the next step involved pushing the Recommendation service's Docker image to a Container registry, a storage and deployment platform for Kubernetes clusters. Finally, AKS pods were deployed, representing running containers within the Kubernetes cluster, thereby making the Miyagi UI and Recommendation service operational
