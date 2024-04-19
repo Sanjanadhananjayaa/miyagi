@@ -243,7 +243,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
    
    ![](./Media/AKS-running.png)
 
-<validation step="f50c7e4e-0b5a-4ae2-bd9e-ff29a023f1d2" />
+    <validation step="f50c7e4e-0b5a-4ae2-bd9e-ff29a023f1d2" />
 
 # Lab 3.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
 
