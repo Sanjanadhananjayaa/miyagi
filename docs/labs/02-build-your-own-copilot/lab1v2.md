@@ -70,6 +70,14 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
+   <validation step="d37dd2bb-631a-4ffe-a41e-fc3ef07aa2b5" />
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+      - If you receive a success message, you can proceed to the next task.
+      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 ### Task 2: Understanding the implementation of the Recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
@@ -80,11 +88,20 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
   
-   > **Note**: Make sure **.Net Interactive** is in ready State, If not please wait for 15 to 20 seconds. Also, please do not click on **Run All** option to execute all the cell at a time which may lead to exceed in token limit that results Error: 503 – Service unreachable. 
+   > **Note**: Make sure **.Net Interactive** is in ready State, If not please wait for 15 to 20 seconds. Also, please do not click on **Run All** option to execute all the cells at a time which may lead to exceed in token limit that results Error: 503 – Service unreachable. 
 
       ![](./Media/run.png)
 
-   > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
+   > **Note**: Incase any issues or errors occur related to exceeding call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
+
+   <validation step="f277b99e-c179-4bb8-b9c1-6479a526ee4b" />
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+      - If you receive a success message, you can proceed to the next task.
+      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ### Task 3: Run recommendation service locally
 
@@ -175,6 +192,15 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
     ![](./Media/ai-search-update.png)
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
+
+    <validation step="940ebf1a-9add-4bf0-a7fd-c6d929961497" />
+
+    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+      
+      - If you receive a success message, you can proceed to the next task.
+      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 
 ### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
 
