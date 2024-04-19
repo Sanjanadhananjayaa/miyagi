@@ -193,7 +193,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
 
-    <validation step="940ebf1a-9add-4bf0-a7fd-c6d929961497" />
+   <validation step="940ebf1a-9add-4bf0-a7fd-c6d929961497" />
 
     > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
       
