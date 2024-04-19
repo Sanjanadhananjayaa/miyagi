@@ -70,6 +70,8 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
+<validation step="d37dd2bb-631a-4ffe-a41e-fc3ef07aa2b5" />
+
 ### Task 2: Understanding the implementation of the Recommendation service
 
 Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
