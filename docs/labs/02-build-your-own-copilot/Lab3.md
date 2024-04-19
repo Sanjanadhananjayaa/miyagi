@@ -31,13 +31,6 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    <validation step="f0747771-c830-4f46-8e46-2531ad40214a" />
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 ### Task 2: Create API Management Policy and Roles
 
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.

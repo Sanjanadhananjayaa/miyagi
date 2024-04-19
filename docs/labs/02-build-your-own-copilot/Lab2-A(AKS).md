@@ -245,13 +245,6 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    <validation step="f50c7e4e-0b5a-4ae2-bd9e-ff29a023f1d2" />
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-      
-   - If you receive a success message, you can proceed to the next task.
-   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-
 # Lab 3.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
 
 ### Task 1: Explore Recommendation service in AKS using Ingress Endpoint
