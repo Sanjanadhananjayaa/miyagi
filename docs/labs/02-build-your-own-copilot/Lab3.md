@@ -29,7 +29,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/api-product6.png)
 
-   <validation step="f0747771-c830-4f46-8e46-2531ad40214a" />
+<validation step="f0747771-c830-4f46-8e46-2531ad40214a" />
 
 ### Task 2: Create API Management Policy and Roles
 
