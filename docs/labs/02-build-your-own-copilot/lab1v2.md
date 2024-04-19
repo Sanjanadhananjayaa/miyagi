@@ -70,7 +70,7 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
-<validation step="d37dd2bb-631a-4ffe-a41e-fc3ef07aa2b5" />
+      <validation step="d37dd2bb-631a-4ffe-a41e-fc3ef07aa2b5" />
 
 ### Task 2: Understanding the implementation of the Recommendation service
 
