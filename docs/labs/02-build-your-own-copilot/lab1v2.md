@@ -74,9 +74,9 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### Task 2: Understanding the implementation of the Recommendation service
 
@@ -98,9 +98,9 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 3: Run recommendation service locally
@@ -189,17 +189,17 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
-    ![](./Media/ai-search-update.png)
+   ![](./Media/ai-search-update.png)
 
-    > **Note**: Please click on the refresh button still you view the **Document Count**.
+   > **Note**: Please click on the refresh button still you view the **Document Count**.
 
    <validation step="940ebf1a-9add-4bf0-a7fd-c6d929961497" />
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
       
-      - If you receive a success message, you can proceed to the next task.
-      - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-      - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+   - If you receive a success message, you can proceed to the next task.
+   - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 
 ### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
