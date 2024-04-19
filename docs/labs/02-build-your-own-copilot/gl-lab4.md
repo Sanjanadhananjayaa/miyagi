@@ -77,7 +77,7 @@ You will clone the Chat-Copilot GitHub Repository to the environment where you'r
 1. Configure Chat Copilot by running the following command. You can use the Azure OpenAI Service Name, Key, Endpoint, and the already deployed model names that you noted down in the previous steps or use the values from the below mentioned table.
    
    ```
-   .\Configure.ps1 -AIService {AI_SERVICE} -APIKey {API_KEY} -Endpoint {AZURE_OPENAI_ENDPOINT} -CompletionModel {DEPLOYMENT_NAME} -EmbeddingModel {DEPLOYMENT_NAME} -PlannerModel {DEPLOYMENT_NAME}
+   .\Configure.ps1 -AIService {AI_SERVICE} -APIKey {API_KEY} -Endpoint {AZURE_OPENAI_ENDPOINT} -CompletionModel {DEPLOYMENT_NAME} -EmbeddingModel {DEPLOYMENT_NAME}
    ```
    | **Variables**                          | **Values**                                            |
    | ---------------------------------------| ------------------------------------------------------|
@@ -86,39 +86,70 @@ You will clone the Chat-Copilot GitHub Repository to the environment where you'r
    | AZURE_OPENAI_ENDPOINT                  | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
    | CompletionModel:{DEPLOYMENT_NAME}      | **<inject key="CompletionModel" enableCopy="true"/>** |
    | EmbeddingModel:{DEPLOYMENT_NAME}       | **<inject key="EmbeddingModel" enableCopy="true"/>**  |
-   | PlannerModel:{DEPLOYMENT_NAME}         | **<inject key="CompletionModel" enableCopy="true"/>** |
+
+   >**Note:** If a Security warning pop-up window appears, choose **Yes**
+   >
+   >**Note:** The code should look similar to the image below:
+
+     ![](./Media/code-1.png)
+
+1. Run Chat Copilot locally. This step starts the **backend API** application. frontend
  
-  >**Note:** If Security warning pop up windows appears, choose **Yes**
-
-  >**Note:** The code should look similar to the image below:
-
-  ![](./Media/code-1.png)
-
-
-2. Finally, run Chat Copilot locally by executing the following command:
-   
+   ```powershell
+   .\Start-Backend.ps1
    ```
-   .\Start.ps1
+   > **Note:** It may take a few minutes for Yarn packages to install on the first run.
+ 
+1. Open another tab in **Edge**, in the browser window paste the following link, and you should see a confirmation message: `Healthy`.
+ 
+   ```powershell
+   http://localhost:40443/healthz
    ```
-      >**Note:** This step starts both the backend API and the frontend application. It may take a few minutes for Yarn packages to install on the first run.
+   > **Note:** Don't close the PowerShell window keep it running up.
+ 
+1. In the LabVM, click on **Start**, from the start menu search and select for **PowerShell 7**.
+ 
+1. Run the following command to change the path.
+ 
+   ```
+   cd C:\LabFiles\chat-copilot\scripts
+   ```
+ 
+1. Run the following to set the execution policy.
+ 
+   ```
+   Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+   ```
+ 
+1. The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies help topic. Do you want to change the execution policy?, enter **A** and hit **Enter**.
+ 
+1. Configure **Chat Copilot** by running the following command.
+ 
+   ```powershell
+   .\Start-Frontend.ps1
+   ```
 
-      >**Note:** In case of an error, follow the below steps.
+1. Once the deployment of the script is executed successfully it will redirect to `http://localhost:3000/` Chat CoPilot in **Edge** browser.
+ 
+   >**Note:** This step starts both the backend API and the frontend application. It may take a few minutes for Yarn packages to install on the first run.
+
+   >**Note:** In case of an error, follow the below steps.
       
-3. Navigate to `chat-copilot > scripts > Start-Frontend.ps1` to run the yarn commands.
+1. Navigate to `chat-copilot > scripts > Start-Frontend.ps1` to run the yarn commands.
 
    ![](./Media/ch14.png)
 
-4. Navigate to `chat-copilot > scripts > Start-Backend.ps1` to run the dotnet commands.
+1. Navigate to `chat-copilot > scripts > Start-Backend.ps1` to run the dotnet commands.
 
    ![](./Media/ch15.png)
 
    >Note: Once done, navigate to the scripts directory and run the start command again.
    
-5. You will get an output similar to this for the frontend:
+1. You will get an output similar to this for the frontend:
 
    ![azure](./Media/3-1.png)
 
-6. You will get an output similar to this for the backend:
+1. You will get an output similar to this for the backend:
 
    ![azure](./Media/3-2.png)
 
