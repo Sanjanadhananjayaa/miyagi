@@ -37,7 +37,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
    ![](./Media/aks-02.png)
    
-6. Copy the **miyagi-ui** IP address from the console and paste it in the **CorsAllowedOrigins** section formatted as an **http** endpoint.  
+6. Copy the **miyagi-ui** External IP address from the console and paste it in the **CorsAllowedOrigins** section formatted as an **http** endpoint  and save the file by **Ctrl + S**.  
 
    ![](./Media/ui-cors.png)
 
@@ -45,7 +45,7 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
    ![](./Media/aks-03.png)
 
-8. Copy the **miyagi-recommendation-service** IP address from the console and paste it in the **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** value.
+8. Copy the **miyagi-recommendation-service** External IP address from the console and paste it in the **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** value and save the file by **Ctrl + S**.
 
    ![](./Media/miyagi-ui-env.png)
 
