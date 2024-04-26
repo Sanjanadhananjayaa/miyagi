@@ -30,7 +30,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 1. Once the **HTTP API pane** is created, select **miyagi-api** **(1)** API from the list, select **Settings** **(2)**, scroll down to Subscription part **Uncheck** **(3)** the Subscription required and click on **Save** **(4)**.
 
-   ![](./Media/api-update.png)
+   ![](./Media/miyagi-RR.png)
 
 1. In the **miyagi-api**, select **Design** **(1)**, and click on **+  Add operation** **(2)** fill the following details in **Frontend** and click on **Save** **(6)**.
 
