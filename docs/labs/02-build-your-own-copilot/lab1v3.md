@@ -1,5 +1,7 @@
 # Lab 1 - Run Miyagi App Locally
 
+### Duration: 80 minutes
+
 In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development. A crucial step includes optimizing data retrieval efficiency by persisting embeddings in Azure AI Search. The project culminates with a broader exploration of the Miyagi App and Recommendation service, emphasizing a personalized user experience. This task-based approach ensures a systematic progression through the project intricacies, facilitating a comprehensive understanding and effective implementation.
 
 ### Task 1: Setup configuration for miyagi app
@@ -76,12 +78,12 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
   
-  > **Note**: Make sure **.Net Interactive** is in ready State , If not please wait for 15 to 20 seconds.
+   > **Note**: Make sure **.Net Interactive** is in ready State, If not please wait for 15 to 20 seconds. Also, please do not click on **Run All** option to execute all the cell at a time which may lead to exceed in token limit that results Error: 503 – Service unreachable. 
 
-   ![](./Media/run.png)
+      ![](./Media/run.png)
 
    > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
-   
+
 ### Task 3: Run recommendation service locally
 
 1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
@@ -135,11 +137,11 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    
 ### Task 5: Persist embeddings in Azure AI Search
 
-1. Navigate back to the **swagger UI** page, scoll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
+1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
    ![](./Media/swaggerUI-memory.png)
 
-1. Replace the code with the below code, and click on **Execution**.
+1. Replace the code with the below code, and click on **Execute**.
 
      ```
      {

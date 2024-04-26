@@ -1,5 +1,7 @@
 # Lab 3: Expose OpenAI through API Management Service
 
+### Duration: 30 minutes
+
 In this lab, you'll be verifying and creating APIs in the deployed API Management service to update the Docker image for the Recommendation service. The revision of the Recommendation service from the Container App encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
  
    > **Note**: Please note that authentication is not configured for APIM. In production, you will be configuring authentication in addition to other best practices.
@@ -24,7 +26,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    | Products **(4)** | **Unlimited** |
    | Click on  **(5)** | **Create** |
 
-   ![](./Media/http-api-create.png)
+   ![](./Media/api-create-new.png)
 
 1. Once the **HTTP API pane** is created, select **miyagi-api** **(1)** API from the list, select **Settings** **(2)**, scroll down to Subscription part **Uncheck** **(3)** the Subscription required and click on **Save** **(4)**.
 
@@ -60,7 +62,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    ![](./Media/lab3-t2-s1.png)
 
-1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** to **API Gateway URL** which you have copied in Task-1 Step-7.
+1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** to **API Gateway URL** which you have copied in Task-1 Step-7 and press Ctrl + S to save the file.
 
    ![](./Media/lab3-t2-s2.png)
 
@@ -86,10 +88,18 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
    **Note**: Refresh the page continuously until you get the swagger page for the recommendation service as depicted in the image below.
 
    ![](./Media/miyagi2.png)
-   
+
 ### Task 3: Verify that the Recommendation service accesses Azure Open AI through APIM
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
+1. Navigate to **Miyagi** **(1)** folder, open **ui/typescript** **(2)** folder and then open `.env` file. Replace the existing code for **RECCOMMENDATION_SERVICE_URL** with the below provided URL and then save the file.
+
+   ```
+   http://localhost:5224
+   ```
+
+   ![](./Media/byoc-mcs-env1.png)
+
+1. Open a new terminal: by navigating  **Miyagi** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
    ![](./Media/image-rg-25.png)
 

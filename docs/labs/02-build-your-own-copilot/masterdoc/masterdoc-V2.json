@@ -1,0 +1,36 @@
+[
+	{
+		"Name": "Build Intelligent Apps with Microsoft's Copilot stack & Azure OpenAI",
+		"Language": "English",
+		"Files": [
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/READMEv2.md",
+				"Order": 1
+			},
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Gettingstarted-v2.md",
+				"Order": 2
+			},
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Verify-and-Retrieve.md",
+				"Order": 3
+			},
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/lab1v2.md",
+				"Order": 4
+			},
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Lab2-A(AKS).md",
+				"Order": 5
+			},
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Lab3.md",
+				"Order": 6
+			},
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/lab4.md",
+				"Order": 7
+			}
+		]
+	}
+]
