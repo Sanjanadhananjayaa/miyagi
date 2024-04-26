@@ -115,7 +115,7 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
    **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
                        
-   ![](./Media/miyagi1.png)
+   ![](./Media/b1.png)
    
 ### Task 3: Persist embeddings in Azure AI Search
 
