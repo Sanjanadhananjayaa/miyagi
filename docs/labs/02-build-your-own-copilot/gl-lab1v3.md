@@ -147,7 +147,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
                        
-   ![](./Media/miyagi1.png)
+   ![](./Media/b1.png)
    
 ### Task 5: Persist embeddings in Azure AI Search
 
@@ -186,13 +186,6 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
     ![](./Media/search-service.png)
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
-
-  **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
 

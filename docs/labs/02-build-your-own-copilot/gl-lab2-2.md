@@ -97,12 +97,6 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
    ![](./Media/cntr4.png)
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
 ### Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI 
 
 1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
@@ -125,7 +119,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
     > **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
                        
-   ![](./Media/miyagi1.png)
+   ![](./Media/b1.png)
 
 1. In the to the **recommendation service** ui page, and click on **Personalize** button.
 

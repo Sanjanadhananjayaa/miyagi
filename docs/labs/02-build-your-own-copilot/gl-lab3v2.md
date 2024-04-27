@@ -133,7 +133,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
    **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
                        
-   ![](./Media/miyagi1.png)
+   ![](./Media/b1.png)
 
 1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
 
