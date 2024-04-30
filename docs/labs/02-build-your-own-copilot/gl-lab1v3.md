@@ -68,8 +68,8 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
-**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+ > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
@@ -92,7 +92,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    > **Note**: Incase of any issues or errors occured related to exceeded call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
 
-   **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -189,7 +189,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     > **Note**: Please click on the refresh button still you view the **Document Count**.
 
-   **Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
