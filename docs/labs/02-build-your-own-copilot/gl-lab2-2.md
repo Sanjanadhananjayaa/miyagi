@@ -96,6 +96,14 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui\typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
 
    ![](./Media/cntr4.png)
+   
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+<validation step="f50c7e4e-0b5a-4ae2-bd9e-ff29a023f1d2" />
 
 ### Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI 
 
