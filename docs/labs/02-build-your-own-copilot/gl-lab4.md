@@ -112,7 +112,7 @@ You will clone the Chat-Copilot GitHub Repository to the environment where you'r
 1. Run the following command to change the path.
  
    ```
-   cd C:\LabFiles\chat-copilot\scripts
+   cd C:\Users\demouser\chat-copilot\scripts\
    ```
  
 1. Run the following to set the execution policy.
