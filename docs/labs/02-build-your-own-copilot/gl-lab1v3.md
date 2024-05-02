@@ -68,6 +68,12 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 #### Validation
 
 <validation step="d37dd2bb-631a-4ffe-a41e-fc3ef07aa2b5" />
