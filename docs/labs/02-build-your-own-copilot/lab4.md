@@ -136,4 +136,6 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
    ![](./Media/final-indexer.png)
 
+### Summary
 
+In this lab, you learned how to configure and run the Semantic Kernel sample by integrating the SDK into your project, setting up LLM providers, defining plugins, and executing the code. Additionally, you gained knowledge on configuring Azure Cognitive Search, including creating or selecting an index, setting up fields, configuring Semantic Kernel to interact with Azure, defining plugins, and testing the integration for enhanced search capabilities.
