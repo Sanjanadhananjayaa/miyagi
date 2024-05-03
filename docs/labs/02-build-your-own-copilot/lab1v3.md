@@ -133,7 +133,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
                        
-   ![](./Media/miyagi1.png)
+   ![](./Media/L1T4S3.png)
    
 ### Task 5: Persist embeddings in Azure AI Search
 
@@ -171,7 +171,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     ![](./Media/search-service.png)
 
-    > **Note**: Please click on the refresh button still you view the **Document Count**.
+    > **Note**: Please click on the refresh button till you view the **Document Count**.
 
 ### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
 
@@ -179,11 +179,11 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
     ![](./Media/service-personalize.png)
 
-1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
+1. In the **personalize** page, select your **Favourite Financial Advisor** from the drop-down, and click on **Personalize**.
 
    ![](./Media/financial-advisor.png)  
 
-1. You should see the recommendations from the recommendation service in the Top Stocks widget.
+1. You should see the recommendations from the recommendation service in the Top Investments widget. (You might need to scroll down a little in the app to see the widget)
 
    ![](./Media/financial-advisor-output.png) 
 
