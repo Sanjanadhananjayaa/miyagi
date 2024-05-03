@@ -131,20 +131,8 @@ You will clone the Chat-Copilot GitHub Repository to the environment where you'r
 
 1. Once the deployment of the script is executed successfully it will redirect to `http://localhost:3000/` Chat CoPilot in **Edge** browser.
  
-   >**Note:** This step starts both the backend API and the frontend application. It may take a few minutes for Yarn packages to install on the first run.
-
-   >**Note:** In case of an error, follow the below steps.
-      
-1. Navigate to `chat-copilot > scripts > Start-Frontend.ps1` to run the yarn commands.
-
-   ![](./Media/ch14.png)
-
-1. Navigate to `chat-copilot > scripts > Start-Backend.ps1` to run the dotnet commands.
-
-   ![](./Media/ch15.png)
-
-   >Note: Once done, navigate to the scripts directory and run the start command again.
-   
+   >**Note:** Please wait for 2-3 mins for the browser to load
+  
 1. You will get an output similar to this for the frontend:
 
    ![azure](./Media/3-1.png)
@@ -152,6 +140,12 @@ You will clone the Chat-Copilot GitHub Repository to the environment where you'r
 1. You will get an output similar to this for the backend:
 
    ![azure](./Media/3-2.png)
+
+   >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 # Exercise 2: Chat with your own documents
 
