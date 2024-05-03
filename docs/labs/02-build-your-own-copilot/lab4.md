@@ -43,18 +43,18 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 1. In ASP.NET Core, `appsettings.json` is a configuration file used to store various application settings, such as service endpoints, and other application-specific settings. Expand **Config** folder, rename **appsettings.json.azure-example** to **appsettings.json** and then replace the values given below.
 
-   >**Note**: In the `appsettings.json` file, you will find a environment variable named `deploymentormodelId`. Please update this `deploymentormodelId` environment variable into two separate enviroment variables as `deploymentId` and `modelId`.
+   >**Note**: In the `appsettings.json` file, you will find an environment variable named `deploymentormodelId`. Please update this `deploymentormodelId` to `deploymentName`.
 
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
    | serviceId                    |  **gpt-35-turbo**                                             |
-   | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
+   | deploymentName               | **<inject key="CompletionModel" enableCopy="true"/>**         |
    | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
    | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
 
 1. Comment the line 2 by adding **//** and save the file. Make sure that your `appsettings.json` file looks as shown in the below screenshot.
 
-    ![](./Media/app.png)
+    ![](./Media/updatenewlaste.png)
 
 1. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**.
 
