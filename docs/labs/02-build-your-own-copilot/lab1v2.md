@@ -130,18 +130,14 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
     yarn dev
     ```
 
-   **Note**: Let the command run, meanwhile you can proceed with the next step.
+   **Note**: Please wait till the command gets executed successfully. It will take up to 5 minutes.
 
-1. Open another tab in Edge, and  browse the following
+1. Open aa new tab in Edge, and browse the following
 
    ```
    http://localhost:4001
    ```
 
-   **Note**: Refresh the page continuously until you get miyagi app running locally as depicted in the image below.
-                       
-   ![](./Media/miyagi1.png)
-   
 ### Task 5: Persist embeddings in Azure AI Search
 
 1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
