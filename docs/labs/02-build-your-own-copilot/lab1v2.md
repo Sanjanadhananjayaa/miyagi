@@ -70,6 +70,11 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
+  >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
    <validation step="d37dd2bb-631a-4ffe-a41e-fc3ef07aa2b5" />
 
 ### Task 2: Understanding the implementation of the Recommendation service
@@ -88,7 +93,12 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
    > **Note**: Incase any issues or errors occur related to exceeding call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
 
-   <validation step="f277b99e-c179-4bb8-b9c1-6479a526ee4b" />
+ >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+<validation step="f277b99e-c179-4bb8-b9c1-6479a526ee4b" />
 
 ### Task 3: Run recommendation service locally
 
@@ -175,6 +185,11 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
    ![](./Media/ai-search-update.png)
 
    > **Note**: Please click on the refresh button still you view the **Document Count**.
+
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
    <validation step="940ebf1a-9add-4bf0-a7fd-c6d929961497" />
 
