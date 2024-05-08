@@ -266,7 +266,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
    ![](./Media/aks-endpoint.png)
 
 
-2. Copy the IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
+2. Copy the External IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
    
    ![](./Media/service-swagger.png)
    
@@ -279,7 +279,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
    
    ![](./Media/aks-endpoint.png)
 
-2. Copy the IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
+2. Copy the External IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
 
    ![](./Media/miyagi-ui.png)
 
