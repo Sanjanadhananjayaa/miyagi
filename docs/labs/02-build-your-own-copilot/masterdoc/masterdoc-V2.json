@@ -26,6 +26,10 @@
 			{
 				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Lab3.md",
 				"Order": 6
+			},
+			{
+				"RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/lab4-v2.md",
+				"Order": 7
 			}
 		]
 	}
