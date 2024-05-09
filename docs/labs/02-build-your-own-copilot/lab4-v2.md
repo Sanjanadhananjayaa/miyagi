@@ -27,82 +27,82 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 5. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** and follow the wizard to **create your app** with the semantic function and save it
 
-    ![](./Media/sskernal.png)
+   ![](./Media/sskernal.png)
 
 6. Choose **C# Home Automation**
 
-    ![](./Media/kkernal.png)
+    ![](./Media/kkernal1.png)
 
 7. Browse the location **C:\LabFiles** and **select location for new app**
 
-    ![](./Media/image1-lab(4).png)
+   ![](./Media/image1-lab(4).png)
 
 8. Click on **Yes, I trust authors**.
 
-    ![](./Media/trustauthor.png)
+   ![](./Media/trustauthor.png)
 
-9. In ASP.NET Core, `appsettings.json` is a configuration file used to store various application settings, such as service endpoints, and other application-specific settings. Expand **Config** folder, rename **appsettings.json.azure-example** to **appsettings.json** and then replace the values given below.
+9. Navigate to the **appsettings.json** **(1)** file and replace the existing **script** **(2)** with the following:
 
-   >**Note**: In the `appsettings.json` file, you will find an environment variable named `deploymentormodelId`. Please update this `deploymentormodelId` to `deploymentName`.
+   ```
+   {
+   "AzureOpenAI": {
+     "ChatDeploymentName": "",
+     "Endpoint": "",
+     "ApiKey": ""
+      }
+   }
+   ```
 
-   | **Variables**                | **Values**                                                    |
-   | ---------------------------- |---------------------------------------------------------------|
-   | serviceId                    |  **gpt-35-turbo**                                             |
-   | deploymentName               | **<inject key="CompletionModel" enableCopy="true"/>**         |
-   | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
-   | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
+   ![](./Media/replaceappsetting.png)
 
-10. Comment the line 2 by adding **//** and save the file. Make sure that your `appsettings.json` file looks as shown in the below screenshot.
+10. In ASP.NET Core, `appsettings.json` is a configuration file used to store various application settings, such as service endpoints, and other application-specific settings and save the file **Ctrl + S**. 
 
-    ![](./Media/updatenewlaste.png)
+    | **Variables**       | **Values**                                             |
+    | --------------------|--------------------------------------------------------|
+    | ChatDeploymentName  | **<inject key="CompletionModel" enableCopy="true"/>**  |
+    | Endpoint            | **<inject key="OpenAIEndpoint" enableCopy="true"/>**   |
+    | ApiKey              | **<inject key="OpenAIKey" enableCopy="true"/>**        |
 
-11. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**.
+11. Make sure that your `appsettings.json` file looks as shown in the below screenshot.
 
-    ![](./Media/image2-lab4.png)
+    ![](./Media/updatenewlaste1.png)
 
-12. You can use the secret manager tool without knowing these implementation details. Here, you'll be defining multiple app secrets consisting of a key and its value. The secret is associated with the project's UserSecretsId value. Run the below dotnet commands to set user-secrets. Make sure to replace the below values before running it.
-  
-   | **Variables**                | **Values**                                                    |
-   | ---------------------------- |---------------------------------------------------------------|
-   | deploymentId                 | **<inject key="CompletionModel" enableCopy="true"/>**         |
-   | modelID                      | **<inject key="CompletionModel" enableCopy="true"/>**
-   | endpoint                     | **<inject key="OpenAIEndpoint" enableCopy="true"/>**          |
-   | apiKey                       | **<inject key="OpenAIKey" enableCopy="true"/>**               |
+12. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**.
+
+    ![](./Media/semtic-newterminal.png)
+
+13. Execute the following commands to install the necessary packages.
     
+    ```
+    dotnet add package Microsoft.Extensions.Hosting --version 9.0.0-preview.3.24172.9
+    dotnet add package Microsoft.Extensions.Options.DataAnnotations --version 9.0.0-preview.3.24172.9
+    dotnet add package Microsoft.SemanticKernel --version 1.11.0
+    ```
 
-   ```powershell
-   dotnet user-secrets set "serviceType" "AzureOpenAI"
-   dotnet user-secrets set "serviceId" "gpt-35-turbo"
-   dotnet user-secrets set "deploymentId" "your deploymentId"
-   dotnet user-secrets set "ModelId" "your ModelId"
-   dotnet user-secrets set "endpoint" "https:// ... your endpoint ... .openai.azure.com/"
-   dotnet user-secrets set "apiKey" "... your Azure OpenAI key ..."
-   ```
-     
-13. To build and run the console application from the terminal use the following commands:
+14. To build and run the Home Automation application from the terminal use the following commands:
 
-   ```powershell
-   dotnet build
-   dotnet run
-   ```
+    ```powershell
+    dotnet build
+    dotnet run
+    ```
+    
+    ![](./Media/dotnetbuild.png)
 
-   >**Note**: Getting a 400 (BadRequest) and error "Azure.RequestFailedException: logprobs, best_of and echo parameters are not available on gpt-35-turbo model. Please remove the parameter and try again."
-   
-   > A chat completion model (gpt-35-turbo) was set in serviceId/deploymentOrModelId while the kernel was configured to use a text completion model. The type of model used by the kernel can be configured with the endpointType secret. To fix, you can either:
-   
-   > Change the endpointType to chat-completion by running the given command `dotnet user-secrets set "endpointType" "chat-completion"` and Re-run step 13 commands.
+    > **Note**: Please disregard the warning.
+    
+15. After running `dotnet run`, you can ask few questions and review the response. For example: `What time is it?`
 
-14. After running `dotnet run`, you can ask few questions and review the response. For example: `what is Copilot?`
+    ![](./Media/dotnetrun.png)
 
-   ![](./Media/question1.png)
+16. Example 2: `Set an alarm for 6:00 am.`
 
-15. Example 2: `How Semantic Kernel used in C# Hello World Sample App`
+    ![](./Media/questionn2.png)
 
-   ![](./Media/question2.1.png)
+17. If you wish to include additional questions, navigate to the **worker.cs** file and insert your new questions at **line number 32**.
 
-16. This app don't support real-time information questions. For example: `What's the latest update on Azure OpenAI`
+    ![](./Media/optional12.png)
 
-   ![](./Media/question3.png)
+18. Alternatively, you can pose any question to in the terminal.
 
 ### Task 2: Configure Azure Cognitive Search
 
