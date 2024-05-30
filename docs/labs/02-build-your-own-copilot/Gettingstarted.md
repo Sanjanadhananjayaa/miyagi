@@ -1,4 +1,4 @@
-# Getting Started with the Lab
+![image](https://github.com/shahanakattil/miyagi/assets/69720936/50620641-eeb1-4c75-a68c-abab726906d7)# Getting Started with the Lab
 
 1. After the environment has been set up, your browser will load a virtual machine (JumpVM), use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the lab guide to switch to different exercises in the lab guide.
 
@@ -46,7 +46,7 @@
 
 1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
 
-   ![](./Media/resources.png)
+   ![](./Media/rgname.png)
 
 ## Verify and Review the values of Azure Resources 
 
