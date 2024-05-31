@@ -85,6 +85,8 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
    ![](./Media/recommendations-parameter-output.png)
 
+   > **Note**: Please ignore the 500 error and move on to the next task.
+
 1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>|Log stream**, review the **logs**.
 
 ### Task 2: Update Container App Recommendation service URL for Miyagi UI
