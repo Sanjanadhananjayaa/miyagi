@@ -57,5 +57,5 @@
    ![](./Media/rgname.png)
 
 
-> [!IMPORTANT]
+> [!IMPORTANT]<br>
 > **For a smoother experience during the hands-on lab, it's important to thoroughly review both the instructions and the accompanying notes. This will help you navigate through the tasks with ease and confidence.**
