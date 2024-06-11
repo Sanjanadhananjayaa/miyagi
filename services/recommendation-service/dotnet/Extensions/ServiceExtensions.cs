@@ -1,102 +1,126 @@
-using Azure.Core;
-using Azure.Identity;
-using Azure.Storage.Blobs;
-using GBB.Miyagi.RecommendationService.config;
+using System.Diagnostics;
+using System.Text.Json;
+using GBB.Miyagi.RecommendationService.Models;
 using GBB.Miyagi.RecommendationService.Plugins;
-using Microsoft.Azure.Cosmos;
+using GBB.Miyagi.RecommendationService.Utils;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.Connectors.AzureAISearch;
-using Microsoft.SemanticKernel.Connectors.OpenAI;
-using Microsoft.SemanticKernel.Memory;
-using Microsoft.SemanticKernel.Plugins.Core;
+using Microsoft.SemanticKernel.Orchestration;
+using Microsoft.SemanticKernel.Planning;
+using Microsoft.SemanticKernel.TemplateEngine.Prompt;
 
-namespace GBB.Miyagi.RecommendationService.Extensions;
+namespace GBB.Miyagi.RecommendationService.Controllers;
 
-public static class ServiceExtensions
+/// <summary>
+///     The controller below is used to recommend asset allocation to the user, given their preferences.
+///     Usage: POST /assets with miyagiContext as the JSON body
+/// </summary>
+[ApiController]
+[Route("recommendations")]
+public class AssetsController : ControllerBase
 {
-        
-    private static KernelSettings GetKernelSettings(IServiceProvider serviceProvider)
-    {
-        return serviceProvider.GetRequiredService<KernelSettings>();
-    }
-        
-    public static void AddAzureServices(this IServiceCollection services)
-    {
-        var kernelSettings = GetKernelSettings(services.BuildServiceProvider());
-        // var serviceProvider = services.BuildServiceProvider();
-        // var configuration = serviceProvider.GetRequiredService<IConfiguration>();
-        
-        TokenCredential credential = new DefaultAzureCredential();
-        
-        services.AddSingleton(_ => new BlobServiceClient(
-            new Uri(kernelSettings.BlobServiceUri),
-            credential));
-        
-        // TODO: Debug why DefaultAzureCredential is not working for multiple tenants
-        // TokenCredential credential = new DefaultAzureCredential(
-        // new DefaultAzureCredentialOptions { ManagedIdentityClientId = Environment.GetEnvironmentVariable("AZURE_CLIENT_ID") });
-        // TokenCredential credential = new ClientSecretCredential(
-        // tenantId: configuration["AZURE_TENANT_ID"]!,
-        // clientId: configuration["AZURE_CLIENT_ID"]!,
-        // clientSecret: configuration["AZURE_CLIENT_SECRET"]!,
-        // options: new TokenCredentialOptions()
-        //     );
-        // CosmosClient cosmosClient = new(
-        //     accountEndpoint: new Uri(kernelSettings.CosmosDbUri).ToString(),
-        //     tokenCredential: credential
-        // );
+    private const string DefaultRiskLevel = "moderate";
+    private readonly IKernel _kernel;
 
-        CosmosClient cosmosClient = new(
-            connectionString: kernelSettings.CosmosDbConnectionString
-        );
-        services.AddSingleton(_ => cosmosClient);
-        services.AddSingleton<CosmosDbService>();
+    /// <summary>
+    ///     Initializes a new instance of the <see cref="AssetsController" /> class.
+    /// </summary>
+    public AssetsController(IKernel kernel)
+    {
+        _kernel = kernel;
     }
 
-    public static void AddSkServices(this IServiceCollection services)
+    /// <summary>
+    ///     Returns the recommended asset allocation for the user using planner.
+    /// </summary>
+    /// <param name="miyagiContext">User preferences.</param>
+    /// <returns>JSON object of LLM response with asset allocation</returns>
+    [HttpPost("/assets")]
+    public async Task<IActionResult> GetRecommendations([FromBody] MiyagiContext miyagiContext)
     {
-        var kernelSettings = GetKernelSettings(services.BuildServiceProvider());
+        var log = ConsoleLogger.Log;
+        log.BeginScope("AssetsController.GetRecommendations");
+        log.LogDebug("*************************************");
+        Stopwatch sw = new();
+        sw.Start();
+        // ========= Import semantic functions as plugins =========
+        log.LogDebug("Path: {S}", Directory.GetCurrentDirectory());
+        var pluginsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "plugins");
+        var advisorPlugin = _kernel.ImportSemanticFunctionsFromDirectory(pluginsDirectory, "AdvisorPlugin");
 
-        services.AddSingleton<Kernel>(_ =>
-        {
-            services = new ServiceCollection();
-            services.AddLogging(c => c.AddConsole().SetMinimumLevel(LogLevel.Trace));
-            services.AddHttpClient();
-            services.AddKernel().AddAzureOpenAIChatCompletion(
-                deploymentName: kernelSettings.DeploymentOrModelId,
-                endpoint: kernelSettings.Endpoint,
-                // credentials: new DefaultAzureCredential() // Use this for token based authentication (recommended)
-                apiKey: kernelSettings.ApiKey, // Use this for API key based authentication (not recommended for production use)
-                modelId: kernelSettings.DeploymentOrModelId);
-            services.AddSingleton<KernelPlugin>(sp => KernelPluginFactory.CreateFromType<TimePlugin>(serviceProvider: sp));
-            services.AddSingleton<KernelPlugin>(sp => KernelPluginFactory.CreateFromType<UserProfilePlugin>(serviceProvider: sp));
-            var kernel = services.BuildServiceProvider().GetRequiredService<Kernel>();
+        // ========= Import native function  =========
+        var userProfilePlugin = _kernel.ImportFunctions(new UserProfilePlugin(), "UserProfilePlugin");
 
-            return kernel;
-        });
-            
-        services.AddSingleton<SemanticTextMemory>(_ =>
-        {
-            // Azure AI Search Vector DB - a store that persists data in a hosted Azure AI Search database
-            IMemoryStore store = new AzureAISearchMemoryStore(
-                kernelSettings.AzureCognitiveSearchEndpoint,
-                // credentials: new DefaultAzureCredential() // Use this for token based authentication (recommended)
-                kernelSettings.AzureCognitiveSearchApiKey // Use this for API key based authentication (not recommended for production use)
-                );
-            
-            // Create an embedding generator to use for semantic memory.
-            var embeddingGenerator = new AzureOpenAITextEmbeddingGenerationService(
-                kernelSettings.EmbeddingDeploymentOrModelId, 
-                kernelSettings.Endpoint,
-                // credential: new DefaultAzureCredential(), // Use this for token based authentication (recommended)
-                kernelSettings.ApiKey, // Use this for API key based authentication (not recommended for production use)
-                kernelSettings.EmbeddingDeploymentOrModelId);
+        // ========= Set context variables to populate the prompt  =========
+        var context = _kernel.CreateNewContext();
+        context.Variables.Set("userId", miyagiContext.UserInfo.UserId);
+        context.Variables.Set("portfolio", JsonSerializer.Serialize(miyagiContext.Portfolio));
+        context.Variables.Set("risk", miyagiContext.UserInfo.RiskLevel ?? DefaultRiskLevel);
 
-            // The combination of the text embedding generator and the memory store makes up the 'SemanticTextMemory' object used to
-            // store and retrieve memories.
-            SemanticTextMemory textMemory = new(store, embeddingGenerator);
-            return textMemory;
-        });
+        // ========= Chain and orchestrate with LLM =========
+        var plan = new Plan("Execute userProfilePlugin and then advisorPlugin");
+        plan.AddSteps(userProfilePlugin["GetUserAge"],
+            userProfilePlugin["GetAnnualHouseholdIncome"],
+            advisorPlugin["PortfolioAllocation"]);
+
+        // Execute plan
+        var ask = "Using the userId, get user age and household income, and then get the recommended asset allocation";
+        context.Variables.Update(ask);
+        log.LogDebug("Planner steps: {N}", plan.Steps.Count);
+        var result = await plan.InvokeAsync(context);
+
+        // ========= Log token count, which determines cost =========
+        var promptRenderer = new PromptTemplateEngine();
+        var renderedPrompt = await promptRenderer.RenderAsync(
+            ask,
+            context);
+        log.LogDebug("Rendered Prompt: {S}", renderedPrompt);
+        log.LogDebug("Result: {S}", result.GetValue<string>());
+
+        log.LogDebug("Time Taken: {N}", sw.Elapsed);
+        log.LogDebug("*************************************");
+
+        var output = result.GetValue<string>()?.Replace("\n", "").Replace("\r", "").Replace(" ", "");
+
+        return Content(output ?? string.Empty, "application/json");
     }
-        
+
+
+    /// <summary>
+    ///     Returns the recommended asset allocation for the user using RunAsync.
+    /// </summary>
+    /// <param name="miyagiContext">User preferences.</param>
+    /// <returns>JSON object of LLM response with asset allocation</returns>
+    [HttpPost("/assets-async")]
+    public async Task<IActionResult> GetRecommendationsRunAsync([FromBody] MiyagiContext miyagiContext)
+    {
+        // ========= Import semantic functions as plugins =========
+        var pluginsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "plugins");
+        var advisorPlugin = _kernel.ImportSemanticFunctionsFromDirectory(pluginsDirectory, "AdvisorPlugin");
+
+        // ========= Import native function  =========
+        var userProfilePlugin = _kernel.ImportFunctions(new UserProfilePlugin(), "UserProfilePlugin");
+
+        // ========= Set context variables to populate the prompt  =========
+        var context = new ContextVariables();
+        context.Set("userId", miyagiContext.UserInfo.UserId);
+        context.Set("portfolio", JsonSerializer.Serialize(miyagiContext.Portfolio));
+        context.Set("risk", miyagiContext.UserInfo.RiskLevel ?? DefaultRiskLevel);
+
+        Console.WriteLine("Context: {0}", context);
+        // ========= Chain and orchestrate with LLM =========
+        var result = await _kernel.RunAsync(
+            context,
+            userProfilePlugin["GetUserAge"],
+            userProfilePlugin["GetAnnualHouseholdIncome"],
+            advisorPlugin["PortfolioAllocation"]);
+
+        // ========= Log token count, which determines cost =========
+        ConsoleLogger.Log.LogDebug("Context: {S}", context.ToString());
+        ConsoleLogger.Log.LogDebug("Result: {S}", result.GetValue<string>());
+
+        var output = result.GetValue<string>()?.Replace("\n", "").Replace("\r", "").Replace(" ", "");
+
+        return Content(output ?? string.Empty, "application/json");
+    }
 }
