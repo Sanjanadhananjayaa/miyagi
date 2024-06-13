@@ -305,6 +305,8 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
       </outbound>
       ```
 
+      ![](./Media/apmi-output.png)
+
 17. Navigate back to Event Hub, select **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>** Event Hubs.
 
     ![](./Media/api-product9.png)
