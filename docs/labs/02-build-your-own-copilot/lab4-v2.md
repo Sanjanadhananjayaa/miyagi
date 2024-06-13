@@ -25,9 +25,9 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
    ![](./Media/azure-account-select.png)
 
-5. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** and follow the wizard to **create your app** with the semantic function and save it
+5. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** **(1)** and follow the wizard to **create your app** **(2)** with the semantic function and save it
 
-   ![](./Media/sskernal.png)
+   ![](./Media/sematic-kernal-file-select.png)
 
 6. Choose **C# Home Automation**
 
