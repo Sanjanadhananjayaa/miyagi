@@ -290,7 +290,7 @@ In this task, you'll will be creating a container app for the recommendation.
    > **Note**: Please replace **[DID]** with **<inject key="DeploymentID" enableCopy="true"/>**
    
    ```
-   az containerapp ingress enable -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 80
+   az containerapp ingress enable -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID] --type external --allow-insecure --target-port 8080
    ```
 
 ### Task 7: Verify Recommendation Service using Swagger
