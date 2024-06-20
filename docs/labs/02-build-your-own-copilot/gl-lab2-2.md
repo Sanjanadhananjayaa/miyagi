@@ -16,7 +16,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from the left navigation pane select **Ingress** **(1)** under setting session and click on **Endpoints** **(2)** URL link.
 
-   ![](./Media/container-ca-ingress.png)
+   ![](./Media/miyag-recc-web.png)
 
 1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
 
@@ -93,7 +93,7 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 1. Once you completed the review of the logs, click on **Ingress** **(1)** under **Settings** and copy **Endpoints** **(2)** URL link.
 
-   ![](./Media/container-ca-ingress.png)
+   ![](./Media/miyag-recc-web.png)
 
 1. Navigate back to **Visual Studio Code**, navigate to **miyagi>ui\typescript>.env.** and replace existing code for **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** with copied for **Endpoints** and save the file 
 
