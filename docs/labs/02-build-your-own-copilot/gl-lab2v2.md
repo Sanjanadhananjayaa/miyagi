@@ -306,7 +306,7 @@ In this task, you'll will be creating a container app for the recommendation.
 
 1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** **(1)** under setting session and click on **Endpoints** **(2)** URL link.
 
-   ![](./Media/container-ca-ingress.png)
+   ![](./Media/miyag-recc-web.png)
 
 1. You can view the **miyagi Recommendation service** website running through the Container Apps.
 
