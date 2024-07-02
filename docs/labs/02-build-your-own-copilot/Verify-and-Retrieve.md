@@ -24,19 +24,19 @@ In this task, verification, and retrieval of specific values, including End Poin
    
       - In the **Azure AI Studio**, select **Deployments**, under the Management section.
 
-      - In the **Deployments** blade of Azure AI Studio, click on **gpt-35-turbo** model name **(1)** and verify the **deployment name** of gpt-35-turbo model **(2)**.
+      - In the **Deployments** blade of Azure AI Studio, click on **gpt-4** model name **(1)** and verify the **deployment name** of gpt-4 model **(2)**.
 
-          ![](./Media/image-rg-7.png)
+          ![](./Media/gpt4-main.png)
         
-          ![](./Media/image-rg-8.png)
+          ![](./Media/gpt4-main-name.png)
       
       -  Navigate back to the **Deployment** page
 
       - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and verify the **deployment name** of **text-embedding-ada-002 model(2)**.
         
-         ![](./Media/image-rg-10.png)
+         ![](./Media/ada-main.png)
 
-         ![](./Media/image-rg-11.png)
+         ![](./Media/ada-main-name.png)
 
 1. To verify the values for **endpoint** and **apiKey** follow the below steps:
 
