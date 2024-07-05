@@ -1,40 +1,40 @@
-# Lab 2 - Run Miyagi App Locally
+# Laboratorio 2 - Ejecutar la Aplicación Miyagi Localmente
 
-### Duration: 80 minutes
+### Duración: 80 minutos
 
-In this lab, the focus is on configuring the Miyagi App for operational readiness. Subsequently, attention shifts to understanding the nuanced implementation of the Recommendation service. The practical phase involves executing the Recommendation service and deploying the Miyagi frontend locally for testing and development. A crucial step includes optimizing data retrieval efficiency by persisting embeddings in Azure AI Search. The project culminates with a broader exploration of the Miyagi App and Recommendation service, emphasizing a personalized user experience. This task-based approach ensures a systematic progression through the project intricacies, facilitating a comprehensive understanding and effective implementation.
+En esta práctica de laboratorio, la atención se centra en configurar la aplicación Miyagi para que esté lista para funcionar. Posteriormente, la atención se centra en comprender la implementación matizada del servicio de Recomendación. La fase práctica implica ejecutar el servicio de Recomendación e implementar el frontend Miyagi localmente para pruebas y desarrollo. Un paso crucial incluye optimizar la eficiencia de la recuperación de datos mediante la persistencia de los embeddings en Azure AI Search. El proyecto culmina con una exploración más amplia de la aplicación Miyagi y el servicio de Recomendación, enfatizando una experiencia de usuario personalizada. Este enfoque basado en tareas garantiza una progresión sistemática a través de las complejidades del proyecto, facilitando una comprensión integral y una implementación efectiva.
 
-### Task 1: Setup configuration for miyagi app
+### Tarea 1: Configuración de la aplicación miyagi
 
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
+1. Abra **Visual Studio Code** desde el escritorio de Lab VM haciendo doble clic en el acceso directo.
 
    ![](./Media/vs.png)
 
-   >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
+   >**Nota** Si aparece la ventana **¡Únase a nosotros para mejorar la extensión promt-flow!**, haga clic en **No,gracias**.
 
    ![](./Media/image-rg-01.png)
    
-1. In **Visual Studio Code** from menu bar select **File(1)>open folder(2)**.
+1. En **Visual Studio Code**, de la barra de menú seleccione **Archivo(1)>Abrir carpeta(2)**.
 
    ![](./Media/image-rg-02.png)
 
-1. Within **File Explorer**, navigate to **C:\LabFiles\miyagi** select **miyagi**(1) click on **Select folder(2)**
+1. Dentro del **Explorador de Archivos**, navegue hasta **C:\LabFiles\miyagi** seleccione **miyagi**(1) y haga clic en **Seleccionar carpeta(2)**
 
    ![](./Media/image-rg(003).png)
 
-1. In **Visual Studio Code**, click on **Yes, I trust the authors** when **Do you trust the authors of the files in this folder?** window prompted.
+1. En **Visual Studio Code**, haga clic en **Sí, confío en los autores** cuando se le solicite en la ventana **¿Confía en los autores de los archivos de esta carpeta?**.
 
    ![](./Media/image-rg-18.png) 
    
-1. Expand **miyagi>ui** directory and verify that **.env.** file is present. 
+1. Expanda el directorio **miyagi>ui** y verifique que el archivo **.env** está presente. 
 
-1. Expand **miyagi/services/recommendation-service/dotnet** directory and verify that **appsettings.json** file is present.
+1. Expanda el directorio **miyagi/services/recommendation-service/dotnet** y verifique que el archivo **appsettings.json** está presente.
 
    ![](./Media/open-appsettings.png)
   
-1. In the **appsettings.json** file replace the following values for the variables below.
+1. En el archivo **appsettings.json** reemplace los siguientes valores para las variables siguientes.
 
-   | **Variables**                | **Values**                                                    |
+   | **Variables**                | **Valores**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
    | deploymentOrModelId          | **<inject key="CompletionModel" enableCopy="true"/>**         |
    | embeddingDeploymentOrModelId | **<inject key="EmbeddingModel" enableCopy="true"/>**          |
@@ -47,17 +47,17 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
    | bingApiKey                   | **<inject key="Bing_API_KEY" enableCopy="true"/>**           |
    | cosmosDbConnectionString     | **<inject key="CosmosDBconnectinString" enableCopy="true"/>** |
    
-   > **Note**: FYI, the above values/Keys/Endpoints/ConnectionString of Azure Resources are directly injected to labguide. Leave default settings for "cosmosDbContainerName": "recommendations" and "logLevel": "Trace".
+   > **Nota**: Para su información, los valores/Claves/Puntos de conexión/Cadena de conexión de los Recursos de Azure están directamente inyectados en esta guía de laboratorio. Deje la configuración predeterminada para "cosmosDbContainerName": "recommendations" y "logLevel": "Trace".
 
       ![](./Media/appsetting-update.png)
    
-1. Once after updating the values kindly save the file by pressing **CTRL + S**.
+1. Una vez que haya actualizado los valores, guarde el archivo presionando **CTRL + S**.
 
-1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
+1. Navegue a **miyagi/sandbox/usecases/rag/dotnet** y verifique que el archivo **.env** está presente.
   
-1. In the **.env** file replace the following values for the variables below.
+1. En el archivo **.env** reemplace los siguientes valores para las variables siguientes.
 
-   | **Variables**                          | **Values**                                            |
+   | **Variables**                          | **Valores**                                            |
    | ---------------------------------------| ------------------------------------------------------|
    | AZURE_OPENAI_ENDPOINT                  | **<inject key="OpenAIEndpoint" enableCopy="true"/>**  |
    | AZURE_OPENAI_CHAT_MODEL                | **<inject key="CompletionModel" enableCopy="true"/>** |
@@ -68,71 +68,71 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
    
    ![](./Media/env1new.png)
 
-1. Once after updating the values kindly save the file by pressing **CTRL + S**.
+1. Una vez que haya actualizado los valores, guarde el archivo presionando **CTRL + S**.
 
-  >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  >**¡Felicitaciones** por completar la Tarea! Ahora es el momento de validarla. Aquí están los pasos:
+> - Pulse el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, ha validado correctamente el laboratorio.
+> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio. 
+> - Si necesita ayuda, contáctenos en labs-support@spektrasystems.com.
 
    <validation step="d37dd2bb-631a-4ffe-a41e-fc3ef07aa2b5" />
 
-### Task 2: Understanding the implementation of the Recommendation service
+### Tarea 2: Comprender la implementación del servicio de Recomendación
 
-Recommendation service implements RAG pattern using Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select kernel as .NET Interactive in the top right corner of the notebook.
+ El servicio de recomendación implementa el patrón RAG utilizando el SDK de Semantic Kernel. Los detalles de la implementación se capturan en el notebook (cuaderno) de Jupyter en la carpeta miyagi/sandbox/usecases/rag/dotnet. Puede abrir el cuaderno en VS Code y ejecutar las celdas para comprender los detalles paso a paso de cómo se implementa el servicio de Recomendación. Preste especial atención a cómo se implementa el patrón RAG utilizando Semantic Kernel. Seleccione el kernel como .NET Interactive en la esquina superior derecha del cuaderno.
 
-1. In the Visual Studio Code navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
+1. En Visual Studio Code navegue hasta la carpeta **miyagi/sandbox/usecases/rag/dotnet** y seleccione **Getting-started.ipynb**
 
    ![](./Media/getting-start-01.png)
 
-1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
+1. **Ejecute el cuaderno celda por celda** (ya sea usando Ctrl + Enter para permanecer en la misma celda o con Shift + Enter par avanzar a la siguiente celda) y observe los resultados de la ejecución de cada celda.
   
-   > **Note**: Make sure **.Net Interactive** is in ready State, If not please wait for 15 to 20 seconds. Also, please do not click on **Run All** option to execute all the cells at a time which may lead to exceed in token limit that results Error: 503 – Service unreachable. 
+   > **Nota**: Asegúrese de que **.Net Interactive** se encuentre en el estado Listo. De lo contrario, espere de 15 a 20 segundos. Además, por favor no haga clic en la opción **Ejecutar Todo** para ejecutar todas las celdas a la vez, dado que puede provocar que se exceda el límite de tokens y se produzca el Error: 503 – Servicio inalcanzable. 
 
       ![](./Media/run.png)
 
-   > **Note**: Incase any issues or errors occur related to exceeding call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
+   > **Nota**: En caso de que se produzca algún problema o error relacionado con exceder el límite de tasa de llamadas de su nivel de precios actual de OpenAI S0, espere de 15 a 20 segundos y vuelva a ejecutar la celda.
 
- >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  >**¡Felicitaciones** por completar la Tarea! Ahora es el momento de validarla. Aquí están los pasos:
+> - Pulse el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, ha validado correctamente el laboratorio.
+> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio. 
+> - Si necesita ayuda, contáctenos en labs-support@spektrasystems.com.
 
 <validation step="f277b99e-c179-4bb8-b9c1-6479a526ee4b" />
 
-### Task 3: Run recommendation service locally
+### Tarea 3: Ejecutar el servicio de recomendaciones localmente
 
-1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
+1. Abra una nueva terminal: navegando a **miyagi/services/recommendation-service/dotnet** y haciendo clic derecho, en el menú contextual seleccione **Abrir en Terminal Integrada**.
 
     ![](./Media/task4-1.png)
 
-1. Run the following command to run the recommendation service locally
+1. Ejecute el siguiente comando para ejecutar el servicio de recomendación localmente.
     
    ```
    dotnet build
    dotnet run
    ```
 
-   **Note**: Let the command run, meanwhile you can proceed with the next step.
+   **Nota**: Deje que se ejecute el comando, mientras tanto puede continuar con el siguiente paso.
 
-1. Open another tab in Edge, in the browser window paste the following link
+1. Abra otra pestaña en Edge, en la ventana del navegador pegue el siguiente enlace
 
    ```
    http://localhost:5224/swagger/index.html 
    ```
 
-   **Note**: Refresh the page continuously until you get the swagger page for the recommendation service as depicted in the image below.
+   **Nota**: Actualice la página continuamente hasta que obtenga la página swagger para el servicio de recomendación como se muestra en la imagen a continuación.
 
    ![](./Media/miyagi2.png)
 
 
-### Task 4: Run miyagi frontend locally
+### Tarea 4: Ejecutar el frontend de Miyagi localmente
 
-1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
+1. Abra una nueva terminal: navegando a **miyagi/ui** y haciendo clic derecho en **ui/typescript**, en el menú contextual seleccione **Abrir en Terminal Integrada**.
 
    ![](./Media/image-rg-25.png)
 
-1. Run the following command to install the dependencies
+1. Ejecute el siguiente comando para instalar las dependencias
    
     ```
     npm install --global yarn
@@ -140,21 +140,21 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
     yarn dev
     ```
 
-   **Note**: Please wait till the command gets executed successfully. It will take up to 5 minutes.
+   **Nota**: Por favor espere hasta que el comando se ejecute correctamente. Tardará hasta 5 minutos.
 
-1. Open aa new tab in Edge, and browse the following
+1. Abra una nueva pestaña en Edge, navegue a la siguiente dirección
 
    ```
    http://localhost:4001
    ```
 
-### Task 5: Persist embeddings in Azure AI Search
+### Tarea 5: Persistiendo embeddings en Azure AI Search
 
-1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
+1. Vuelva a la página **swagger UI**, desplácese hasta la sección **Memory**, haga clic en **POST /dataset** para ampliar y haga clic en **Try it out**.
 
    ![](./Media/swaggerUI-memory.png)
 
-1. Replace the code with the below code, and click on **Execute**.
+1. Reemplace el código con el siguiente código y haga clic en **Execute**.
 
      ```
      {
@@ -170,53 +170,53 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
       ![](./Media/swaggerUI-Execution.png)
       
-1. In the **swagger UI** page, Scroll down to the **Responses** session review that it has been executed successfully by checking the code status is **200**.
+1. En la página **swagger UI**, desplácese hasta la sección **Responses** revise que se ha ejecutado exitosamente verificando que el código de estado es **200**.
 
     ![](./Media/swaggerUI-Responses.png)
 
-1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
+1. Vuelva a la pestaña **Portal de Azure**, busque y seleccione **AI Search**.
 
     ![](./Media/ai-search1.png)    
 
-1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
+1. En la pestaña **Azure AI services | AI Search**, seleccione **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
+1. En la pestaña **acs-<inject key="DeploymentID" enableCopy="false"/>** del servicio Search, haga clic en **Índices** **(1)** en Administración de búsquedas y revise que **miyagi-embeddings** **(2)** ha sido creado.   
 
    ![](./Media/ai-search-update.png)
 
-   > **Note**: Please click on the refresh button still you view the **Document Count**.
+   > **Nota**: Por favor haga clic en el botón Actualizar mientras ve el **Recuento de Documentos**.
 
->**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+>**¡Felicitaciones** por completar la Tarea! Ahora es el momento de validarla. Aquí están los pasos:
+> - Pulse el botón Validar para la tarea correspondiente. Si recibe un mensaje de éxito, ha validado correctamente el laboratorio.
+> - De lo contrario, lea atentamente el mensaje de error y vuelva a intentar el paso, siguiendo las instrucciones de la guía de laboratorio. 
+> - Si necesita ayuda, contáctenos en labs-support@spektrasystems.com.
 
    <validation step="940ebf1a-9add-4bf0-a7fd-c6d929961497" />
 
-### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
+### Tarea 6: Explorar la Aplicación Miyagi y el servicio de Recomendación mediante Personalización
 
-1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
+1. Vuelva a la página de la interfaz de usuario del **servicio de recomendación** y haga clic en el botón **personalize**.
 
     ![](./Media/service-personalize.png)
 
-1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
+1. En la página **Personalize**, seleccione su **asesor financiero** en el menú desplegable y haga clic en **Personalize**.
 
    ![](./Media/financial-advisor.png)  
 
-1. You should see the recommendations from the recommendation service in the Top Stocks widget.
+1. Debería ver las recomendaciones del servicio de recomendación en el widget Top Stocks.
 
    ![](./Media/financial-advisor-output.png) 
 
-1. Navigate to the **Visual Studio Code**, and click on **dotnet** from the terminal, you can go through the logs.
+1. Navegue a **Visual Studio Code** y haga clic en **dotnet** desde la terminal, puede revisar los registros.
 
    ![](./Media/terminal-output.png)    
 
-1. Once you view the logs, press **Ctrl + C** to stop the **swagger UI** page.
+1. Una vez que revise los registros, presione **Ctrl + C** para detener la página **swagger UI**.
 
-1.  From the **Terminal** select **Node** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
+1. Desde la **Terminal** seleccione la terminal **Node**, presione **Ctrl + C** para detener la página de la interfaz de usuario del **servicio de recomendación**.
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+1. Ahora, haga clic en **Siguiente** en la esquina inferior derecha para pasar a la página siguiente.
 
-## Summary
+## Resumen
 
-In this Lab, you began with configuring the Miyagi App for operational readiness, followed by a detailed exploration of the Recommendation service's implementation. Practical execution involves running the Recommendation service and deploying the Miyagi frontend locally for testing. Enhancing data retrieval efficiency is a pivotal step, achieved by persisting embeddings in Azure AI Search. The project concludes with a broad exploration of the Miyagi App and Recommendation service, prioritizing a personalized user experience. This systematic approach ensures a thorough understanding and effective implementation throughout the project.
+En esta práctica de laboratorio, comenzó con la configuración de la Aplicación Miyagi para su preparación operativa, seguido de una exploración detallada de la implementación del servicio de Recomendación. La ejecución práctica implica ejecutar el servicio de Recomendación e implementar el frontend Miyagi localmente para realizar pruebas. Mejorar la eficiencia de la recuperación de datos es un paso fundamental que se logra mediante la persistencia de embeddings en Azure AI Search. El proyecto concluye con una amplia exploración de la Aplicación Miyagi y el servicio de Recomendación, priorizando una experiencia de usuario personalizada. Este enfoque sistemático garantiza una comprensión profunda y una implementación efectiva durante todo el proyecto.

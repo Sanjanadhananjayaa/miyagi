@@ -1,89 +1,89 @@
-# Lab 1: Verify and Retrieve the values of Azure Resources (optional)
+# Laboratorio 1 - Verificar y Recuperar los valores de los Recursos de Azure (opcional)
 
-In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key for the designated resources.
+En esta tarea, se verifican y recuperan valores específicos, incluidos el punto de conexión, la cadena de conexión y la clave para los recursos designados.
 
    - Azure OpenAI : **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** 
-   - Azure Cosmos DB account : **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
-   - Search Service : **acs-<inject key="DeploymentID" enableCopy="false"/>**
+   - Cuenta de Azure Cosmos DB : **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
+   - Servicio Search : **acs-<inject key="DeploymentID" enableCopy="false"/>**
 
-1. To verify the deployment model names for "**deploymentOrModelId**" and "**embeddingDeploymentOrModelId**" follow the below steps:
+1. Para verificar los nombres de los modelos implementados para "**deploymentOrModelId**" y para "**embeddingDeploymentOrModelId**" siga los pasos a continuación:
    
-      - In Azure Portal, click on **Resource groups** from the Navigate panel.
+      - En el Portal de Azure, haga clic en **Grupos de Recursos** en el panel Navegar.
 
-      - From the Resource groups page, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
+      - Desde la página Grupos de Recursos, haga clic en **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
          ![](./Media/image-rg-1.png)
 
-      - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+      - En **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, en la pestaña Información general (1) seleccione **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
         ![](./Media/select-openai.png)
 
-      - In the **OpenAI Overview** **(1)** page, right-click on **Go to Azure OpenAI Studio** (2) button and click on **Open link a new tab**.
+      - En la página **Información General de OpenAI** **(1)**, haga clic derecho en el botón **Ir a Azure OpenAI Studio** (2) y haga clic en **Abrir enlace en una pestaña nueva**.
 
          ![](./Media/image-rg-03.png) 
    
-      - In the **Azure AI Studio**, select **Deployments**, under the Management section.
+      - En **Azure AI Studio**, seleccione **Implementaciones**, en la sección Administración.
 
-      - In the **Deployments** blade of Azure AI Studio, click on **gpt-35-turbo** model name **(1)** and verify the **deployment name** of gpt-35-turbo model **(2)**.
+      - En la hoja **Implementaciones** de Azure AI Studio, haga clic en el nombre de modelo **(1)** **gpt-35-turbo**  y verifique el **nombre de la implementación** del modelo **(2)** gpt-35-turbo.
 
           ![](./Media/image-rg-7.png)
         
           ![](./Media/image-rg-8.png)
       
-      -  Navigate back to the **Deployment** page
+      -  Vuelva a la página **Implementaciones**.
 
-      - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and verify the **deployment name** of **text-embedding-ada-002 model(2)**.
+      - En la hoja Implementaciones de Azure AI Studio, haga clic en el **nombre del modelo (1) text-embedding-ada-002** y verifique el **nombre de la implementación** del **modelo (2) text-embedding-ada-002**.
         
          ![](./Media/image-rg-10.png)
 
          ![](./Media/image-rg-11.png)
 
-1. To verify the values for **endpoint** and **apiKey** follow the below steps:
+1. Para verificar los valores para **endpoint** y **apiKey**, siga los pasos a continuación:
 
-   -  Navigate back to the tab displaying **Azure portal**. 
+   -  Vuelva a la pestaña que muestra **Portal de Azure**. 
 
-   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint**, verify the **KEY1** and **Endpoint**.
+   -  En la hoja **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** en la sección **Administración de Recursos**, seleccione **Claves y punto de conexión**, verifique **Clave 1** y **Extremo**.
      
       ![](./Media/image-rg-3.png)
 
-1. To verify the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
+1. Para verificar los valores para  "azureCognitiveSearchEndpoint" y  "azureCognitiveSearchApiKey", siga los pasos a continuación:
    
-   - Navigate back to **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
+   - Vuelva al grupo de recursos **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   - On the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** page, select **acs-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
+   - En la página **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, seleccione **acs-<inject key="DeploymentID" enableCopy="false"/>** de la lista de recursos.
 
       ![](./Media/select-acs.png)
  
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, verify the **URL**.
+   - En la hoja **acs-<inject key="DeploymentID" enableCopy="false"/>**, verifique la **URL**.
    
       ![](./Media/image-rg-13.png)
 
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, verify the **Primary admin Key** value.
+   - En la hoja **acs-<inject key="DeploymentID" enableCopy="false"/>**, en la sección **Configuración**, verifique el valor **Clave de administrador principal**.
    
       ![](./Media/image-rg-14.png)
 
-1. To verify the values for "**cosmosDbUri**" and "**cosmosDbName**," please follow the steps below:
+1. Para verificar los valores de "**cosmosDbUri**" y "**cosmosDbName**," por favor siga los pasos a continuación:
 
-   - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **cosmos-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
+   - Vuelva a la página del grupo de recursos **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, seleccione **cosmos-<inject key="DeploymentID" enableCopy="false"/>** de la lista de recursos.
 
      ![](./Media/select-cosmosdb.png)
 
-   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** verify the **URL**.
+   - En **cosmos-<inject key="DeploymentID" enableCopy="false"/>** verifique la **URL**.
      
      ![](./Media/image-rg-16.png)
 
-   - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings**, select **Keys** and verify the value of the **Cosmos DB Primary Connection String**.
+   - En **cosmos-<inject key="DeploymentID" enableCopy="false"/>** en **Configuración**, seleccione **Claves** y verifique el valor de la **Cadena de Conexión Principal de Cosmos DB**.
 
      ![](./Media/cs.png)
 
-1. To obtain the values for  "**blobServiceUri**", please follow the steps below:
+1. Para obtener los valores de  "**blobServiceUri**", por favor siga los pasos a continuación:
 
-   - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** from resources list.
+   - Vuelva a la página del grupo de recursos **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, seleccione **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** de la lista de recursos.
 
      ![](./Media/select-storage.png)
 
-   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings verify the **Blob service** **(1)** under Blob service.
+   - En la cuenta de almacenamiento **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>**, del menú de la izquierda seleccione **Puntos de conexión** **(1)** en Configuración y verifique **Blob service** **(1)** en Blob service.
 
      ![](./Media/blob-storage-endpoint.png)
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+1. Ahora, haga clic en **Siguiente** en la esquina inferior derecha para pasar a la página siguiente.
