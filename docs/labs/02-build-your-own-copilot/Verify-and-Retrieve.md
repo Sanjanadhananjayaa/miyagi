@@ -88,4 +88,4 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
      ![](./Media/miyagi-image117.png)
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+### You have successfully completed this lab. Now click on **Next** from the lower right corner to move to the next page.
