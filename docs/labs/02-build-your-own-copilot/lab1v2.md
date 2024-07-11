@@ -130,6 +130,7 @@ In this task, you will run the recommendation service locally by using Visual St
 
 
 ### Task 4: Run miyagi frontend locally
+In this task, you will run the miyagi frontend locally by installing dependencies using npm and yarn, and then starting the development server. You will verify its functionality by accessing the local development server in the browser.
 
 1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in intergate Terminal**.
 
