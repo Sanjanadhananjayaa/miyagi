@@ -61,6 +61,7 @@ It will create miyagi-recommendation-service and miyagi-ui
    ![](./Media/miyagi-ui-env.png)
 
 ### Task 2: Build a Docker Image for the Miyagi UI
+In this task, you will build and run the Miyagi UI Docker container locally. Begin by opening Docker Desktop and completing the initial setup. Next, use Visual Studio Code to build the Docker image for the Miyagi UI. Once the image is created, verify it and run the image in Docker. Configure the host port and access the application locally via the provided URL.
 
 1. Open the **Docker** Application from the Lab VM desktop by double-clicking on it.
 
