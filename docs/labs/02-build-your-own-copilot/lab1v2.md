@@ -180,7 +180,7 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
 
     ![](./Media/miyagi-image24.png)
 
-1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
+1. Navigate back to the **Azure portal** tab, in Search resources, services and docs (G+/) box at the top of the portal, enter **AI Search**, and then select **AI Search** under services.
 
     ![](./Media/miyagi-image25.png)
 
