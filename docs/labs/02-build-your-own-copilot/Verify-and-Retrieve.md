@@ -10,6 +10,8 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
    
       - On the Azure Portal home page, click on **Resource groups** in the **Navigate** panel.
 
+          ![](./Media/miyagi-image6.png)
+        
       - From the Resource groups page, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
          ![](./Media/miyagi-image7.png)
