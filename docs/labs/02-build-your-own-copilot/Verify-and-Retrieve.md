@@ -54,38 +54,38 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
    - On the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** page, select **acs-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-      ![](./Media/select-acs.png)
+      ![](./Media/miyagi-image110.png)
  
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, verify the **URL**.
    
-      ![](./Media/image-rg-13.png)
+      ![](./Media/miyagi-image111.png)
 
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, verify the **Primary admin Key** value.
    
-      ![](./Media/image-rg-14.png)
+      ![](./Media/miyagi-image112.png)
 
 1. To verify the values for "**cosmosDbUri**" and "**cosmosDbName**," please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **cosmos-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-     ![](./Media/select-cosmosdb.png)
-
+     ![](./Media/miyagi-image113.png)
+     
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** verify the **URL**.
      
-     ![](./Media/image-rg-16.png)
+     ![](./Media/miyagi-image114.png)
 
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings**, select **Keys** and verify the value of the **Cosmos DB Primary Connection String**.
 
-     ![](./Media/cs.png)
+     ![](./Media/miyagi-image115.png)
 
 1. To obtain the values for  "**blobServiceUri**", please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-     ![](./Media/select-storage.png)
+     ![](./Media/miyagi-image116.png)
 
    - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings verify the **Blob service** **(1)** under Blob service.
 
-     ![](./Media/blob-storage-endpoint.png)
+     ![](./Media/miyagi-image117.png)
 
 1. Now, click on **Next** from the lower right corner to move to the next page.
