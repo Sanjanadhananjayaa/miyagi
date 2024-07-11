@@ -28,17 +28,17 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
         
       - In the **Deployments** blade of Azure AI Studio, click on **gpt-4** model name **(1)** and verify the **deployment name** of gpt-4 model **(2)**.
 
-          ![](./Media/miyagi-image12.png)
+          ![](./Media/miyagi-image(12).png)
         
-          ![](./Media/miyagi-image13.png)
+          ![](./Media/miyagi-image(13).png)
       
       -  Navigate back to the **Deployment** page.
 
       - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and verify the **deployment name** of **text-embedding-ada-002 model(2)**.
         
-         ![](./Media/miyagi-image14.png)
+         ![](./Media/miyagi-image(14).png)
 
-         ![](./Media/miyagi-image15.png)
+         ![](./Media/miyagi-image(15).png)
 
 1. To verify the values for **endpoint** and **apiKey** follow the below steps:
 
