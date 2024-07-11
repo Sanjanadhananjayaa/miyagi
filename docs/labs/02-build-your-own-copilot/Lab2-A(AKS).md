@@ -4,6 +4,8 @@ In this lab, you'll be building the docker images and publishing them to Azure K
 
 ### Task 1: Deploy AKS Services
 
+In this task, You will deploy the Miyagi recommendation and UI services on an Azure Kubernetes Service (AKS) cluster. This involves logging into the Azure portal, applying Kubernetes configurations, and updating configuration files with the services' external IP addresses.
+
 1. Navigate back to the Visual Studio code window and navigate to **miyagi/deploy/infrastructure/kubernetes/manifests/50-miyagi**, right-click on **50-miyagi** in cascading menu, and select **Open in integrate Terminal**.
 
     ![](./Media/aks-01.png)
