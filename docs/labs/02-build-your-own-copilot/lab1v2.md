@@ -51,7 +51,7 @@ In this task, you will configure the Miyagi application by updating specific set
    
    > **Note**: FYI, the above values/Keys/Endpoints/ConnectionString of Azure Resources are directly injected to labguide. Leave default settings for "cosmosDbContainerName": "recommendations" and "logLevel": "Trace".
 
-      ![](./Media/miyagi-image17.png)
+      ![](./Media/miyagi-image(17).png)
    
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
@@ -105,7 +105,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 ### Task 3: Run recommendation service locally
 In this task, you will run the recommendation service locally by using Visual Studio Code to build and run the service in the terminal and then verify its functionality by accessing the Swagger page in the browser.
 
-1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
+1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on **dotnet** in cascading menu select **Open in intergate Terminal**.
 
     ![](./Media/task4-1.png)
 
@@ -174,7 +174,7 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
       }
       ```
 
-     ![](./Media/miyagi-image23.png) 
+     ![](./Media/miyagi-image(23).png) 
       
 1. In the **swagger UI** page, Scroll down to the **Responses** session review that it has been executed successfully by checking the code status is **200**.
 
