@@ -287,7 +287,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 2. Copy the External IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
    
-   ![](./Media/service-swagger.png)
+   ![](./Media/miyagi-image52.png)
    
 ### Task 2: Explore Miyagi App in AKS using Ingress Endpoint
 
@@ -300,7 +300,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 2. Copy the External IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
 
-   ![](./Media/miyagi-ui.png)
+   ![](./Media/miyagi-image53.png)
 
 ### Summary
 
