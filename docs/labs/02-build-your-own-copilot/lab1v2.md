@@ -154,6 +154,8 @@ In this task, you will run the miyagi frontend locally by installing dependencie
 
 ### Task 5: Persist embeddings in Azure AI Search
 
+In this task, you will persist embeddings in Azure AI Search by executing a POST request in Swagger UI, verifying the execution, and then confirming the creation of the index in the Azure portal.
+
 1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
    ![](./Media/swaggerUI-memory.png)
