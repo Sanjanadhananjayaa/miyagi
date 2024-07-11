@@ -16,27 +16,29 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
       - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
-        ![](./Media/select-openai.png)
+        ![](./Media/miyagi-image118.png)
 
-      - In the **OpenAI Overview** **(1)** page, right-click on **Go to Azure OpenAI Studio** (2) button and click on **Open link a new tab**.
+      - In the **OpenAI Overview** **(1)** page, right-click on **Go to Azure OpenAI Studio** and click on **Open link a new tab**.
 
-         ![](./Media/image-rg-03.png) 
+         ![](./Media/miyagi-image10.png)
    
-      - In the **Azure AI Studio**, select **Deployments**, under the Management section.
+      - In the **Azure AI Studio**, from the left navigation pane under the **Management** section, select **Deployments**.
 
+           ![](./Media/miyagi-image119.png)
+        
       - In the **Deployments** blade of Azure AI Studio, click on **gpt-4** model name **(1)** and verify the **deployment name** of gpt-4 model **(2)**.
 
-          ![](./Media/gpt4-main.png)
+          ![](./Media/miyagi-image12.png)
         
-          ![](./Media/gpt4-main-name.png)
+          ![](./Media/miyagi-image13.png)
       
-      -  Navigate back to the **Deployment** page
+      -  Navigate back to the **Deployment** page.
 
       - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and verify the **deployment name** of **text-embedding-ada-002 model(2)**.
         
-         ![](./Media/ada-main.png)
+         ![](./Media/miyagi-image14.png)
 
-         ![](./Media/ada-main-name.png)
+         ![](./Media/miyagi-image15.png)
 
 1. To verify the values for **endpoint** and **apiKey** follow the below steps:
 
@@ -44,7 +46,7 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
    -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint**, verify the **KEY1** and **Endpoint**.
      
-      ![](./Media/image-rg-3.png)
+      ![](./Media/miyagi-image16.png)
 
 1. To verify the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
    
