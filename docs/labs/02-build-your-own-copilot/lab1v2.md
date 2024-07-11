@@ -200,6 +200,7 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
    <validation step="940ebf1a-9add-4bf0-a7fd-c6d929961497" />
 
 ### Task 6: Explore the Miyagi App and Recommendation service  by Personalizing
+In this task, you'll personalize the Miyagi App's Recommendation service by selecting a financial advisor and reviewing the recommendations. Then, you'll check the logs in Visual Studio Code and stop the services.
 
 1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
 
