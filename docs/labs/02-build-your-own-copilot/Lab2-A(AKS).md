@@ -92,29 +92,32 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
    ```
    docker images
    ```
+
+   ![](./Media/miyagi-image32.png)
+
 7. Navigate back to **Docker desktop**, from the left pane select **Images**.
 
-   ![](./Media/docker7.png)
+   ![](./Media/miyagi-image33.png)
 
-8. In the **Images** blade, notice **miyagi-ui(1)** image is created, select **run(2)** icon .
+8. In the **Images** blade, notice **miyagi-ui** image is created, select **run(2)** icon .
 
-   ![](./Media/docker-miyagi-ui.png)
+   ![](./Media/miyagi-image34.png)
 
 9. In the **Run a new container** window select the dropdown arrow.
 
-   ![](./Media/docker14-(1).png)
+   ![](./Media/miyagi-image43.png)
 
 10. In the **Run a new containe**, under **Ports** for **Host Port** enter **3000** and click on **Run**.
 
-    ![](./Media/ui-port.png)
+    ![](./Media/miyagi-image35.png)
 
 11. Click on **3000:3000** URL link
 
-    ![](./Media/ui-port-open.png)
+    ![](./Media/miyagi-image36.png)
    
 12. You should be able to see the application running locally
    
-     ![](./Media/docker-ui.png)
+     ![](./Media/miyagi-image37.png)
 
 ### Task 3: Build Docker Images for the Recommendation service
 
@@ -128,8 +131,6 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
    docker build . -t miyagi-recommendation      
    ```
 
-   ![](./Media/task2-1.png)
-
    > **Note**: Please wait as this command may require some time to complete.
 
 1. Run the following command to get the newly created image.
@@ -138,31 +139,31 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
    docker images
    ```
    
-   ![](./Media/task2-2.png)
-
+   ![](./Media/miyagi-image38.png)
+   
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
 
-   ![](./Media/docker7.png)
+   ![](./Media/miyagi-image33.png)
 
 1. In the **Images** blade, notice **miyagi-recommendation(1)** image is created, select **run(2)** icon .
 
-   ![](./Media/docker13.png)
+   ![](./Media/miyagi-image41.png)
 
 1. In the **Run a new container** window select the dropdown arrow.
 
-   ![](./Media/docker14-(1).png)
-
+   ![](./Media/miyagi-image42.png)
+   
 1. In the **Run a new containe**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
 
-    ![](./Media/recommendation-port-new.png)
+    ![](./Media/miyagi-image44.png)
 
 1. Click on **5224:80** URL link
 
-   ![](./Media/recommendation-port-open.png)
+   ![](./Media/miyagi-image45.png)
    
 1. You should be able to see the application running locally
    
-   ![](./Media/docker-recommend.png)
+   ![](./Media/miyagi-image46.png)
 
 ### Task 4: Push the Docker Image of Recommendation service to the Container registry
 
