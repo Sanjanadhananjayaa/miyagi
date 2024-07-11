@@ -51,7 +51,7 @@ In this task, you will configure the Miyagi application by updating specific set
    
    > **Note**: FYI, the above values/Keys/Endpoints/ConnectionString of Azure Resources are directly injected to labguide. Leave default settings for "cosmosDbContainerName": "recommendations" and "logLevel": "Trace".
 
-      ![](./Media/appsetting-update.png)
+      ![](./Media/miyagi-image17.png)
    
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
@@ -68,8 +68,8 @@ In this task, you will configure the Miyagi application by updating specific set
    | AZURE_COGNITIVE_SEARCH_ENDPOINT        | **<inject key="SearchServiceuri" enableCopy="true"/>**|
    |AZURE_COGNITIVE_SEARCH_API_KEY          | **<inject key="SearchAPIkey" enableCopy="true"/>**    |
    
-   ![](./Media/env1new.png)
-
+   ![](./Media/miyagi-image18.png)
+   
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
   >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
@@ -85,14 +85,14 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 
 1. In the Visual Studio Code navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**
 
-   ![](./Media/getting-start-01.png)
+   ![](./Media/miyagi-image19.png)
 
 1. **Execute the notebook cell by cell** (using either Ctrl + Enter to stay on the same cell or Shift + Enter to advance to the next cell) and observe the results of each cell execution.
   
    > **Note**: Make sure **.Net Interactive** is in ready State, If not please wait for 15 to 20 seconds. Also, please do not click on **Run All** option to execute all the cells at a time which may lead to exceed in token limit that results Error: 503 – Service unreachable. 
 
-      ![](./Media/run.png)
-
+      ![](./Media/miyagi-image20.png)
+   
    > **Note**: Incase any issues or errors occur related to exceeding call rate limit of your current OpenAI S0 pricing tier. , Please wait for 15 to 20 seconds and Re-run the cell
 
  >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
@@ -126,7 +126,7 @@ In this task, you will run the recommendation service locally by using Visual St
 
    **Note**: Refresh the page continuously until you get the swagger page for the recommendation service as depicted in the image below.
 
-   ![](./Media/miyagi2.png)
+   ![](./Media/miyagi-image21.png)
 
 
 ### Task 4: Run miyagi frontend locally
@@ -146,7 +146,7 @@ In this task, you will run the miyagi frontend locally by installing dependencie
 
    **Note**: Please wait till the command gets executed successfully. It will take up to 5 minutes.
 
-1. Open aa new tab in Edge, and browse the following
+1. Open a new tab in Edge, and browse the following
 
    ```
    http://localhost:4001
@@ -158,7 +158,7 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
 
 1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
 
-   ![](./Media/swaggerUI-memory.png)
+   ![](./Media/miyagi-image22.png)
 
 1. Replace the code with the below code, and click on **Execute**.
 
@@ -174,21 +174,23 @@ In this task, you will persist embeddings in Azure AI Search by executing a POST
       }
       ```
 
-      ![](./Media/swaggerUI-Execution.png)
+     ![](./Media/miyagi-image23.png) 
       
 1. In the **swagger UI** page, Scroll down to the **Responses** session review that it has been executed successfully by checking the code status is **200**.
 
-    ![](./Media/swaggerUI-Responses.png)
+    ![](./Media/miyagi-image24.png)
 
 1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
 
-    ![](./Media/ai-search1.png)    
+    ![](./Media/miyagi-image25.png)
 
 1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
+    ![](./Media/miyagi-image26.png)
+   
 1. In **acs-<inject key="DeploymentID" enableCopy="false"/>** Search service tab, click on **Indexes** **(1)** under Search management, and review the **miyagi-embeddings** **(2)** has been created.   
 
-   ![](./Media/ai-search-update.png)
+   ![](./Media/miyagi-image27.png)
 
    > **Note**: Please click on the refresh button still you view the **Document Count**.
 
@@ -204,15 +206,15 @@ In this task, you'll personalize the Miyagi App's Recommendation service by sele
 
 1. Navigate back to the **recommendation service** ui page, and click on **personalize** button.
 
-    ![](./Media/service-personalize.png)
+    ![](./Media/miyagi-image28.png)
 
 1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
 
-   ![](./Media/financial-advisor.png)  
+   ![](./Media/miyagi-image29.png)
 
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
-   ![](./Media/financial-advisor-output.png) 
+   ![](./Media/miyagi-image30.png) 
 
 1. Navigate to the **Visual Studio Code**, and click on **dotnet** from the terminal, you can go through the logs.
 
@@ -221,6 +223,7 @@ In this task, you'll personalize the Miyagi App's Recommendation service by sele
 1. Once you view the logs, press **Ctrl + C** to stop the **swagger UI** page.
 
 1.  From the **Terminal** select **Node** terminal, press **Ctrl + C** to stop the **recommendation service** ui page.
+      ![](./Media/miyagi-image31.png)
 
 1. Now, click on **Next** from the lower right corner to move to the next page.
 
