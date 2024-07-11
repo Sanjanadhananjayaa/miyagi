@@ -103,6 +103,7 @@ Recommendation service implements RAG pattern using Semantic Kernel SDK. The det
 <validation step="f277b99e-c179-4bb8-b9c1-6479a526ee4b" />
 
 ### Task 3: Run recommendation service locally
+In this task, you will run the recommendation service locally by using Visual Studio Code to build and run the service in the terminal and then verify its functionality by accessing the Swagger page in the browser.
 
 1. Open a new terminal: by navigating **miyagi/services/recommendation-service/dotnet** and right-click on in cascading menu select **Open in intergate Terminal**.
 
