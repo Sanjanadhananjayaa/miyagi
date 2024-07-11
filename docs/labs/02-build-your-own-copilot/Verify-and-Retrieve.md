@@ -1,6 +1,6 @@
 # Lab 1: Verify and Retrieve the values of Azure Resources (optional)
 
-In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key for the designated resources.
+In this lab, you will verify and retrieve specific values such as Endpoint, Connection String, and Key for various Azure resources. This is crucial for ensuring the proper configuration and connectivity of these resources.
 
    - Azure OpenAI : **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** 
    - Azure Cosmos DB account : **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
@@ -8,11 +8,11 @@ In this task, verification, and retrieval of specific values, including End Poin
 
 1. To verify the deployment model names for "**deploymentOrModelId**" and "**embeddingDeploymentOrModelId**" follow the below steps:
    
-      - In Azure Portal, click on **Resource groups** from the Navigate panel.
+      - On the Azure Portal home page, click on **Resource groups** in the **Navigate** panel.
 
       - From the Resource groups page, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-         ![](./Media/image-rg-1.png)
+         ![](./Media/miyagi-image7.png)
 
       - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
 
