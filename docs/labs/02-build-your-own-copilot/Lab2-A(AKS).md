@@ -16,6 +16,8 @@ In this lab, you'll be building the docker images and publishing them to Azure K
    az aks get-credentials -n [ClusterName] -g [ResourceGroupName]
    ```
 
+   >**Important** : The command az aks get-credentials -n [ClusterName] -g [ResourceGroupName] is used in Azure's command-line interface (CLI) to retrieve and merge the Kubernetes configuration files for a specified Azure Kubernetes Service (AKS) cluster into the local kubeconfig file.
+   
 3. Once the command finishes you should now have access to the cluster and can run the following commands to deploy the application services.
 
    ```
