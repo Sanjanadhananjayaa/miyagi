@@ -14,7 +14,7 @@
 
 1. Minimize the **Docker Desktop** by click on **Minimize** button.
 
-   ![](./Media/getting-docker.png)
+   ![](./Media/miyagi-image1.png)
 
    - If you face any issue A WSL distro Docker Desktop relies on has exited unexpectedly. This usually happens as a result of an external entity terminating WSL, click on **Restart** Button.
 
@@ -28,33 +28,33 @@
 
    * **Email/Username**: **<inject key="AzureAdUserEmail"></inject>**
 
-     ![](./Media/img4.png)
+     ![](./Media/miyagi-image2.png)
      
 1. Now enter the following password and click on **Sign in**.
    
    * **Password**: **<inject key="AzureAdUserPassword"></inject>**
 
-     ![](./Media/img5.png)
+     ![](./Media/miyagi-image3.png)
    
 1. If you see the pop-up **Stay Signed in?**, select **No**.
 
-   ![](./Media/img7.png)
+   ![](./Media/miyagi-image4.png)
 
 1. If a **Welcome to Microsoft Azure** popup window appears, select **Cancel** to skip the tour.
 
-    ![](./Media/welcome-update.png)
+    ![](./Media/miyagi-image5.png)
    
 1. Now that you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
-   ![](./Media/img10.png)
+   ![](./Media/miyagi-image6.png)
 
 1. In the **Resource groups**, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group.
 
-   ![](./Media/resource-group.png)
+   ![](./Media/miyagi-image7.png)
 
 1. In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource groups, verify the resources present in it.
 
-   ![](./Media/rgname.png)
+   ![](./Media/miyagi-image8.png)
 
 
 > [!IMPORTANT]<br>
