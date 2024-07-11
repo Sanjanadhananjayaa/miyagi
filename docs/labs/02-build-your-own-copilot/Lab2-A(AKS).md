@@ -82,6 +82,8 @@ It will create miyagi-recommendation-service and miyagi-ui
 
    > **Note**: Please wait as this command may require some time to complete.
 
+   > **Note**: this command reads instructions from the Dockerfile, processes them to create a Docker image based on those instructions, and then tags the resulting image with the name miyagi-ui.
+   
 6. Run the following command to get the newly created image.
 
    ```
