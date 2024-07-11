@@ -139,7 +139,7 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
    docker images
    ```
    
-   ![](./Media/miyagi-image38.png)
+   ![](./Media/miyagi-image40.png)
    
 1. Navigate back to **Docker desktop**, from the left pane select **Images**.
 
