@@ -6,6 +6,8 @@ In this lab, the focus is on configuring the Miyagi App for operational readines
 
 ### Task 1: Setup configuration for miyagi app
 
+In this task, you will configure the Miyagi application by updating specific settings in Visual Studio Code. This involves replacing placeholder values in configuration files with the actual values for various Azure resources to ensure proper connectivity and functionality.
+
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
    ![](./Media/vs.png)
