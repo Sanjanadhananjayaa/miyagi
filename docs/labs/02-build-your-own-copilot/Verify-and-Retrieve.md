@@ -90,4 +90,7 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
      ![](./Media/miyagi-image117.png)
 
+## Summary
+In this lab, you will verify and retrieve configuration values such as Endpoint, Connection String, and Key for various Azure resources like OpenAI Service, Cosmos DB, and Cognitive Search. This ensures proper configuration and connectivity. The steps involve accessing the Azure Portal, navigating to specific resource groups, and verifying the required values.
+
 ### You have successfully completed this lab. Now click on **Next** from the lower right corner to move to the next page.
