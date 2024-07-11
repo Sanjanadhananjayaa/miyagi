@@ -233,13 +233,17 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 2. Open the **miyagi-recommendation.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
 
-   ![](./Media/service-acr.png)
+   ![](./Media/miyagi-image47.png)
+   
+   ![](./Media/miyagi-image48.png)
 
 4. Open the **miyagi-ui.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
 
-   ![](./Media/ui-acr.png)
+   ![](./Media/miyagi-image49.png)
 
-5. Run the following commands to deploy the application pods.
+   ![](./Media/miyagi-image50.png)
+
+6. Run the following commands to deploy the application pods.
 
    ```
     kubectl apply -f ./miyagi-recommendation.yaml
@@ -248,7 +252,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
     kubectl apply -f ./miyagi-ui.yaml
    ```
 
-6. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
+7. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
 
    >**Note** : It could take a few minutes for the output to appear so wait a few minutes before running the command.
    
