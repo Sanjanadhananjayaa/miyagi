@@ -34,7 +34,7 @@ In this task, you will configure the Miyagi application by updating specific set
 
    ![](./Media/open-appsettings.png)
   
-1. In the **appsettings.json** file replace the following values for the variables below.
+1. Open **appsettings.json** file and replace the following values for the variables below.
 
    | **Variables**                | **Values**                                                    |
    | ---------------------------- |---------------------------------------------------------------|
