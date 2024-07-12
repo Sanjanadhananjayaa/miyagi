@@ -1,4 +1,4 @@
-# Lab 3.1: Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS)
+# Lab 3.1: Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS) 
 
 ### Duration: 80 minutes
 
@@ -47,7 +47,7 @@ It will create miyagi-recommendation-service and miyagi-ui
 
    ![](./Media/aks-02.png)
    
-1. Copy the **miyagi-ui** External IP address from the console and paste it in the **CorsAllowedOrigins** section formatted as an **http** endpoint  and save the file by **Ctrl + S**.  
+1. Copy the **miyagi-ui** External IP address from the console and paste it in the **CorsAllowedOrigins** section formatted as an **http://** endpoint  and save the file by **Ctrl + S**.  
 
    ![](./Media/ui-cors.png)
 
