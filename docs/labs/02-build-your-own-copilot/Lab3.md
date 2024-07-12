@@ -10,7 +10,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
 
-  ![](./Media/miyagi-image55.png)
+    ![](./Media/miyagi-image55.png)
 
 1. Enter the following values in the Create an HTTP API pane:
    
@@ -27,7 +27,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 1. Once API is created, click on **Overview** **(1)** from the left-menu copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
 
-  ![](./Media/miyagi-image57.png)
+    ![](./Media/miyagi-image57.png)
 
 1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task.
