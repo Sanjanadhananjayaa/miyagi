@@ -238,13 +238,13 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
     ![](./Media/aks-01.png)
 
-1. Open the **miyagi-recommendation.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
+1. Open the **miyagi-recommendation.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name and save the file by **Ctrl + S**.
 
    ![](./Media/miyagi-image47.png)
    
    ![](./Media/miyagi-image48.png)
 
-1. Open the **miyagi-ui.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
+1. Open the **miyagi-ui.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name  and save the file by **Ctrl + S**.
 
    ![](./Media/miyagi-image49.png)
 
