@@ -290,12 +290,12 @@ In this task, you'll Push miyagi-recommendation images to acr.
    kubectl get svc
    ```
    
-   ![](./Media/miyagi-image120.png)
+    ![](./Media/miyagi-image120.png)
 
 
 1. Copy the External IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
    
-   ![](./Media/miyagi-image129.png)
+    ![](./Media/miyagi-image129.png)
    
 ### Task 2: Explore Miyagi App in AKS using Ingress Endpoint
 
@@ -304,11 +304,11 @@ In this task, you'll Push miyagi-recommendation images to acr.
    kubectl get svc
    ```
    
-  ![](./Media/miyagi-image128.png)
+   ![](./Media/miyagi-image128.png)
 
 1. Copy the External IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
 
-   ![](./Media/miyagi-image53.png)
+    ![](./Media/miyagi-image53.png)
 
 ### Summary
 
