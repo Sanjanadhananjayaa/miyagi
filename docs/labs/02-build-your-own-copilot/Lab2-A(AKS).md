@@ -10,7 +10,7 @@ In this task, You will deploy the Miyagi recommendation and UI services on an Az
 
     ![](./Media/aks-01.png)
 
-2. Run the following command to log in to the Azure portal.
+1. Run the following command to log in to the Azure portal.
 
    > **Note**: replace [ClusterName] with **<inject key="aksname" enableCopy="true"/>** and [ResourceGroupName] with **<inject key="rgname" enableCopy="true"/>**
 
@@ -20,7 +20,7 @@ In this task, You will deploy the Miyagi recommendation and UI services on an Az
 
    >**Important** : The command az aks get-credentials -n [ClusterName] -g [ResourceGroupName] is used in Azure's command-line interface (CLI) to retrieve and merge the Kubernetes configuration files for a specified Azure Kubernetes Service (AKS) cluster into the local kubeconfig file.
    
-3. Once the command finishes you should now have access to the cluster and can run the following commands to deploy the application services.
+1. Once the command finishes you should now have access to the cluster and can run the following commands to deploy the application services.
 
    ```
    kubectl apply -f ./miyagi-recommendation-service.yaml
@@ -36,7 +36,7 @@ It will create miyagi-recommendation-service and miyagi-ui
    > Upon successful execution of the command kubectl apply -f ./miyagi-recommendation-service.yaml, Kubernetes will read the YAML file (miyagi-recommendation-service.yaml) and apply its configurations to the cluster. This will result in the creation of the miyagi-recommendation-service along with any other Kubernetes resources defined in the YAML file, such as deployments, services, config maps, etc. Additionally, if you have another YAML file for miyagi-ui and apply it similarly (kubectl apply -f ./miyagi-ui.yaml), it will create or update the miyagi-ui service and related resources in the cluster as specified in that file.
 
    
-4. Once the services have been deployed run the below command and keep track of the service's **external ip's**. It could take a few minutes for the **external ip's** to appear so wait a few minutes before running the command.
+1. Once the services have been deployed run the below command and keep track of the service's **external ip's**. It could take a few minutes for the **external ip's** to appear so wait a few minutes before running the command.
 
    ```
    kubectl get svc
@@ -44,19 +44,19 @@ It will create miyagi-recommendation-service and miyagi-ui
 
    ![](./Media/external-ip.png)
 
-5. Next navigate to **miyagi/services/recommendation-service/dotnet** and open app settings.
+1. Next navigate to **miyagi/services/recommendation-service/dotnet** and open **appsettings.json** file.
 
    ![](./Media/aks-02.png)
    
-6. Copy the **miyagi-ui** External IP address from the console and paste it in the **CorsAllowedOrigins** section formatted as an **http** endpoint  and save the file by **Ctrl + S**.  
+1. Copy the **miyagi-ui** External IP address from the console and paste it in the **CorsAllowedOrigins** section formatted as an **http** endpoint  and save the file by **Ctrl + S**.  
 
    ![](./Media/ui-cors.png)
 
-7. Next navigate to **miyagi/ui/typescript** and open the **.env** file. 
+1. Next navigate to **miyagi/ui/typescript** and open the **.env** file. 
 
    ![](./Media/aks-03.png)
 
-8. Copy the **miyagi-recommendation-service** External IP address from the console and paste it in the **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** value and save the file by **Ctrl + S**.
+1. Copy the **miyagi-recommendation-service** External IP address from the console and paste it in the **NEXT_PUBLIC_RECCOMMENDATION_SERVICE_URL** value and save the file by **Ctrl + S**.
 
    ![](./Media/miyagi-ui-env.png)
 
@@ -67,17 +67,17 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
 
    ![](./Media/docker1.png)
    
-2. In the **Docker Subscription Service Agreement** window, click **Accept**.
+1. In the **Docker Subscription Service Agreement** window, click **Accept**.
 
    ![](./Media/docker2.png)
 
-3. In the **Welcome to Docker Desktop** window, click on **Continue without signing in**.
+1. In the **Welcome to Docker Desktop** window, click on **Continue without signing in**.
 
    ![](./Media/without-signin.png)
 
-4. In the **Tell us about the work you do** window, click on **Skip**.
+1. In the **Tell us about the work you do** window, click on **Skip**.
    
-5. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrate Terminal**.
+1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrate Terminal**.
 
    ```
    docker build . -t miyagi-ui      
@@ -87,7 +87,7 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
 
    > **Note**: this command reads instructions from the Dockerfile, processes them to create a Docker image based on those instructions, and then tags the resulting image with the name miyagi-ui.
    
-6. Run the following command to get the newly created image.
+1. Run the following command to get the newly created image.
 
    ```
    docker images
@@ -95,27 +95,27 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
 
    ![](./Media/miyagi-image32.png)
 
-7. Navigate back to **Docker desktop**, from the left pane select **Images**.
+1. Navigate back to **Docker desktop**, from the left pane select **Images**.
 
    ![](./Media/miyagi-image33.png)
 
-8. In the **Images** blade, notice **miyagi-ui** image is created, select **run(2)** icon .
+1. In the **Images** blade, notice **miyagi-ui** image is created, select **run(2)** icon .
 
    ![](./Media/miyagi-image34.png)
 
-9. In the **Run a new container** window select the dropdown arrow.
+1. In the **Run a new container** window select the dropdown arrow.
 
    ![](./Media/miyagi-image43.png)
 
-10. In the **Run a new containe**, under **Ports** for **Host Port** enter **3000** and click on **Run**.
+1. In the **Run a new containe**, under **Ports** for **Host Port** enter **3000** and click on **Run**.
 
     ![](./Media/miyagi-image35.png)
 
-11. Click on **3000:3000** URL link
+1. Click on **3000:3000** URL link
 
     ![](./Media/miyagi-image36.png)
    
-12. You should be able to see the application running locally
+1. You should be able to see the application running locally
    
      ![](./Media/miyagi-image37.png)
 
@@ -231,19 +231,19 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
     ![](./Media/aks-01.png)
 
-2. Open the **miyagi-recommendation.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
+1. Open the **miyagi-recommendation.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
 
    ![](./Media/miyagi-image47.png)
    
    ![](./Media/miyagi-image48.png)
 
-4. Open the **miyagi-ui.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
+1. Open the **miyagi-ui.yaml** file and replace the &lt;ACR-NAME&gt; with **<inject key="acrUsername" enableCopy="true"/>** Azure container registry name created earlier and save the file by **Ctrl + S**.
 
    ![](./Media/miyagi-image49.png)
 
    ![](./Media/miyagi-image50.png)
 
-6. Run the following commands to deploy the application pods.
+1. Run the following commands to deploy the application pods.
 
    ```
     kubectl apply -f ./miyagi-recommendation.yaml
@@ -252,7 +252,7 @@ In this task, you'll Push miyagi-recommendation images to acr.
     kubectl apply -f ./miyagi-ui.yaml
    ```
 
-7. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
+1. The applications should now be deployed. To verify run the below command and you should see both pods in a running state.
 
    >**Note** : It could take a few minutes for the output to appear so wait a few minutes before running the command.
    
@@ -264,9 +264,9 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
  
    >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
     <validation step="f50c7e4e-0b5a-4ae2-bd9e-ff29a023f1d2" />
 
@@ -282,12 +282,12 @@ In this task, you'll Push miyagi-recommendation images to acr.
    kubectl get svc
    ```
    
-   ![](./Media/aks-endpoint.png)
+   ![](./Media/miyagi-image120.png)
 
 
-2. Copy the External IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
+1. Copy the External IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
    
-   ![](./Media/miyagi-image52.png)
+   ![](./Media/miyagi-image129.png)
    
 ### Task 2: Explore Miyagi App in AKS using Ingress Endpoint
 
@@ -296,9 +296,9 @@ In this task, you'll Push miyagi-recommendation images to acr.
    kubectl get svc
    ```
    
-   ![](./Media/aks-endpoint.png)
+  ![](./Media/miyagi-image128.png)
 
-2. Copy the External IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
+1. Copy the External IP address of the **miyagi-ui** and enter it into the browser. You should now see the Miyagi frontend.
 
    ![](./Media/miyagi-image53.png)
 
