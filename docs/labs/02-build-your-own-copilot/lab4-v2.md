@@ -163,3 +163,5 @@ In this task, you'll configure Azure Cognitive Search by importing data from Cos
 ### Summary
 
 In this lab, you learned how to configure and run the Semantic Kernel sample by integrating the SDK into your project, setting up LLM providers, defining plugins, and executing the code. Additionally, you gained knowledge on configuring Azure Cognitive Search, including creating or selecting an index, setting up fields, configuring Semantic Kernel to interact with Azure, defining plugins, and testing the integration for enhanced search capabilities.
+
+### You have successfully completed this lab. Now click on Next from the lower right corner to move to the next page.
