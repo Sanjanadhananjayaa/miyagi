@@ -359,3 +359,5 @@ In this lab, you'll be setting up Event Hub logging for API Management, configur
 ### Summary
 
 In this lab, you configured an API Management service to manage APIs efficiently. Initially, the service was deployed, and an API was created within it. Subsequently, rules and roles were established to control access to the API. Event Hub logging was configured to monitor API usage effectively. Lastly, input validation was conducted to ensure the API handled various inputs correctly. Overall, this process ensured the effective management, security, and performance monitoring of the APIs, contributing to a well-organized and secure API ecosystem.
+
+### You have successfully completed this lab. Now click on Next from the lower right corner to move to the next page.
