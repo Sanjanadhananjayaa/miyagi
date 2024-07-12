@@ -148,7 +148,7 @@ In this lab, you'll be updating the configuration of the recommendation service,
 
 1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** with **API Gateway URL** which you have copied in Task-1 Step-4, **apiKey** value with the **subscription key** that was copied in Task-2 Step-9 and Save the file.
 
-    ![](./Media/miyagi-image72.png)
+    ![](./Media/miyagi-image(72).png)
 
 1. Navigate back to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
