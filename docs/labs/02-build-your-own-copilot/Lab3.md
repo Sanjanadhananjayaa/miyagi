@@ -82,7 +82,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. Once the subscription is **AOAI Test** created click the **three dots** **(1)** next to **AOAI Test** and then click **Show\hide keys** **(2)**. Copy the **primary subscription** **(3)** key and save it for later.
 
-   ![](./Media/miyagi-image65.png)
+   ![](./Media/miyagi-image(65).png)
 
 1. Navigate to **Azure OpenAI** in the Azure Portal, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
@@ -100,7 +100,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. On the select managed identity pop up, for **Subscription (1)** accept default value then **Managed identity** select **API Management service** **(2)**, choose the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(3)**, then click-on **Select** **(4)**.
 
-   ![](./Media/miyagi-image68.png)
+   ![](./Media/miyagi-image(68).png)
 
 1. Click on **Next**.
 
@@ -148,7 +148,7 @@ In this lab, you'll be updating the configuration of the recommendation service,
 
 1. In the `appsettings.json` file, you have to replace the **endpoint** value from **OpenAI resource endpoint** with **API Gateway URL** which you have copied in Task-1 Step-4, **apiKey** value with the **subscription key** that was copied in Task-2 Step-9 and Save the file.
 
-    ![](./Media/miyagi-image72.png)
+    ![](./Media/miyagi-image(72).png)
 
 1. Navigate back to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
@@ -240,7 +240,7 @@ In this lab, you'll be setting up Event Hub logging for API Management, configur
  
 1. On the select managed identity pop-up for **Subscription Accept the default (1)** **under Managed identity drop-down select **API Management service** **(2)**, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(3)**, then click-on **Select** **(4)**.
 
-   ![](./Media/miyagi-image68.png)
+   ![](./Media/miyagi-image(68).png)
 
 1. Click on **Next**.
 

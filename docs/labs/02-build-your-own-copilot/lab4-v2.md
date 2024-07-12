@@ -66,7 +66,7 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
 11. Make sure that your `appsettings.json` file looks as shown in the below screenshot.
 
-    ![](./Media/miyagi-image99.png)
+    ![](./Media/miyagi-image(99).png)
 
 12. Configure an Azure OpenAI endpoint by Opening a New **Terminal** click on **(...) (1)** next to **View** menu and select **Terminal(2)** > **New Terminal(3)**.
 
@@ -158,7 +158,7 @@ In this task, you'll configure Azure Cognitive Search by importing data from Cos
 
 1. Click on **realestate-us-sample-index** in the search bar enter **Seattle (1)** and click on **Search (2)** then view thw **Result (3)**.
 
-   ![](./Media/miyagi-image109.png)
+   ![](./Media/miyagi-image(109).png)
 
 ### Summary
 
