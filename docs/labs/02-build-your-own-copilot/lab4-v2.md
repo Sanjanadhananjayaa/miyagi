@@ -15,11 +15,11 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 2. In the **Visual Studio Code** from the left panel select **Semantic Kernel** **(1)** plugin, expand  by click on **AIENDPONTS(OPEN AI)** **(2)**, click on **Switch EndPoint Provider** **(3)**, and select **AzureOpenAI** **(4)**.
 
-   ![](./Media/miyagi-image92.png)
+    ![](./Media/miyagi-image92.png)
 
 3. Under **AI ENDPONTS(AZURE OPENAI)**, click on **sign in to Azure** **(1)**, in the pop-up  **The extension 'Semantic Kernel Tools' wants to sign in using Microsoft** click on **Allow** **(2)**.
 
-  ![](./Media/miyagi-image93.png)
+   ![](./Media/miyagi-image93.png)
 
 4. This will redirect to **Microsoft login page**, select your Azure account **<inject key="AzureAdUserEmail"></inject>**, and navigate back to the **Visual studio code**.
 
@@ -106,17 +106,19 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 ### Task 2: Configure Azure Cognitive Search
 
-1. Navigate back to the **Azure portal** tab, search and select **AI Search**.
+1. Navigate back to the **Azure portal** tab, in Search resources, services and docs (G+/) box at the top of the portal, enter **AI Search**, and then select **AI Search** under services.
+
+    ![](./Media/miyagi-image25.png)
 
 1. In **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-   > **Note**: Please click on the refresh button still you view the **Document Count**.
+    ![](./Media/miyagi-image26.png)
 
 1. In the overiew tab of search service, click on the **Import data**.
 
     ![](./Media/miyagi-image103.png)
    
-1. From the drop-down select **Data Source** as **Sample**, select the **CosmosDB hotels-sample**, and click on **Next : Add cognitive skills(optional)**.
+1. From the drop-down select **Data Source** as **Sample (1)**, select the **CosmosDB hotels-sample (2)**, and click on **Next : Add cognitive skills(optional) (3)**.
 
    ![](./Media/miyagi-image104.png)
    
@@ -134,11 +136,13 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 
 1. Navigate back to **Azure AI services | AI Search** tab, select **acs-<inject key="DeploymentID" enableCopy="false"/>**.
 
-1. From the left navigation pane select **Indexes** and click on **realestate-us-sample-index**.
+   ![](./Media/miyagi-image26.png)
+   
+1. From the left navigation pane under **Search management** select **Indexes (1)** and click on **realestate-us-sample-index (2)**.
 
 1. ![](./Media/miyagi-image108.png)
 
-1. Click on **realestate-us-sample-index** in the search bar enter **Seattle** and click on **Search**.
+1. Click on **realestate-us-sample-index** in the search bar enter **Seattle (1)** and click on **Search (2)** then view thw **Result (3)**.
 
    ![](./Media/miyagi-image109.png)
 
