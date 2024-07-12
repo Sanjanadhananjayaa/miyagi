@@ -156,11 +156,11 @@ In this task, you will run the miyagi frontend locally by installing dependencie
 
 In this task, you will persist embeddings in Azure AI Search by executing a POST request in Swagger UI, verifying the execution, and then confirming the creation of the index in the Azure portal.
 
-1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset** for expansion, and click on **Try it out**.
+1. Navigate back to the **swagger UI** page, scroll to **Memory** session, click on **POST /dataset (1)** for expansion, and click on **Try it out (2)**.
 
    ![](./Media/miyagi-image22.png)
 
-1. Replace the code with the below code, and click on **Execute**.
+1. Replace the below **code (1)** with the below code, and click on **Execute (2)**.
 
      ```
      {
@@ -208,9 +208,9 @@ In this task, you'll personalize the Miyagi App's Recommendation service by sele
 
     ![](./Media/miyagi-image28.png)
 
-1. In the **personalize** page, select your **financial advisor** from the drop-down, and click on **Personalize**.
+1. In the **Personalize** page, select your **Favorite Financial Advisor (1)** and choose **GPT-4 (2)** for the **Reasoning Engine** from the dropdown menu, then click on **Personalize (3)**.
 
-   ![](./Media/miyagi-image29.png)
+   ![](./Media/miyagi-image126.png)
 
 1. You should see the recommendations from the recommendation service in the Top Stocks widget.
 
