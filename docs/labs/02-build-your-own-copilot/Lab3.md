@@ -100,7 +100,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. On the select managed identity pop up, for **Subscription (1)** accept default value then **Managed identity** select **API Management service** **(2)**, choose the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(3)**, then click-on **Select** **(4)**.
 
-   ![](./Media/miyagi-image68.png)
+   ![](./Media/miyagi-image(68).png)
 
 1. Click on **Next**.
 
