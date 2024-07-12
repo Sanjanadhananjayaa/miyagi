@@ -240,7 +240,7 @@ In this lab, you'll be setting up Event Hub logging for API Management, configur
  
 1. On the select managed identity pop-up for **Subscription Accept the default (1)** **under Managed identity drop-down select **API Management service** **(2)**, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(3)**, then click-on **Select** **(4)**.
 
-   ![](./Media/miyagi-image68.png)
+   ![](./Media/miyagi-image(68).png)
 
 1. Click on **Next**.
 
