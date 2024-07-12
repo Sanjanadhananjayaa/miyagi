@@ -40,6 +40,8 @@ This task focuses on setting up an HTTP API within Azure API Management to inter
 
 ### Task 2: Create API Management Policy and Roles
 
+This task involves setting up API policies, defining roles and subscriptions, and integrating the Azure OpenAI Service API within Azure API Management. It ensures proper authentication, authorization, and operational testing of the API endpoints
+
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
    ![](./Media/miyagi-image58.png)
