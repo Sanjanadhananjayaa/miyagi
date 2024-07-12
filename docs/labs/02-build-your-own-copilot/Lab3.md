@@ -4,7 +4,7 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 ### Task 1: Verify the deployed API Management service and create an API
 
-This task focuses on setting up an HTTP API within Azure API Management to interact with the Azure OpenAI service. It ensures the API is configured correctly and provides a gateway URL for external access and integration with other services.
+In this lab, you'll be focusing on setting up an HTTP API within Azure API Management to interact with the Azure OpenAI service. It ensures the API is configured correctly and provides a gateway URL for external access and integration with other services.
 
 1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
@@ -40,7 +40,7 @@ This task focuses on setting up an HTTP API within Azure API Management to inter
 
 ### Task 2: Create API Management Policy and Roles
 
-This task involves setting up API policies, defining roles and subscriptions, and integrating the Azure OpenAI Service API within Azure API Management. It ensures proper authentication, authorization, and operational testing of the API endpoints
+In this lab, you'll be setting up API policies, defining roles and subscriptions, and integrating the Azure OpenAI Service API within Azure API Management. It ensures proper authentication, authorization, and operational testing of the API endpoints
 
 1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
@@ -140,7 +140,7 @@ This task involves setting up API policies, defining roles and subscriptions, an
 
 ### Task 3: Update the Docker Image for the Recommendation service
 
-This task involves updating the configuration of the recommendation service, rebuilding the Docker image, pushing it to ACR, and ensuring that the updated image is ready for deployment within the Azure environment.
+In this lab, you'll be updating the configuration of the recommendation service, rebuilding the Docker image, pushing it to ACR, and ensuring that the updated image is ready for deployment within the Azure environment.
 
 1. Navigate to Visual Studio Code, expand **miyagi/services/recommendation-service/dotnet** directory and select the **appsettings.json**.
 
@@ -188,7 +188,7 @@ This task involves updating the configuration of the recommendation service, reb
    
 ### Task 4: Revision of Recommendation service from AKS 
 
-This task focuses on managing the deployment lifecycle of the recommendation service on Azure Kubernetes Service (AKS), including starting and stopping the service as well as verifying its functionality post-revision.
+In this lab, you'll be managing the deployment lifecycle of the recommendation service on Azure Kubernetes Service (AKS), including starting and stopping the service as well as verifying its functionality post-revision.
 
 1. Navigate to the Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **env-miyagi-<inject key="DeploymentID" enableCopy="false"/>** Kubernetes service from the resources list.
 
@@ -215,7 +215,7 @@ This task focuses on managing the deployment lifecycle of the recommendation ser
 
 ### Task 5: Setup Event Hub Logging and Validate Input
 
-This task focuses on setting up Event Hub logging for API Management, configuring the necessary components in Azure, deploying the logging configuration using a Bicep template, and validating the integration through testing and monitoring.
+In this lab, you'll be setting up Event Hub logging for API Management, configuring the necessary components in Azure, deploying the logging configuration using a Bicep template, and validating the integration through testing and monitoring.
 
 1. In the Azure portal Search and select **Event Hubs**, select the **miyagi-event-<inject key="DeploymentID" enableCopy="false"/>**.
 
