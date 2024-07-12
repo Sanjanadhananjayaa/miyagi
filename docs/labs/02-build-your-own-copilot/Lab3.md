@@ -110,7 +110,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
     
 1. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor**</> **(4)** under **Inbound processing**.
 
-    ![](./Media/miyagi-image67.png)
+    ![](./Media/api-inbound.png)
 
 1. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** with **<inject key="OpenAIEndpoint" enableCopy="true"/>** **(2)** of API manager which you copen in Task 1 Step 4 and click on **Save** **(3)**.
 
@@ -126,17 +126,25 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
       </inbound>
       ```
 
-    ![](./Media/api-inbound.png)
+    ![](./Media/api-inbound1.png)
 
     >**Note**: Please ensure to paste the **OpenAIEndpoint** values and eliminate any duplication of **https://**.
 
-1. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter the gpt-4 deployment name **<inject key="CompletionModel" enableCopy="true"/>** **(3)** in the deployment-id field, enter **2023-05-15** **(4)** in the API version field, and click **Send** **(5)**. 
+1. In API Management, click on **Test** **(1)**, select Creates a **completion for the chat message** **(2)**, enter the gpt-4 deployment name **<inject key="CompletionModel" enableCopy="true"/>** **(3)** in the deployment-id field, enter **2023-05-15** **(4)** in the API version field.
 
-     ![](./Media/api-test.png)
+     ![](./Media/new-api-test.png)
+
+1. Scroll down to the **Request body** section **(1)**, replace the existing code with the code below, and click on **Send** **(2)**.
+
+   ```
+   {"model":"gpt-4","messages":[{"role":"user","content":"Hello! What does an API Management Service in Azure do?"}]}
+   ```
+
+   ![](./Media/new-api-body.png)
 
 1. Scroll down the response and you should see a `200` response and a message back from your OpenAI service.
 
-    ![](./Media/api-product8.png)
+    ![](./Media/new-api-result.png)
 
 ### Task 3: Update the Docker Image for the Recommendation service
 
