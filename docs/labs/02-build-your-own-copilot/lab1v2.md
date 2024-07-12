@@ -68,7 +68,7 @@ In this task, you will configure the Miyagi application by updating specific set
    | AZURE_COGNITIVE_SEARCH_ENDPOINT        | **<inject key="SearchServiceuri" enableCopy="true"/>**|
    |AZURE_COGNITIVE_SEARCH_API_KEY          | **<inject key="SearchAPIkey" enableCopy="true"/>**    |
    
-   ![](./Media/miyagi-image18.png)
+   ![](./Media/miyagi-image(18).png)
    
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
