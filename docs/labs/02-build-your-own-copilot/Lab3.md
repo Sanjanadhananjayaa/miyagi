@@ -82,13 +82,13 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
    ![](./Media/miyagi-image65.png)
 
-1. Navigate to **Azure OpenAI** in the Azure Portal, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** Azure OpenAI resources.
+1. Navigate to **Azure OpenAI** in the Azure Portal, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
 1. In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**, select **Access control (IAM)** **(1)**, click on **+ Add** **(2)**, and select **Add role assignment** **(3)**.
 
     ![](./Media/miyagi-image66.png)
    
-1. In **Add role assignment** tab in the search bar search and select **Cognitive Services User** and click on **Next**.
+1. In **Add role assignment** tab in the search bar search and select **Cognitive Services User (1) (2)** and click on **Next (3)**.
 
     ![](./Media/apinew3.png)
 
@@ -96,7 +96,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
     ![](./Media/miyagi-image82.png)
 
-1. On the select managed identity pop up Select **Subscription** default value then under Managed identity drop-down select **API Management service** **(2)**, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(3)**, then click-on **Select** **(4)**.
+1. On the select managed identity pop up, for **Subscription (1)** accept default value then **Managed identity** select **API Management service** **(2)**, choose the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** **(3)**, then click-on **Select** **(4)**.
 
    ![](./Media/miyagi-image68.png)
 
@@ -104,13 +104,11 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. In the **Review + assign** tab click on **Review + assign**.
 
-      ![](./Media/apim-role1.png)
-
 1. Navigate back to **API Management service** in the Azure Portal, select the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service.
     
 1. In the **API Management service**, select **APIs** **(1)**, select the **Azure OpenAI Service API** **(2)** API created in the earlier step, select **All Operations** **(3)** and click on **Policy code editor**</> **(4)** under **Inbound processing**.
 
-       ![](./Media/miyagi-image67.png)
+    ![](./Media/miyagi-image67.png)
 
 1. In the code editor copy the below policy to overwrite the **inbound** **(1)** tags only, replace **&lt;&lt;Azure_OpenAI_Endpoint&gt;&gt;** with **<inject key="OpenAIEndpoint" enableCopy="true"/>** **(2)** of API manager which you copen in Task 1 Step 4 and click on **Save** **(3)**.
 
