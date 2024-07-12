@@ -1,5 +1,7 @@
 # Lab 4 - Expose Open AI through APIM
 
+### Duration: 80 minutes
+
 In this lab, you'll be verifying and creating APIs in the deployed API Management service to update the Docker image for the Recommendation service. The revision of the Recommendation service from the Azure Kubernetes services encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
 
 ### Task 1: Verify the deployed API Management service and create an API
