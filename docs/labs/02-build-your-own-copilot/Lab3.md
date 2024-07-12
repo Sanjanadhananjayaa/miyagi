@@ -350,7 +350,7 @@ In this lab, you'll be setting up Event Hub logging for API Management, configur
 
     ![](./Media/miyagi-image90.png)
 
-1. Next open the Miyagi UI in a separate browser tab click **Personalize** and change your stock preferences. Then, click on **Personalize** and repeat the same steps several times to generate additional logs. In the Event Hub query, you should see log information for the tokens used.
+1. Click on **Test Query** and in the Event Hub query, you should see log information for the tokens used.
 
     ![](./Media/miyagi-image91.png)
 
