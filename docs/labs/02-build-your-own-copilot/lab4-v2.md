@@ -26,7 +26,7 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
    ![](./Media/miyagi-image94.png)
 
-5. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** **(1)** and follow the wizard to **create your app** **(2)** with the semantic function and save it
+5. Navigate back to the **Visual Studio Code** From the **Functions panel**, click on the **Get started icon** **(1)** and follow the wizard to **create your app** **(2)** with the semantic function.
 
    ![](./Media/miyagi-image95.png)
 
@@ -80,6 +80,15 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
     dotnet add package Microsoft.SemanticKernel --version 1.11.0
     ```
 
+
+    >**Note**: These commands are used in a .NET Core or .NET 5+ project to add NuGet packages to the project. Here's what each command does:
+
+    > **dotnet add package Microsoft.Extensions.Hosting --version 9.0.0-preview.3.24172.9**: Adds the Microsoft.Extensions.Hosting package to the project with a specific version (9.0.0-preview.3.24172.9). This package provides hosting and startup abstractions for .NET applications.
+
+    > **dotnet add package Microsoft.Extensions.Options.DataAnnotations --version 9.0.0-preview.3.24172.9**: Adds the Microsoft.Extensions.Options.DataAnnotations package to the project with a specific version (9.0.0-preview.3.24172.9). This package extends the options framework in .NET to support data annotations for configuration objects.
+
+    > **dotnet add package Microsoft.SemanticKernel --version 1.11.0**: Adds the Microsoft.SemanticKernel package to the project with a specific version (1.11.0). This package likely provides functionality related to semantic analysis and processing within the application.
+
 14. To build and run the Home Automation application from the terminal use the following commands:
 
     ```powershell
@@ -90,7 +99,7 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
     ![](./Media/dotnetbuild.png)
 
     > **Note**: Please disregard the warning.
-    
+    > **Note** The commands dotnet build and dotnet run are fundamental in .NET Core and .NET 5+ environments for building and running .NET applications locally on your machine.
 15. After running `dotnet run`, you can ask few questions and review the response. For example: `What time is it?`
 
     ![](./Media/miyagi-image100.png)
