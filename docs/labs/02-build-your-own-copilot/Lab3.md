@@ -2,7 +2,8 @@
 
 ### Duration: 80 minutes
 
-In this lab, you'll be verifying and creating APIs in the deployed API Management service to update the Docker image for the Recommendation service. The revision of the Recommendation service from the Azure Kubernetes services encapsulates the meticulous approach to maintaining and optimizing containerized applications within the project's scope.
+In this lab, you'll be validating and configuring APIs within the deployed API Management service, specifically aimed at updating the Docker image for the Recommendation service. This process underscores the importance of maintaining and optimizing containerized applications hosted on Azure Kubernetes Service (AKS). By revising the Recommendation service through AKS,
+
 
 ### Task 1: Verify the deployed API Management service and create an API
 
