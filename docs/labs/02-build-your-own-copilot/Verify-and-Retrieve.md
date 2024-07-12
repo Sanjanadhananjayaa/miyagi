@@ -1,6 +1,6 @@
 # Lab 1: Verify and Retrieve the values of Azure Resources (optional)
 
-In this task, verification, and retrieval of specific values, including End Point, Connection String, and Key for the designated resources.
+In this lab, you will verify and retrieve specific values such as Endpoint, Connection String, and Key for various Azure resources. This is crucial for ensuring the proper configuration and connectivity of these resources.
 
    - Azure OpenAI : **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** 
    - Azure Cosmos DB account : **cosmos-<inject key="DeploymentID" enableCopy="false"/>**
@@ -8,43 +8,47 @@ In this task, verification, and retrieval of specific values, including End Poin
 
 1. To verify the deployment model names for "**deploymentOrModelId**" and "**embeddingDeploymentOrModelId**" follow the below steps:
    
-      - In Azure Portal, click on **Resource groups** from the Navigate panel.
+      - On the Azure Portal home page, click on **Resource groups** in the **Navigate** panel.
 
+          ![](./Media/miyagi-image6.png)
+        
       - From the Resource groups page, click on **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**.
 
-         ![](./Media/image-rg-1.png)
+         ![](./Media/miyagi-image7.png)
 
-      - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+      - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
-        ![](./Media/select-openai.png)
+        ![](./Media/miyagi-image118.png)
 
-      - In the **OpenAI Overview** **(1)** page, right-click on **Go to Azure OpenAI Studio** (2) button and click on **Open link a new tab**.
+      - In the **OpenAI Overview** page, right-click on **Go to Azure OpenAI Studio** and click on **Open link a new tab**.
 
-         ![](./Media/image-rg-03.png) 
+         ![](./Media/miyagi-image10.png)
    
-      - In the **Azure AI Studio**, select **Deployments**, under the Management section.
+      - In the **Azure AI Studio**, from the left navigation pane under the **Management** section, select **Deployments**.
 
+           ![](./Media/miyagi-image119.png)
+        
       - In the **Deployments** blade of Azure AI Studio, click on **gpt-4** model name **(1)** and verify the **deployment name** of gpt-4 model **(2)**.
 
-          ![](./Media/gpt4-main.png)
+          ![](./Media/miyagi-image(12).png)
         
-          ![](./Media/gpt4-main-name.png)
+          ![](./Media/miyagi-image(13).png)
       
-      -  Navigate back to the **Deployment** page
+      -  Navigate back to the **Deployment** page.
 
       - In the Deployments blade of Azure AI Studio, click on **text-embedding-ada-002 model name (1)** and verify the **deployment name** of **text-embedding-ada-002 model(2)**.
         
-         ![](./Media/ada-main.png)
+         ![](./Media/miyagi-image(14).png)
 
-         ![](./Media/ada-main-name.png)
+         ![](./Media/miyagi-image(15).png)
 
 1. To verify the values for **endpoint** and **apiKey** follow the below steps:
 
    -  Navigate back to the tab displaying **Azure portal**. 
 
-   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint**, verify the **KEY1** and **Endpoint**.
+   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint (1)**, verify the **KEY 1 (2)** and **Endpoint (3)**.
      
-      ![](./Media/image-rg-3.png)
+      ![](./Media/miyagi-image16.png)
 
 1. To verify the values for  "azureCognitiveSearchEndpoint", "azureCognitiveSearchApiKey", follow below steps:
    
@@ -52,38 +56,41 @@ In this task, verification, and retrieval of specific values, including End Poin
 
    - On the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** page, select **acs-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-      ![](./Media/select-acs.png)
+      ![](./Media/miyagi-image110.png)
  
    - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, verify the **URL**.
    
-      ![](./Media/image-rg-13.png)
+      ![](./Media/miyagi-image111.png)
 
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, verify the **Primary admin Key** value.
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, select **Key (1)** and  verify the **Primary admin Key (2)** value.
    
-      ![](./Media/image-rg-14.png)
+      ![](./Media/miyagi-image112.png)
 
 1. To verify the values for "**cosmosDbUri**" and "**cosmosDbName**," please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **cosmos-<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-     ![](./Media/select-cosmosdb.png)
-
+     ![](./Media/miyagi-image113.png)
+     
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** verify the **URL**.
      
-     ![](./Media/image-rg-16.png)
+     ![](./Media/miyagi-image114.png)
 
    - On **cosmos-<inject key="DeploymentID" enableCopy="false"/>** under **Settings**, select **Keys** and verify the value of the **Cosmos DB Primary Connection String**.
 
-     ![](./Media/cs.png)
+     ![](./Media/miyagi-image115.png)
 
-1. To obtain the values for  "**blobServiceUri**", please follow the steps below:
+1. To obtain the values for **blobServiceUri**, please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
-     ![](./Media/select-storage.png)
+     ![](./Media/miyagi-image116.png)
 
-   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings verify the **Blob service** **(1)** under Blob service.
+   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under **Settings** section verify the **Blob service** **(2)** under Blob service.
 
-     ![](./Media/blob-storage-endpoint.png)
+     ![](./Media/miyagi-image117.png)
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+## Summary
+In this lab, you will verify and retrieve configuration values such as Endpoint, Connection String, and Key for various Azure resources like OpenAI Service, Cosmos DB, and Cognitive Search. This ensures proper configuration and connectivity. The steps involve accessing the Azure Portal, navigating to specific resource groups, and verifying the required values.
+
+### You have successfully completed this lab. Now click on **Next** from the lower right corner to move to the next page.
