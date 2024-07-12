@@ -230,3 +230,5 @@ In this task, you'll personalize the Miyagi App's Recommendation service by sele
 ## Summary
 
 In this Lab, you began with configuring the Miyagi App for operational readiness, followed by a detailed exploration of the Recommendation service's implementation. Practical execution involves running the Recommendation service and deploying the Miyagi frontend locally for testing. Enhancing data retrieval efficiency is a pivotal step, achieved by persisting embeddings in Azure AI Search. The project concludes with a broad exploration of the Miyagi App and Recommendation service, prioritizing a personalized user experience. This systematic approach ensures a thorough understanding and effective implementation throughout the project.
+
+### You have successfully completed this lab. Now click on Next from the lower right corner to move to the next page.
