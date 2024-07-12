@@ -107,6 +107,8 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
 
 ### Task 2: Configure Azure Cognitive Search
 
+In this task, you'll configure Azure Cognitive Search by importing data from CosmosDB into a search index named "realestate-us-sample-index". You customize the index and create an indexer named "realestate-us-sample-indexer" to synchronize data. Finally, you verify the search functionality by querying data for "Seattle".
+
 1. Navigate back to the **Azure portal** tab, in Search resources, services and docs (G+/) box at the top of the portal, enter **AI Search**, and then select **AI Search** under services.
 
     ![](./Media/miyagi-image25.png)
