@@ -140,6 +140,8 @@ This task involves setting up API policies, defining roles and subscriptions, an
 
 ### Task 3: Update the Docker Image for the Recommendation service
 
+This task involves updating the configuration of the recommendation service, rebuilding the Docker image, pushing it to ACR, and ensuring that the updated image is ready for deployment within the Azure environment.
+
 1. Navigate to Visual Studio Code, expand **miyagi/services/recommendation-service/dotnet** directory and select the **appsettings.json**.
 
    ![](./Media/open-appsettings.png)
