@@ -8,6 +8,7 @@ What makes Semantic Kernel _special_, however, is its ability to _automatically_
 [planners](https://learn.microsoft.com/en-us/semantic-kernel/ai-orchestration/planner), you can ask an LLM to generate a plan that achieves a user's unique goal. Afterwards, Semantic Kernel will execute the plan for the user.
 
 ### Task 1: Configure and Run the Semantic Kernel Sample
+In this task, you will configure the Semantic Kernel plugin in Visual Studio Code, create a C# Home Automation app using Azure OpenAI, and build and run the application to interact with it.
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
