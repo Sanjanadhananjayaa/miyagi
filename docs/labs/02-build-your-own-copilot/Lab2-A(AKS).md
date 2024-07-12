@@ -314,3 +314,5 @@ In this lab, you'll explores the deployment and verification of the Miyagi UI an
 ### Summary
 
 In this Lab, you deployed Azure Kubernetes Service (AKS) for both the Miyagi UI and Miyagi Recommendation service. It began with constructing Docker images for these services, containing all necessary components like code and configuration files. After image creation, the next step involved pushing the Recommendation service's Docker image to a Container registry, a storage and deployment platform for Kubernetes clusters. Finally, AKS pods were deployed, representing running containers within the Kubernetes cluster, thereby making the Miyagi UI and Recommendation service operational
+
+### You have successfully completed this lab. Now click on Next from the lower right corner to move to the next page.
