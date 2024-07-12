@@ -99,7 +99,7 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
 
    ![](./Media/miyagi-image33.png)
 
-1. In the **Images** blade, notice **miyagi-ui** image is created, select **run(2)** icon .
+1. In the **Images** blade, notice **miyagi-ui(1)** image is created, select **run(2)** icon .
 
    ![](./Media/miyagi-image34.png)
 
@@ -107,7 +107,7 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
 
    ![](./Media/miyagi-image43.png)
 
-1. In the **Run a new containe**, under **Ports** for **Host Port** enter **3000** and click on **Run**.
+1. In the **Run a new containe**, under **Ports** for **Host Port** enter **3000 (1)** and click on **Run (2)**.
 
     ![](./Media/miyagi-image35.png)
 
@@ -153,15 +153,15 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
 
    ![](./Media/miyagi-image42.png)
    
-1. In the **Run a new containe**, under **Ports** for **Host Port** enter **5224** and click on **Run**.
+1. In the **Run a new containe**, under **Ports** for **Host Port** enter **5224 (1)** and click on **Run(2)**.
 
     ![](./Media/miyagi-image44.png)
 
-1. Click on **5224:80** URL link
+1. Click on **5224:8080** URL link.
 
    ![](./Media/miyagi-image45.png)
    
-1. You should be able to see the application running locally
+1. You should be able to see the application running locally.
    
    ![](./Media/miyagi-image46.png)
 
@@ -169,8 +169,10 @@ In this task, you will build and run the Miyagi UI Docker container locally. Beg
 
 In this task, you'll Push miyagi-recommendation images to acr. 
 
-1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**
+1. Navigate back to the **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
+    ![](./Media/aks-04.png)
+   
 1. Run the following command to log in to the **Azure portal**.
 
     ```
@@ -188,6 +190,8 @@ In this task, you'll Push miyagi-recommendation images to acr.
    ```
    az acr login -n [ACRname] 
    ```
+
+   >**Note**: The command az acr login -n [ACRname] logs you into an Azure Container Registry (ACR) instance. It authenticates your session with the specified Azure Container Registry, allowing you to push and pull container images to and from the registry.
     
 1. Run the following command to add the tag.
 
@@ -196,6 +200,8 @@ In this task, you'll Push miyagi-recommendation images to acr.
    ```
    docker tag miyagi-recommendation:latest [ACRname]/miyagi-recommendation:latest
    ```
+
+   >**Note**: The command docker tag miyagi-recommendation:latest [ACRname]/miyagi-recommendation:latest tags a local Docker image with a new name that includes the Azure Container Registry (ACR) name. By tagging the image this way, you prepare it to be pushed to the specified Azure Container Registry.
 
 1. Run the following command to push the image to the container registry.
 
@@ -207,6 +213,8 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
    ![](./Media/task2-6.png)
 
+   >**Note**: The command docker push [ACRname]/miyagi-recommendation:latest uploads the specified Docker image, which has been tagged with the Azure Container Registry (ACR) name, to the ACR. This makes the image available in the ACR for deployment and use in various Azure services.
+   
 1. Navigate back to **Visual studio code** window and navigate to **miyagi/ui/typescript** right - click in cascading menu, select **Open in integrate Terminal**.
 
 1. Run the following command to add the tag.
