@@ -2,8 +2,7 @@
 
 ### Duration: 80 minutes
 
-In this lab, you'll be validating and configuring APIs within the deployed API Management service, specifically aimed at updating the Docker image for the Recommendation service. This process underscores the importance of maintaining and optimizing containerized applications hosted on Azure Kubernetes Service (AKS). By revising the Recommendation service through AKS,
-
+In this lab, you'll delve into configuring and verifying APIs within Azure API Management, focusing on integrating the Azure OpenAI service. This entails setting up HTTP APIs, ensuring correct configuration, and obtaining a gateway URL for seamless external access and integration. You'll also explore policy creation, role definitions, and subscription management to securely operate the APIs. This lab underscores best practices in API management, ensuring robust authentication, authorization, and operational testing within Azure's comprehensive ecosystem.
 
 ### Task 1: Verify the deployed API Management service and create an API
 
