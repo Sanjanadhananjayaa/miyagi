@@ -4,17 +4,17 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 ### Task 1: Verify the deployed API Management service and create an API
 
-In this lab, you'll be focusing on setting up an HTTP API within Azure API Management to interact with the Azure OpenAI service. It ensures the API is configured correctly and provides a gateway URL for external access and integration with other services.
+In this lab, you'll be setting up an HTTP API within Azure API Management to interact with the Azure OpenAI service. It ensures the API is configured correctly and provides a gateway URL for external access and integration with other services.
 
-1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
+1. Navigate to Azure portal, open the **Resource Group** named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
    ![](./Media/miyagi-image54.png)
 
-1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under Define a new API to create an HTTP API.
+1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)** under APIs from the left menu and select **HTTP** **(2)** under **Define a new API** to create an HTTP API.
 
     ![](./Media/miyagi-image55.png)
 
-1. Enter the following values in the Create an HTTP API pane:
+1. On the **Create an HTTP API** pane, enter the following values:
    
    | **Parameter**        | **Values**           | 
    | -------------------- | -------------------- | 
@@ -27,7 +27,7 @@ In this lab, you'll be focusing on setting up an HTTP API within Azure API Manag
 
    ![](./Media/miyagi-image56.png)
 
-1. Once API is created, click on **Overview** **(1)** from the left-menu copy the **Gateway URL** **(2)** of API Management service. Paste it into Notepad for later use.
+1. Once API is created, click on **Overview** **(1)** then copy the **Gateway URL** **(2)** of API Management service. Record the **URL** you required in upcoming task.
 
     ![](./Media/miyagi-image57.png)
 
@@ -42,7 +42,7 @@ In this lab, you'll be focusing on setting up an HTTP API within Azure API Manag
 
 In this lab, you'll be setting up API policies, defining roles and subscriptions, and integrating the Azure OpenAI Service API within Azure API Management. It ensures proper authentication, authorization, and operational testing of the API endpoints
 
-1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
+1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, from the left navigation pane under **APIs** section select **APIs** **(1)**, click on the **three dots** **(2)** next to miyagi-api, select **Import** **(3)**, and click on **OpenAPI** **(4)**.
 
    ![](./Media/miyagi-image58.png)
 
@@ -62,23 +62,23 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
    ![](./Media/miyagi-image61.png)
 
-1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **Products** **(1)** under APIs from the left menu and click on **+ Add** **(2)**.
+1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, from the left navigation pane under **APIs** click on **Products** **(1)** then select **+ Add** **(2)**.
 
    ![](./Media/miyagi-image62.png)
 
-1. In the **Add product** display name as **OpenAi** **(1)**, description as **OpenAI** **(2)**. Under the APIs menu click the **plus sign** **(3)** select the **Azure OpenAI Service API** **(4)** hit Enter and click on **Create** **(5)**.
+1. In the **Add product** window, specify **Display name** as **OpenAi** **(1)**, **Description** as **OpenAI** **(2)**. Under the **APIs** menu click the **plus sign** **(3)** select the **Azure OpenAI Service API** **(4)** hit enter and click on **Create** **(5)**.
 
    ![](./Media/api-product2.png)
 
-1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, click on **Subscriptions** **(1)** under APIs from the left menu and click on **+ Add subscription** **(2)**.
+1. In the **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service, from the left navigation pane under **APIs** select **Subscriptions** **(1)**  then lick on **+ Add subscription** **(2)**.
 
    ![](./Media/miyagi-image63.png)
 
-1. In the **Add subscription**, enter the Name as **aoai-test** **(1)**, enter Display name as **AOAI Test** **(2)**, and click on **Create** **(3)**.
+1. In the **Add subscription** window, provide **Name** as **aoai-test** **(1)** and  **Display name** as **AOAI Test** **(2)**, and click on **Create** **(3)**.
 
    ![](./Media/miyagi-image64.png)
 
-1. Once the subscription is created click the **three dots** **(1)** next to the newly created key and then click **Show\hide keys** **(2)**. Copy the **primary subscription** **(3)** key and save it for later.
+1. Once the subscription is **AOAI Test** created click the **three dots** **(1)** next to **AOAI Test** and then click **Show\hide keys** **(2)**. Copy the **primary subscription** **(3)** key and save it for later.
 
    ![](./Media/miyagi-image65.png)
 
