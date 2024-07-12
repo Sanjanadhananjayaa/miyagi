@@ -80,13 +80,13 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
      ![](./Media/miyagi-image115.png)
 
-1. To obtain the values for  "**blobServiceUri**", please follow the steps below:
+1. To obtain the values for **blobServiceUri**, please follow the steps below:
 
    - Navigative back to resource group **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>** resource group page, select **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** from resources list.
 
      ![](./Media/miyagi-image116.png)
 
-   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under Settings verify the **Blob service** **(1)** under Blob service.
+   - In the **miyagiblobstorge<inject key="DeploymentID" enableCopy="false"/>** storage account from the left menu select **Endpoints** **(1)** under **Settings** section verify the **Blob service** **(2)** under Blob service.
 
      ![](./Media/miyagi-image117.png)
 
