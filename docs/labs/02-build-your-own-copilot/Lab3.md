@@ -4,6 +4,8 @@ In this lab, you'll be verifying and creating APIs in the deployed API Managemen
 
 ### Task 1: Verify the deployed API Management service and create an API
 
+This task focuses on setting up an HTTP API within Azure API Management to interact with the Azure OpenAI service. It ensures the API is configured correctly and provides a gateway URL for external access and integration with other services.
+
 1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
    ![](./Media/miyagi-image54.png)
