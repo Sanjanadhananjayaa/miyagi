@@ -82,7 +82,7 @@ In this lab, you'll be setting up API policies, defining roles and subscriptions
 
 1. Once the subscription is **AOAI Test** created click the **three dots** **(1)** next to **AOAI Test** and then click **Show\hide keys** **(2)**. Copy the **primary subscription** **(3)** key and save it for later.
 
-   ![](./Media/miyagi-image65.png)
+   ![](./Media/miyagi-image(65).png)
 
 1. Navigate to **Azure OpenAI** in the Azure Portal, select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
