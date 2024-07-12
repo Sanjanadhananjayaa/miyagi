@@ -62,7 +62,7 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
    
       ![](./Media/miyagi-image111.png)
 
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, verify the **Primary admin Key** value.
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, select **Key (1)** and  verify the **Primary admin Key (2)** value.
    
       ![](./Media/miyagi-image112.png)
 
