@@ -160,7 +160,7 @@ In this lab, you'll be updating the configuration of the recommendation service,
 
    ![](./Media/lab3-t2-s4.png)
 
-    >**Note**: Thiscommand creates a Docker image named Miyagi-recommendation from the Dockerfile and associated files in the current directory.
+    >**Note**: This command creates a Docker image named Miyagi-recommendation from the Dockerfile and associated files in the current directory.
 
 1. Run the following command to ACR login.
 
