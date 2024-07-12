@@ -145,7 +145,9 @@ In this task, you will run the miyagi frontend locally by installing dependencie
     yarn dev
     ```
 
-   **Note**: Please wait till the command gets executed successfully. It will take up to 5 minutes.
+   > **Note**: Please wait till the command gets executed successfully. It will take up to 5 minutes. Once **yarn dev** command start executing wait for 2 mins and proceed with next step.
+   
+   > **Note**: These commands (npm install --global yarn, yarn install, and yarn dev) are indeed essential in JavaScript and TypeScript projects for managing dependencies and running scripts necessary to set up and run applications. They ensure that all required packages are installed (yarn install), and they execute development scripts (yarn dev) defined in the project's configuration (package.json).
 
 1. Open a new tab in Edge, and browse the following
 
