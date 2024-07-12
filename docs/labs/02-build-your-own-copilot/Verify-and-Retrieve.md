@@ -16,11 +16,11 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
          ![](./Media/miyagi-image7.png)
 
-      - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview (1) tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+      - In the **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**, from the Overview tab select the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>**.
 
         ![](./Media/miyagi-image118.png)
 
-      - In the **OpenAI Overview** **(1)** page, right-click on **Go to Azure OpenAI Studio** and click on **Open link a new tab**.
+      - In the **OpenAI Overview** page, right-click on **Go to Azure OpenAI Studio** and click on **Open link a new tab**.
 
          ![](./Media/miyagi-image10.png)
    
@@ -46,7 +46,7 @@ In this lab, you will verify and retrieve specific values such as Endpoint, Conn
 
    -  Navigate back to the tab displaying **Azure portal**. 
 
-   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint**, verify the **KEY1** and **Endpoint**.
+   -  In the **OpenAIService-<inject key="DeploymentID" enableCopy="false"/>** blade under **Resource Management** section, select **Keys and Endpoint (1)**, verify the **KEY 1 (2)** and **Endpoint (3)**.
      
       ![](./Media/miyagi-image16.png)
 
