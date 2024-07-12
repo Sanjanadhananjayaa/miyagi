@@ -148,9 +148,9 @@ In this lab, you'll be updating the configuration of the recommendation service,
 
     ![](./Media/miyagi-image72.png)
 
-1. From the Explorer, navigate to `Miyagi/services/recommendation-service/dotnet/` **(1)** path. Right-click on `dotnet` folder and select **Open in Integrated Terminal** **(2)** from the options tab to open the terminal with the required path.
+1. Navigate back to **Visual studio code** window and navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in integrate Terminal**.
 
-   ![](./Media/lab3-t2-s3.png)
+   ![](./Media/aks-04.png)
 
 1. Now, you need to re-build the docker image for recommendation service by running the below docker command. Make to update the docker image name which was created earlier for recommendation service with the same name.
 
