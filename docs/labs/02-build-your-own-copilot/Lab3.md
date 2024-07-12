@@ -301,7 +301,9 @@ In this lab, you'll be setting up Event Hub logging for API Management, configur
     cd C:\LabFiles\miyagi
     az deployment group create --resource-group <<RESOURCE_GROUP_NAME>> --template-file .\aoai-logger.bicep
     ```
-    
+
+     >**Note**: This command sequence navigates to C:\LabFiles\miyagi directory containing the Bicep file and then deploys the resources defined in that file to the specified Azure resource group.
+
 1. Navigate to Azure portal, open the Resource Group named **miyagi-rg-<inject key="DeploymentID" enableCopy="false"/>**  and select **miyagi-apim-<inject key="DeploymentID" enableCopy="false"/>** API Management service from the resources list.
 
     ![](./Media/lab3-t1-s1.png)
