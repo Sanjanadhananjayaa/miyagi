@@ -1,5 +1,7 @@
 # Lab 3.1: Containerizing Miyagi UI and Recommendation service to Azure Kubernetes Service(AKS)
 
+### Duration: 80 minutes
+
 In this lab, you'll be building the docker images and publishing them to Azure Kubernetes Service(AKS).
 
 ### Task 1: Deploy AKS Services
