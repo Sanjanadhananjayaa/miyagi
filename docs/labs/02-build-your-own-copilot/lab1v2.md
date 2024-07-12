@@ -116,7 +116,8 @@ In this task, you will run the recommendation service locally by using Visual St
    dotnet run
    ```
 
-   **Note**: Let the command run, meanwhile you can proceed with the next step.
+   > **Note**: Let the command run, meanwhile you can proceed with the next step.
+   > **Note** The commands dotnet build and dotnet run are fundamental in .NET Core and .NET 5+ environments for building and running .NET applications locally on your machine.
 
 1. Open another tab in Edge, in the browser window paste the following link
 
