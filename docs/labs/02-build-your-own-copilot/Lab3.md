@@ -275,7 +275,7 @@ In this lab, you'll be setting up Event Hub logging for API Management, configur
     }
    ```
 
-   ![](./Media/bicepfile1.png)
+   ![](./Media/miyagi-image121.png)
 
 1. In the menu bar notepad select **Files** and click on **Save As**.
 
