@@ -99,7 +99,9 @@ In this task, you will configure the Semantic Kernel plugin in Visual Studio Cod
     ![](./Media/dotnetbuild.png)
 
     > **Note**: Please disregard the warning.
+    
     > **Note** The commands dotnet build and dotnet run are fundamental in .NET Core and .NET 5+ environments for building and running .NET applications locally on your machine.
+
 15. After running `dotnet run`, you can ask few questions and review the response. For example: `What time is it?`
 
     ![](./Media/miyagi-image100.png)
