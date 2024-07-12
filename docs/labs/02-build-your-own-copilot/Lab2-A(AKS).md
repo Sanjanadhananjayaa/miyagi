@@ -279,6 +279,8 @@ In this task, you'll Push miyagi-recommendation images to acr.
 
 # Lab 3.2: Explore and Verify the Containerized Miyagi UI and Recommendation service in AKS
 
+In this lab, you'll explores the deployment and verification of the Miyagi UI and Recommendation services on Azure Kubernetes Service (AKS). Tasks involve testing APIs and accessing the UI via Ingress endpoints, ensuring proper functionality within the AKS environment.
+
 ### Task 1: Explore Recommendation service in AKS using Ingress Endpoint
 
 1. To test the API run the below command to get the service IP addresses
