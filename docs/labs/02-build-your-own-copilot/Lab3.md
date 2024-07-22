@@ -343,8 +343,9 @@ In this lab, you'll be setting up Event Hub logging for API Management, configur
 
       ![](./Media/miyagi-image88.png)
 
-
-1. Next open the **Miyagi UI** in a separate browser tab click **Personalize** and select your **Favorite Financial Advisor (1)** and choose **GPT-4 (2)** for the **Reasoning Engine** from the dropdown menu, then click on **Personalize (3)**. repeat the same step by selecting different **Favorite Financial Advisor** for 6 - 7 times to generate additional logs.
+1. Next open the **Miyagi UI** in a separate browser tab click **Personalize** and select your **Favorite Financial Advisor (1)** and choose **GPT-4 (2)** for the 
+   **Reasoning Engine** from the dropdown menu, then click on **Personalize (3)**. repeat the same step by selecting different **Favorite Financial Advisor** for 6 - 7 
+    times to generate additional logs.
 
     ![](./Media/miyagi-image126.png)
 
