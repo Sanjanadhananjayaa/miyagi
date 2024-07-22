@@ -293,7 +293,6 @@ In this lab, you'll explores the deployment and verification of the Miyagi UI an
    
    ![](./Media/miyagi-image129.png)
 
-
 1. Copy the External IP address of the **miyagi-recommendation-service** and enter it into the browser. You should now see the swagger endpoint.
    
     ![](./Media/miyagi-image52.png)
