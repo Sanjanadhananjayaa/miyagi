@@ -30,10 +30,9 @@ In this task, You will deploy the Miyagi recommendation and UI services on an Az
    ```
    kubectl apply -f ./miyagi-ui-service.yaml
    ```
-
-
-      >**Note**: Upon successful execution of above commands. The Kubernetes will read the YAML file and apply its configurations to the cluster.
-       It will create miyagi-recommendation-service and miyagi-ui
+   
+    >**Note**: Upon successful execution of above commands. The Kubernetes will read the YAML file and apply its configurations to the cluster. It will create miyagi-recommendation- 
+    service and miyagi-ui
  
 1. Once the services have been deployed run the below command and keep track of the service's **external ip's**. It could take a few minutes for the **external ip's** to appear so wait a few minutes before running the command.
 
